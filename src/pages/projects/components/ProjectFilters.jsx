@@ -29,7 +29,7 @@ const ProjectFilters = ({
 
   const technologyFilters = [
     'React', 'Node.js', 'Python', 'TypeScript', 'Next.js', 
-    'Express', 'MongoDB', 'PostgreSQL', 'AWS', 'Docker'
+    'Express', 'MongoDB', 'MySQL', 'HTML5', 'Talwind CSS'
   ];
 
   return (
@@ -44,7 +44,7 @@ const ProjectFilters = ({
           placeholder="Search projects by name, technology, or description..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e?.target?.value)}
-          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-lg text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
         />
         {searchQuery && (
           <button
@@ -65,7 +65,7 @@ const ProjectFilters = ({
             iconName={filter?.icon}
             iconPosition="left"
             onClick={() => onFilterChange(filter?.id)}
-            className={activeFilter === filter?.id ? 'gradient-primary text-white' : ''}
+            className={activeFilter === filter?.id ? 'gradient-primary text-white rounded-xl' : 'rounded-xl'}
           >
             {filter?.label}
           </Button>
@@ -79,7 +79,7 @@ const ProjectFilters = ({
             <button
               key={tech}
               onClick={() => onSearchChange(tech)}
-              className="px-3 py-1.5 text-xs font-medium bg-muted text-muted-foreground rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-200"
+              className="px-3 py-1.5 text-xs font-medium bg-muted text-muted-foreground rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-200 rounded-xl"
             >
               {tech}
             </button>
@@ -100,6 +100,7 @@ const ProjectFilters = ({
                 iconName={sort?.icon}
                 iconPosition="left"
                 onClick={() => onSortChange(sort?.id)}
+                className='rounded-xl'
               >
                 {sort?.label}
               </Button>

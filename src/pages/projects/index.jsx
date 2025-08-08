@@ -5,7 +5,7 @@ import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
 import ProjectCard from './components/ProjectCard';
 import ProjectFilters from './components/ProjectFilters';
-import FeaturedProject from './components/FeaturedProject';
+//import FeaturedProject from './components/FeaturedProject';
 import ProjectStats from './components/ProjectStats';
 import TechnologyShowcase from './components/TechnologyShowcase';
 
@@ -49,6 +49,8 @@ const Projects = () => {
   // Mock data for technologies
   const technologies = [
     { name: "React", category: "frontend", level: 5, icon: "Code2", description: "Modern UI library for building interactive interfaces" },
+     { name: "HTML5", category: "frontend", level: 5, icon: "FileCode", description: "Markup language for structuring and presenting content on the web" },
+     { name: "CSS3", category: "frontend", level: 5, icon: "Palette", description: "Style sheet language used to design and enhance the visual presentation of web pages" },
     { name: "Node.js", category: "backend", level: 5, icon: "Server", description: "JavaScript runtime for server-side development" },
     { name: "MongoDB", category: "database", level: 4, icon: "Database", description: "NoSQL document database" },
     { name: "Express", category: "backend", level: 4, icon: "Server", description: "Fast, unopinionated web framework for Node.js" },

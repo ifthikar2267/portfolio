@@ -9,7 +9,7 @@ const TechnologyShowcase = ({ technologies }) => {
     { id: 'frontend', label: 'Frontend', icon: 'Monitor' },
     { id: 'backend', label: 'Backend', icon: 'Server' },
     { id: 'database', label: 'Database', icon: 'Database' },
-    { id: 'tools', label: 'Tools & DevOps', icon: 'Settings' }
+    { id: 'tools', label: 'Tools', icon: 'Settings' }
   ];
 
   const filteredTechnologies = selectedCategory === 'all' 
@@ -28,7 +28,7 @@ const TechnologyShowcase = ({ technologies }) => {
           <button
             key={category?.id}
             onClick={() => setSelectedCategory(category?.id)}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+            className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               selectedCategory === category?.id
                 ? 'bg-primary text-white shadow-sm'
                 : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
@@ -40,11 +40,11 @@ const TechnologyShowcase = ({ technologies }) => {
         ))}
       </div>
       {/* Technology Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 ">
         {filteredTechnologies?.map((tech, index) => (
           <div
             key={index}
-            className="group relative bg-background border border-border rounded-lg p-4 text-center hover:border-primary/30 hover:shadow-brand transition-all duration-200 cursor-pointer"
+            className="group relative bg-background border border-border rounded-lg p-4 text-center hover:border-primary/30 hover:shadow-brand transition-all duration-200 cursor-pointer rounded-xl"
           >
             {/* Technology Icon/Logo */}
             <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
