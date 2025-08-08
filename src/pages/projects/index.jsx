@@ -148,7 +148,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       <Helmet>
         <title>Projects</title>
         <meta name="description" content="Explore my portfolio of full-stack development projects, featuring modern web applications, APIs, and mobile solutions built with cutting-edge technologies." />

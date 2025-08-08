@@ -22,9 +22,7 @@ const ProjectFilters = ({
 
   const sortOptions = [
     { id: 'newest', label: 'Newest First', icon: 'ArrowDown' },
-    { id: 'oldest', label: 'Oldest First', icon: 'ArrowUp' },
-    { id: 'featured', label: 'Featured', icon: 'Star' },
-    { id: 'popular', label: 'Most Popular', icon: 'TrendingUp' }
+    { id: 'oldest', label: 'Oldest First', icon: 'ArrowUp' }
   ];
 
   const technologyFilters = [
