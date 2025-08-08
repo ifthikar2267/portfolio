@@ -1,10 +1,29 @@
+# macOS system files
 .DS_Store
-node_modules
+
+# Node modules
+node_modules/
+
+# Environment variables
 .env
-dist
-.idea
-package-lock.json
-/build
+.env.*    # in case you have multiple like .env.local, .env.production
+
+# Build output
+dist/
+build/
+
+# IDE / Editor files
 .vscode/
 .idea/
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Miscellaneous
+*.log
+*.tmp
+
+# Vite config backups (optional wildcard)
 vite.config.*s.*
