@@ -57,7 +57,7 @@ const FeaturedProject = ({ project }) => {
                 {project?.technologies?.map((tech, index) => (
                   <span
                     key={index}
-                    className="px-3 py-1.5 text-sm font-medium bg-background border border-border rounded-lg text-foreground"
+                    className="px-3 py-1.5 text-sm font-medium bg-background border border-border rounded-xl text-foreground"
                   >
                     {tech}
                   </span>
@@ -83,16 +83,30 @@ const FeaturedProject = ({ project }) => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://skinsaviour-store.web.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
+              >
               <Button
                 variant="default"
                 size="lg"
                 iconName="ExternalLink"
                 iconPosition="right"
-                className="gradient-primary text-white hover:opacity-90"
+                className="gradient-primary text-white hover:opacity-90 rounded-xl"
               >
                 View Live Demo
               </Button>
+              </a>
+               <a 
+                    href="https://github.com/ifthikar2267" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200 inline-block"
+                  >
               <Button
+              className='rounded-xl'
                 variant="outline"
                 size="lg"
                 iconName="Github"
@@ -100,14 +114,7 @@ const FeaturedProject = ({ project }) => {
               >
                 View Source Code
               </Button>
-              <Button
-                variant="ghost"
-                size="lg"
-                iconName="FileText"
-                iconPosition="left"
-              >
-                Case Study
-              </Button>
+              </a>
             </div>
           </div>
 

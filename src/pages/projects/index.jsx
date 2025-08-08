@@ -19,137 +19,53 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with advanced inventory management, payment processing, and real-time analytics dashboard.",
+      title: "AI Powered E-Commerce Platform",
+      description: "SkinSaviour is an AI-powered e-commerce platform specializing in homemade, toxin-free, vegan, and cruelty-free skincare products. Built with the MERN stack, it features personalized product recommendations, a chatbot for skincare advice, secure payments, real-time inventory tracking, and an intuitive admin dashboard for product and order management.",
       image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS", "Docker"],
+      technologies: ["React", "Node.js", "MongoDB", "Express.js", "AI", "Razorpay"],
       type: "web-app",
       status: "completed",
       featured: true,
-      liveDemo: "https://demo-ecommerce.com",
-      github: "https://github.com/user/ecommerce",
-      stars: 245,
-      forks: 67,
+      liveDemo: "https://skinsaviour-store.web.app/",
+      github: "https://github.com/ifthikar2267",
       duration: "6 months",
-      year: 2024,
+      year: 2025,
       features: [
-        "Advanced product filtering",
-        "Real-time inventory tracking",
-        "Secure payment processing",
-        "Admin analytics dashboard",
-        "Mobile-responsive design",
-        "SEO optimized"
+        "AI-powered skincare recommendations",
+        "Personalized product suggestions based on skin type",
+        "Toxin-free, vegan, and cruelty-free products",
+        "Secure checkout with multiple payment options",
+        "Customer reviews & ratings for every product",
+        "Mobile-friendly and fast-loading design"
       ],
       metrics: {
-        users: "10K+",
+        users: "1K+",
         performance: "98%",
         uptime: "99.9%"
       }
-    },
-    {
-      id: 2,
-      title: "Task Management API",
-      description: "RESTful API for project management with team collaboration features, real-time notifications, and comprehensive reporting.",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?w=800&h=600&fit=crop",
-      technologies: ["Node.js", "Express", "PostgreSQL", "Redis", "JWT"],
-      type: "api",
-      status: "completed",
-      featured: false,
-      liveDemo: null,
-      github: "https://github.com/user/task-api",
-      stars: 156,
-      forks: 34,
-      duration: "3 months",
-      year: 2024
-    },
-    {
-      id: 3,
-      title: "Weather Mobile App",
-      description: "Cross-platform mobile application providing detailed weather forecasts with location-based services and offline capabilities.",
-      image: "https://images.pixabay.com/photo/2016/11/29/06/15/clouds-1867908_1280.jpg?w=800&h=600&fit=crop",
-      technologies: ["React Native", "TypeScript", "Redux", "Firebase"],
-      type: "mobile",
-      status: "in-progress",
-      featured: false,
-      liveDemo: null,
-      github: "https://github.com/user/weather-app",
-      stars: 89,
-      forks: 23,
-      duration: "4 months",
-      year: 2024
-    },
-    {
-      id: 4,
-      title: "Data Analytics Dashboard",
-      description: "Interactive dashboard for business intelligence with real-time data visualization, custom reporting, and export capabilities.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-      technologies: ["React", "D3.js", "Python", "FastAPI", "PostgreSQL"],
-      type: "web-app",
-      status: "completed",
-      featured: false,
-      liveDemo: "https://analytics-demo.com",
-      github: "https://github.com/user/analytics",
-      stars: 198,
-      forks: 45,
-      duration: "5 months",
-      year: 2023
-    },
-    {
-      id: 5,
-      title: "Desktop Code Editor",
-      description: "Lightweight code editor with syntax highlighting, plugin system, and integrated terminal for multiple programming languages.",
-      image: "https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?w=800&h=600&fit=crop",
-      technologies: ["Electron", "JavaScript", "Monaco Editor", "Node.js"],
-      type: "desktop",
-      status: "completed",
-      featured: false,
-      liveDemo: null,
-      github: "https://github.com/user/code-editor",
-      stars: 312,
-      forks: 78,
-      duration: "8 months",
-      year: 2023
-    },
-    {
-      id: 6,
-      title: "Social Media API",
-      description: "Scalable social media backend with user authentication, post management, real-time messaging, and content moderation.",
-      image: "https://images.pixabay.com/photo/2017/06/23/10/48/network-2432406_1280.jpg?w=800&h=600&fit=crop",
-      technologies: ["Node.js", "GraphQL", "MongoDB", "Socket.io", "AWS"],
-      type: "api",
-      status: "completed",
-      featured: false,
-      liveDemo: null,
-      github: "https://github.com/user/social-api",
-      stars: 167,
-      forks: 41,
-      duration: "7 months",
-      year: 2023
     }
   ];
 
   // Mock data for technologies
   const technologies = [
-    { name: "React", category: "frontend", level: 5, projectCount: 8, icon: "Code2", description: "Modern UI library for building interactive interfaces" },
-    { name: "Node.js", category: "backend", level: 5, projectCount: 12, icon: "Server", description: "JavaScript runtime for server-side development" },
-    { name: "TypeScript", category: "frontend", level: 4, projectCount: 6, icon: "FileCode", description: "Typed superset of JavaScript" },
-    { name: "Python", category: "backend", level: 4, projectCount: 5, icon: "Code", description: "Versatile programming language for backend and data science" },
-    { name: "MongoDB", category: "database", level: 4, projectCount: 7, icon: "Database", description: "NoSQL document database" },
-    { name: "PostgreSQL", category: "database", level: 4, projectCount: 5, icon: "Database", description: "Advanced open-source relational database" },
-    { name: "AWS", category: "tools", level: 3, projectCount: 9, icon: "Cloud", description: "Amazon Web Services cloud platform" },
-    { name: "Docker", category: "tools", level: 4, projectCount: 8, icon: "Package", description: "Containerization platform" },
-    { name: "Next.js", category: "frontend", level: 4, projectCount: 4, icon: "Zap", description: "React framework for production" },
-    { name: "Express", category: "backend", level: 5, projectCount: 10, icon: "Server", description: "Fast, unopinionated web framework for Node.js" },
-    { name: "GraphQL", category: "backend", level: 3, projectCount: 3, icon: "GitBranch", description: "Query language for APIs" },
-    { name: "Redis", category: "database", level: 3, projectCount: 4, icon: "Zap", description: "In-memory data structure store" }
+    { name: "React", category: "frontend", level: 5, icon: "Code2", description: "Modern UI library for building interactive interfaces" },
+    { name: "Node.js", category: "backend", level: 5, icon: "Server", description: "JavaScript runtime for server-side development" },
+    { name: "MongoDB", category: "database", level: 4, icon: "Database", description: "NoSQL document database" },
+    { name: "Express", category: "backend", level: 4, icon: "Server", description: "Fast, unopinionated web framework for Node.js" },
+    { name: "Git", category: "tools", level: 4, icon: "GitBranch", description: "Distributed version control system for tracking changes in source code" },
+    { name: "GitHub", category: "tools", level: 4, icon: "Github", description: "Cloud-based platform for hosting and collaborating on Git repositories" },
+    { name: "Visual Studio Code", category: "tools", level: 5, icon: "Code", description: "Lightweight yet powerful source code editor with extensions and debugging tools" },
+    { name: "MySQL", category: "database", level: 4, icon: "Database", description: "Open-source relational database management system for structured data storage" }
+
+
   ];
 
   // Mock stats
   const stats = {
     totalProjects: projects?.length,
-    linesOfCode: "50K+",
-    githubStars: projects?.reduce((sum, project) => sum + (project?.stars || 0), 0),
-    activeUsers: "25K+"
+    linesOfCode: "10K+",
+    githubStars: projects?.reduce((sum, project) => sum + (project?.stars || 10), 0),
+    activeUsers: "1K+"
   };
 
   // Featured project
@@ -201,6 +117,20 @@ const Projects = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleDownload = () => {
+    const fileUrl =
+      "https://drive.google.com/file/d/1yeRdoTSmDM7ASUJ2OBpNtOqDqjIDL7d9/view?usp=drivesdk";
+
+    // Create a hidden link and trigger click
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.setAttribute("download", "My_Resume.pdf"); // This suggests a filename
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
+
   if (isLoading) {
     return (
       <div className="min-h-screen bg-background">
@@ -218,7 +148,7 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Projects - DevPortfolio Pro</title>
+        <title>Projects</title>
         <meta name="description" content="Explore my portfolio of full-stack development projects, featuring modern web applications, APIs, and mobile solutions built with cutting-edge technologies." />
         <meta name="keywords" content="portfolio, projects, web development, full-stack, React, Node.js, mobile apps" />
       </Helmet>
@@ -250,17 +180,26 @@ const Projects = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                 <a 
+                    href="https://github.com/ifthikar2267" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
                 <Button
                   variant="default"
                   size="lg"
                   iconName="Github"
                   iconPosition="left"
-                  className="gradient-primary text-white hover:opacity-90"
+                  className="gradient-primary text-white hover:opacity-90 rounded-xl"
                 >
                   View GitHub Profile
                 </Button>
+                </a>
                 <Button
                   variant="outline"
+                  className='rounded-xl'
+                  onClick={handleDownload}
                   size="lg"
                   iconName="Download"
                   iconPosition="left"
@@ -276,13 +215,13 @@ const Projects = () => {
         </section>
 
         {/* Featured Project */}
-        {featuredProject && (
+        {/* {featuredProject && (
           <section className="py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <FeaturedProject project={featuredProject} />
             </div>
           </section>
-        )}
+        )} */}
 
         {/* Technology Showcase */}
         <section className="py-12">
@@ -337,7 +276,7 @@ const Projects = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 lg:py-24">
+        {/* <section className="py-16 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border border-primary/20 rounded-2xl p-8 lg:p-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
@@ -368,7 +307,7 @@ const Projects = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       {/* Footer */}
       <footer className="bg-card border-t border-border py-8">
@@ -378,10 +317,10 @@ const Projects = () => {
               <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                 <Icon name="Code2" size={18} color="white" />
               </div>
-              <span className="text-lg font-bold gradient-text">DevPortfolio Pro</span>
+              <span className="text-lg font-bold gradient-text">Full Stack Developer Portfolio</span>
             </div>
             <div className="text-sm text-muted-foreground">
-              © {new Date()?.getFullYear()} DevPortfolio Pro. All rights reserved.
+              © {new Date()?.getFullYear()} Ifthikar. All rights reserved.
             </div>
           </div>
         </div>

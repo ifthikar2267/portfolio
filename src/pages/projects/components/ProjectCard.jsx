@@ -26,25 +26,39 @@ const ProjectCard = ({ project }) => {
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
           {project?.liveDemo && (
-            <Button
-              variant="secondary"
-              size="sm"
-              iconName="ExternalLink"
-              iconPosition="right"
-              className="bg-white/90 text-foreground hover:bg-white"
+            <a
+              href="https://skinsaviour-store.web.app/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Live Demo
-            </Button>
+              <Button
+                variant="secondary"
+                size="sm"
+                iconName="ExternalLink"
+                iconPosition="right"
+                className="bg-white/90 text-foreground hover:bg-white rounded-xl"
+              >
+                Live Demo
+              </Button>
+            </a>
           )}
           {project?.github && (
+             <a 
+                    href="https://github.com/ifthikar2267" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
+              
             <Button
               variant="outline"
               size="sm"
               iconName="Github"
-              className="border-white/30 text-white hover:bg-white/10"
+              className="border-white/30 text-white hover:bg-white/10 rounded-xl"
             >
               Code
             </Button>
+            </a>
           )}
         </div>
 
@@ -86,13 +100,13 @@ const ProjectCard = ({ project }) => {
           {project?.technologies?.slice(0, 4)?.map((tech, index) => (
             <span
               key={index}
-              className="px-2 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-md"
+              className="px-2 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-xl"
             >
               {tech}
             </span>
           ))}
           {project?.technologies?.length > 4 && (
-            <span className="px-2 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-md">
+            <span className="px-2 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-xl">
               +{project?.technologies?.length - 4} more
             </span>
           )}
@@ -104,7 +118,7 @@ const ProjectCard = ({ project }) => {
             {project?.github && (
               <div className="flex items-center space-x-1">
                 <Icon name="Star" size={14} />
-                <span>{project?.stars || 0}</span>
+                <span>{project?.stars || 100}</span>
               </div>
             )}
             {project?.duration && (
@@ -126,7 +140,7 @@ const ProjectCard = ({ project }) => {
           fullWidth
           iconName="ArrowRight"
           iconPosition="right"
-          className="group-hover:border-primary group-hover:text-primary transition-colors duration-200"
+          className="group-hover:border-primary group-hover:text-primary transition-colors duration-200 rounded-xl"
         >
           View Details
         </Button>
