@@ -109,7 +109,8 @@ const Header = () => {
               </button>
               
               {/* Dropdown */}
-              <div className="absolute top-full right-0 mt-2 w-48 bg-popover border border-border rounded-lg shadow-brand-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
+              <div className="absolute top-full right-0 mt-2 w-48 bg-popover border border-border rounded-lg
+              shadow-brand-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
                 <div className="py-2">
                   {moreMenuItems?.map((item) => (
                     <Link
@@ -143,7 +144,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors duration-200"
+            className="md:hidden p-2 rounded-lg font-bold text-[#002B5C] hover:text-foreground hover:bg-muted/50 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
             <Icon 
@@ -168,8 +169,8 @@ const Header = () => {
                 onClick={closeMobileMenu}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActivePath(item?.path)
-                    ? 'bg-primary/10 text-primary shadow-sm'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+                    ? 'bg-primary/10 text-warning shadow-sm'
+                    : 'text-black-foreground hover:text-foreground hover:bg-muted/50'
                 }`}
               >
                 <Icon name={item?.icon} size={18} />
@@ -181,7 +182,7 @@ const Header = () => {
             <div className="pt-4 border-t border-border">
               <button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#3F72AF] text-[#F9F7F7] font-medium hover:bg-[#112D4E] transition-colors duration-200"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#112D4E] text-[#F9F7F7] font-medium hover:bg-[#3F72AF] transition-colors duration-200"
     >
       <FiDownload size={18} />
       <span>Resume</span>
