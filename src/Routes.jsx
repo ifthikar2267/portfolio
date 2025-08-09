@@ -7,7 +7,7 @@ import CertificationsPage from './pages/certifications';
 import Education from './pages/education';
 import Contact from './pages/contact';
 import Projects from './pages/projects';
-import AboutPage from './pages/about';
+//import AboutPage from './pages/about';
 import Homepage from './pages/homepage';
 
 const Routes = () => {
@@ -22,7 +22,7 @@ const Routes = () => {
         <Route path="/education" element={<Education />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<AboutPage />} />
+        {/* <Route path="/about" element={<AboutPage />} /> */}
         <Route path="/homepage" element={<Homepage />} />
         <Route path="*" element={<NotFound />} />
       </RouterRoutes>

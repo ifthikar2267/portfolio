@@ -18,7 +18,7 @@ const Header = () => {
   ];
 
   const moreMenuItems = [
-    { name: 'About', path: '/about', icon: 'User' },
+    // { name: 'About', path: '/about', icon: 'User' },
     { name: 'Contact', path: '/contact', icon: 'Mail' }
   ];
 
