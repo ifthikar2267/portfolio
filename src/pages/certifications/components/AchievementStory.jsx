@@ -7,49 +7,47 @@ const AchievementStory = () => {
 
   const stories = [
     {
-      id: 1,
-      title: 'AWS Solutions Architect Journey',
-      certification: 'AWS Solutions Architect Professional',
-      icon: 'Cloud',
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
-      motivation: `After working on several cloud migration projects, I realized the need to deepen my understanding of AWS architectural patterns. The complexity of designing fault-tolerant, scalable systems required more than just hands-on experience.`,
-      challenge: `The exam covers an incredibly broad range of services and scenarios. The most challenging aspect was understanding the nuanced differences between similar services and when to use each one in different architectural contexts.`,
-      preparation: `I spent 4 months preparing with a combination of hands-on labs, practice exams, and real-world project implementations. AWS Well-Architected Framework became my bible, and I built several demo applications to test different architectural patterns.`,
-      impact: `This certification transformed how I approach system design. I now consider cost optimization, security, and operational excellence from the very beginning of any project. It's helped me lead architecture discussions with confidence and credibility.`,
-      resources: [
-        'AWS Well-Architected Framework','A Cloud Guru Practice Labs','AWS Documentation Deep Dives','Real-world project implementations'
-      ],
-      timeline: '4 months intensive study',nextGoal: 'AWS DevOps Engineer Professional'
-    },
-    {
-      id: 2,
-      title: 'React Mastery Achievement',
-      certification: 'React Developer Certification',icon: 'Code2',color: 'text-purple-600',bgColor: 'bg-purple-50',
-      motivation: `As React evolved rapidly with hooks, concurrent features, and new patterns, I wanted to ensure my knowledge was comprehensive and up-to-date. Many developers know React basics, but mastering advanced patterns sets you apart.`,
-      challenge: `The certification required deep understanding of React internals, performance optimization techniques, and advanced patterns like render props, higher-order components, and custom hooks. Testing strategies were particularly challenging.`,
-      preparation: `I built a comprehensive project showcasing every React pattern, contributed to open-source React projects, and mentored junior developers. Teaching others helped solidify my own understanding of complex concepts.`,
-      impact: `This certification validated my React expertise and opened doors to senior frontend roles. I now lead React architecture decisions and have become the go-to person for complex React challenges in my team.`,
-      resources: [
-        'React Official Documentation','Kent C. Dodds Testing Library','Open Source Contributions','Mentoring Junior Developers'
-      ],
-      timeline: '3 months focused learning',nextGoal: 'Next.js Expert Certification'
-    },
-    {
+        id: 1,
+        title: 'MERN Stack Development Journey',
+        certification: 'MERN Full Stack Developer',
+        icon: 'Code',
+        color: 'text-green-600',
+        bgColor: 'bg-green-50',
+        motivation: `While building my Skin Saviour e-commerce project, I realized I needed an end-to-end skill set to handle both frontend and backend seamlessly. I wanted the ability to design, develop, and deploy a complete application without depending on multiple tech stacks.`,
+        challenge: `The most challenging aspect was mastering how each MERN component interacts — React for dynamic UI, Node.js and Express for API handling, and MongoDB for flexible data modeling — and ensuring smooth communication between them.`,
+        preparation: `Over 3 months, I followed a structured learning plan combining Udemy courses, official documentation, and practical projects. I built multiple applications, including a product recommendation system with AI integration, to reinforce my understanding.`,
+        impact: `This journey completely changed how I approach web development. I can now take an idea from concept to deployment independently, optimize performance, and integrate advanced features like authentication, payment gateways, and AI-based recommendations.`,
+        resources: [
+          'Udemy MERN Full Stack Bootcamp',
+          'MongoDB & Express Documentation',
+          'React.js Official Docs',
+          'Node.js Crash Courses',
+          'Real-world MERN Projects'
+        ],
+        timeline: '3 months focused learning and project building',
+        nextGoal: 'Master Next.js for server-side rendering and advanced performance optimization'
+      },
+
+      {
       id: 3,
-      title: 'Security Mindset Development',
-      certification: 'CompTIA Security+',icon: 'Shield',color: 'text-red-600',bgColor: 'bg-red-50',motivation: `Security breaches in the news made me realize that every developer needs to think like a security professional. Writing secure code isn't optional—it's a fundamental responsibility that requires formal training.`,
-      challenge: `Transitioning from a development mindset to a security mindset was challenging. Learning to think like an attacker while building defensive systems required a complete shift in perspective.`,
-      preparation: `I set up a home lab with vulnerable applications, practiced penetration testing techniques, and studied real-world security incidents. The hands-on approach helped me understand both offensive and defensive security.`,
-      impact: `This certification changed how I write code. I now perform security reviews, implement secure coding practices by default, and can identify vulnerabilities during code reviews. It's made me a more well-rounded developer.`,
+      title: 'MongoDB Mastery Achievement',
+      certification: 'MongoDB Developer Certification',
+      icon: 'Database',
+      color: 'text-emerald-600',
+      bgColor: 'bg-emerald-50',
+      motivation: `Working on multiple MERN stack projects made me realize how crucial a deep understanding of MongoDB is for designing scalable and efficient data models. I wanted to move beyond basic CRUD and master indexing, aggregation, and performance optimization.`,
+      challenge: `The certification required mastery over MongoDB schema design, complex aggregation pipelines, indexing strategies, replication, and sharding. Understanding how to optimize queries for large datasets while ensuring data integrity was particularly challenging.`,
+      preparation: `I dedicated 3 months to hands-on practice, building real-world database architectures for e-commerce, analytics, and AI-based recommendation systems. I explored advanced aggregation stages, experimented with replica sets, and simulated sharded cluster environments.`,
+      impact: `This achievement significantly improved how I approach backend design. I now create MongoDB schemas that are optimized for both performance and scalability, making my applications faster and more reliable.`,
       resources: [
-        'OWASP Top 10 Deep Study',
-        'Vulnerable Application Labs',
-        'Security Incident Case Studies',
-        'Penetration Testing Practice'
+        'MongoDB University Courses',
+        'MongoDB Documentation',
+        'MERN Stack Real-world Projects',
+        'Performance Tuning Guides',
+        'Hands-on Practice with Aggregation Pipelines'
       ],
-      timeline: '5 months comprehensive study',
-      nextGoal: 'AWS Security Specialty'
+      timeline: '3 months focused learning',
+      nextGoal: 'Build a full-stack project integrating MySQL with Node.js and React'
     }
   ];
 
@@ -60,9 +58,10 @@ const AchievementStory = () => {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h3 className="text-xl font-semibold text-foreground mb-2">Achievement Stories</h3>
-          <p className="text-sm text-muted-foreground">Personal journeys behind the certifications</p>
+          {/* <p className="text-sm text-muted-foreground">Personal journeys behind the certifications</p> */}
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex flex-wrap items-center gap-2">
+
           {stories?.map((story, index) => (
             <Button
               key={story?.id}
@@ -72,6 +71,7 @@ const AchievementStory = () => {
               iconName={story?.icon}
               iconPosition="left"
               iconSize={16}
+              className='rounded-xl'
             >
               {story?.title?.split(' ')?.[0]}
             </Button>
@@ -173,6 +173,7 @@ const AchievementStory = () => {
             iconName="ChevronLeft"
             iconPosition="left"
             iconSize={16}
+            className='rounded-xl'
           >
             Previous
           </Button>
@@ -196,6 +197,7 @@ const AchievementStory = () => {
             iconName="ChevronRight"
             iconPosition="right"
             iconSize={16}
+            className='rounded-xl'
           >
             Next
           </Button>

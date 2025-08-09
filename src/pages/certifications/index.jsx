@@ -18,136 +18,73 @@ const CertificationsPage = () => {
   const certifications = [
     {
       id: 1,
-      name: 'AWS Solutions Architect Professional',
-      issuer: 'Amazon Web Services',
-      description: 'Advanced certification for designing distributed applications and systems on AWS platform with focus on scalability, security, and cost optimization.',
-      level: 'Professional',
-      status: 'Active',
-      category: 'Cloud',
-      earnedDate: '2024-03-15',
-      expiryDate: '2027-03-15',
-      credentialId: 'AWS-SAP-2024-001',
-      verificationUrl: 'https://aws.amazon.com/verification/AWS-SAP-2024-001',
-      badgeUrl: 'https://credly.com/badges/aws-sap-badge',
-      icon: 'Cloud',
-      skills: ['AWS Architecture', 'System Design', 'Cost Optimization', 'Security']
+      name: 'The MERN Fullstack',
+      issuer: 'udemy',
+      description: 'A certification course on Udemy covering full-stack web development using MongoDB, Express.js, React, and Node.js (MERN stack).',
+      category: 'Fullstack',
+      earnedDate: '2024-03-11',
+      verificationUrl: 'https://www.udemy.com/certificate/UC-20a64cb5-be20-4132-bab2-a465ba040255/',
+      icon: 'Code2',
+      skills: ["MongoDB", "Express.js", "React", "Node.js"]
     },
     {
       id: 2,
-      name: 'React Developer Certification',
-      issuer: 'Meta (Facebook)',
-      description: 'Comprehensive certification covering advanced React patterns, hooks, performance optimization, and modern development practices.',
-      level: 'Expert',
-      status: 'Active',
-      category: 'Frontend',
-      earnedDate: '2024-01-20',
-      expiryDate: '2026-01-20',
-      credentialId: 'META-REACT-2024-007',
-      verificationUrl: 'https://developers.facebook.com/certification/META-REACT-2024-007',
-      badgeUrl: 'https://credly.com/badges/react-expert-badge',
-      icon: 'Code2',
-      skills: ['React', 'Hooks', 'Performance', 'Testing']
+      name: 'MongoDB',
+      issuer: 'Great Learning',
+      description: 'A certification course from Great Learning covering MongoDB developer fundamentals and practical applications.',
+      category: 'Database',
+      earnedDate: '2024-12-10',
+      verificationUrl: 'https://drive.google.com/file/d/1PPnPhO4xSAt8V-GBsoKrMnMJzny3rgDT/view?usp=drivesdk',
+      icon: 'Database',
+      skills: ['MongoDB']
     },
     {
       id: 3,
-      name: 'Node.js Application Developer',
-      issuer: 'OpenJS Foundation',
-      description: 'Professional certification for building scalable server-side applications using Node.js, Express, and related technologies.',
-      level: 'Professional',
-      status: 'Active',
+      name: 'Blockchain',
+      issuer: 'Kerala Blockchain Academy',
+      description: 'Gained hands-on knowledge of blockchain fundamentals, consensus algorithms, smart contracts, and industry applications through practical learning and projects.',
       category: 'Backend',
-      earnedDate: '2024-04-10',
-      expiryDate: '2026-04-10',
-      credentialId: 'NODEJS-DEV-2024-012',
-      verificationUrl: 'https://openjsf.org/certification/NODEJS-DEV-2024-012',
-      badgeUrl: 'https://credly.com/badges/nodejs-developer-badge',
-      icon: 'Server',
-      skills: ['Node.js', 'Express', 'API Design', 'Microservices']
+      earnedDate: '2024-10-05',
+      verificationUrl: 'https://drive.google.com/file/d/1P-Md0xy8LlDMdrCfF0zFPkg29A100Ro-/view?usp=drivesdk',
+      icon: 'Server'
     },
     {
       id: 4,
-      name: 'MongoDB Developer Associate',
-      issuer: 'MongoDB Inc.',
-      description: 'Certification demonstrating proficiency in MongoDB database design, querying, indexing, and application development.',
-      level: 'Associate',
-      status: 'Renewal Due',
-      category: 'Database',
-      earnedDate: '2023-06-15',
-      expiryDate: '2024-06-15',
-      credentialId: 'MONGO-DEV-2023-089',
-      verificationUrl: 'https://university.mongodb.com/certification/MONGO-DEV-2023-089',
-      badgeUrl: 'https://credly.com/badges/mongodb-developer-badge',
-      icon: 'Database',
-      skills: ['MongoDB', 'Aggregation', 'Indexing', 'Schema Design']
+      name: 'Python',
+      issuer: 'Guvi',
+      description: 'A certification course from Guvi covering Python programming fundamentals and practical applications.',
+      category: 'Server',
+      earnedDate: '2023-08-15',
+      verificationUrl: 'https://drive.google.com/file/d/1P1Wnq2JW4gt8ZQi_sK6EGSnFZgFnvbY-/view?usp=drivesdk',
+      icon: 'Server',
+      skills: ['Python']
     },
     {
       id: 5,
-      name: 'CompTIA Security+',
-      issuer: 'CompTIA',
-      description: 'Foundational cybersecurity certification covering network security, compliance, operational security, and threats.',
-      level: 'Foundational',
-      status: 'Active',
-      category: 'Security',
-      earnedDate: '2024-02-28',
-      expiryDate: '2027-02-28',
-      credentialId: 'COMPTIA-SEC-2024-156',
-      verificationUrl: 'https://comptia.org/certifications/security/verify/COMPTIA-SEC-2024-156',
-      badgeUrl: 'https://credly.com/badges/security-plus-badge',
-      icon: 'Shield',
-      skills: ['Network Security', 'Risk Management', 'Cryptography', 'Compliance']
+      name: 'Oracle Cloud',
+      issuer: 'Oracle',
+      description: 'An Oracle certification validating foundational knowledge of databases, SQL, and Oracle Cloud concepts.',
+      category: 'Cloud',
+      earnedDate: '2024-03-28',
+      verificationUrl: 'https://drive.google.com/file/d/1PT0X0XoflrdppIB6ydc3eL4yumCv1ITT/view?usp=drivesdk',
+      icon: 'Cloud',
+      skills: ['Cloud']
     },
     {
       id: 6,
-      name: 'Google Cloud Professional Developer',
-      issuer: 'Google Cloud',
-      description: 'Professional-level certification for designing, building, and deploying applications on Google Cloud Platform.',
-      level: 'Professional',
-      status: 'Active',
-      category: 'Cloud',
-      earnedDate: '2023-11-20',
-      expiryDate: '2025-11-20',
-      credentialId: 'GCP-DEV-2023-234',
-      verificationUrl: 'https://cloud.google.com/certification/verify/GCP-DEV-2023-234',
-      badgeUrl: 'https://credly.com/badges/gcp-developer-badge',
-      icon: 'CloudCog',
-      skills: ['GCP Services', 'Kubernetes', 'CI/CD', 'Monitoring']
-    },
-    {
-      id: 7,
-      name: 'Certified Kubernetes Administrator',
-      issuer: 'Cloud Native Computing Foundation',
-      description: 'Hands-on certification for Kubernetes cluster administration, troubleshooting, and application lifecycle management.',
-      level: 'Professional',
-      status: 'Active',
-      category: 'DevOps',
-      earnedDate: '2024-05-12',
-      expiryDate: '2027-05-12',
-      credentialId: 'CKA-2024-445',
-      verificationUrl: 'https://cncf.io/certification/verify/CKA-2024-445',
-      badgeUrl: 'https://credly.com/badges/cka-badge',
-      icon: 'Settings',
-      skills: ['Kubernetes', 'Container Orchestration', 'Cluster Management', 'Troubleshooting']
-    },
-    {
-      id: 8,
-      name: 'Docker Certified Associate',
-      issuer: 'Docker Inc.',
-      description: 'Certification validating skills in containerization, Docker fundamentals, and container orchestration basics.',
-      level: 'Associate',
-      status: 'Expired',
-      category: 'DevOps',
-      earnedDate: '2022-08-15',
-      expiryDate: '2024-08-15',
-      credentialId: 'DOCKER-CERT-2022-678',
-      verificationUrl: 'https://docker.com/certification/verify/DOCKER-CERT-2022-678',
-      badgeUrl: 'https://credly.com/badges/docker-associate-badge',
-      icon: 'Container',
-      skills: ['Docker', 'Containerization', 'Image Management', 'Networking']
+      name: 'AI',
+      issuer: 'Guvi',
+      description: 'A certification course from Guvi on the fundamentals and applications of Artificial Intelligence.',
+      category: 'Backend',
+      earnedDate: '2023-18-15',
+      verificationUrl: 'https://drive.google.com/file/d/1P1xWi5AT0gcuanWK3630KsuiVZTp5HCv/view?usp=drivesdk',
+      icon: 'Brain',
+      skills: ['Artificial Intelligence']
     }
   ];
 
   // Filter options
-  const categories = ['All', 'Cloud', 'Frontend', 'Backend', 'Database', 'Security', 'DevOps'];
+  const categories = ['All', 'Cloud', 'Frontend', 'Backend', 'Database', 'Fullstack'];
   const levels = ['All', 'Foundational', 'Associate', 'Professional', 'Expert'];
   const statuses = ['All', 'Active', 'Renewal Due', 'Expired'];
 
@@ -176,9 +113,9 @@ const CertificationsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Professional Certifications | DevPortfolio Pro</title>
-        <meta name="description" content="Comprehensive display of professional certifications, technical credentials, and continuous learning achievements in cloud computing, web development, and cybersecurity." />
-        <meta name="keywords" content="certifications, AWS, React, Node.js, MongoDB, security, professional development, technical credentials" />
+        <title>Professional Certifications</title>
+        <meta name="description" content="Comprehensive display of professional certifications, technical credentials, and continuous learning achievements in Fullstac development, web development and cloud." />
+        <meta name="keywords" content="certifications, Oracle, React, Node.js, MongoDB, professional development, technical credentials" />
       </Helmet>
       <Header />
       <main className="pt-16">
@@ -195,21 +132,20 @@ const CertificationsPage = () => {
               Professional <span className="gradient-text">Certifications</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Industry-recognized credentials validating expertise in cloud computing, full-stack development, 
-              and cybersecurity. Each certification represents a commitment to excellence and continuous learning.
+              Industry-recognized credentials validating expertise in web development, full-stack development, cloud computing. Each certification represents a commitment to excellence and continuous learning.
             </p>
             <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Icon name="CheckCircle" size={16} className="text-green-600" />
-                <span>8 Active Certifications</span>
+                <span>6 Active Certifications</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Icon name="TrendingUp" size={16} className="text-blue-600" />
-                <span>3 Earned This Year</span>
+                <span>4 Earned Last Year</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Icon name="Star" size={16} className="text-purple-600" />
-                <span>2 Expert Level</span>
+                <span>1 Expert Level</span>
               </div>
             </div>
           </div>
@@ -291,7 +227,7 @@ const CertificationsPage = () => {
         </section>
 
         {/* Certification Roadmap */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-foreground mb-4">Learning Roadmaps</h2>
@@ -301,7 +237,7 @@ const CertificationsPage = () => {
             </div>
             <CertificationRoadmap />
           </div>
-        </section>
+        </section> */}
 
         {/* Achievement Stories */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -317,7 +253,7 @@ const CertificationsPage = () => {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 gradient-primary">
+        {/* <section className="py-20 px-4 sm:px-6 lg:px-8 gradient-primary">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Work with a Certified Professional?
@@ -343,7 +279,7 @@ const CertificationsPage = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12 px-4 sm:px-6 lg:px-8">
@@ -354,21 +290,18 @@ const CertificationsPage = () => {
                 <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                   <Icon name="Code2" size={18} color="white" />
                 </div>
-                <span className="text-lg font-bold gradient-text">DevPortfolio Pro</span>
+                <span className="text-lg font-bold gradient-text">Ifthikar-Portfolio</span>
               </div>
               <p className="text-muted-foreground mb-4 max-w-md">
                 Professional certifications validate expertise and demonstrate commitment to continuous learning 
                 in the ever-evolving technology landscape.
               </p>
               <div className="flex items-center space-x-4">
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/ifthikar2267" className="text-muted-foreground hover:text-primary transition-colors">
                   <Icon name="Github" size={20} />
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/ifthikar-mj-59b8a8250" className="text-muted-foreground hover:text-primary transition-colors">
                   <Icon name="Linkedin" size={20} />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  <Icon name="Twitter" size={20} />
                 </a>
               </div>
             </div>
@@ -386,17 +319,17 @@ const CertificationsPage = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-4">Certifications</h4>
               <ul className="space-y-2">
-                <li><span className="text-muted-foreground">AWS Solutions Architect</span></li>
-                <li><span className="text-muted-foreground">React Developer</span></li>
-                <li><span className="text-muted-foreground">Node.js Professional</span></li>
-                <li><span className="text-muted-foreground">Security+ Certified</span></li>
+                <li><span className="text-muted-foreground">MERN Fullstack Development</span></li>
+                <li><span className="text-muted-foreground">MongoDB</span></li>
+                <li><span className="text-muted-foreground">Python</span></li>
+                <li><span className="text-muted-foreground">Blockchain</span></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between">
             <p className="text-muted-foreground text-sm">
-              © {new Date()?.getFullYear()} DevPortfolio Pro. All rights reserved.
+              © {new Date()?.getFullYear()} Ifthikar. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>

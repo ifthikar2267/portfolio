@@ -27,17 +27,17 @@ const Homepage = () => {
         />
         <meta 
           name="keywords" 
-          content="full-stack developer, React developer, TypeScript, Node.js, web development, portfolio, software engineer" 
+          content="full-stack developer, React developer, Node.js, web development, portfolio, software engineer" 
         />
-        <meta name="author" content="DevPortfolio Pro" />
+        <meta name="author" content="ifthikar-portfolio" />
         <meta property="og:title" content="DevPortfolio Pro - Full-Stack Developer" />
         <meta 
           property="og:description" 
           content="Building the future through code. Professional full-stack developer with expertise in modern web technologies." 
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://devportfolio-pro.vercel.app" />
-        <link rel="canonical" href="https://devportfolio-pro.vercel.app" />
+        <meta property="og:url" content="https://ifthikar-portfolio.vercel.app" />
+        <link rel="canonical" href="https://ifthikar-portfolio.vercel.app" />
       </Helmet>
       <div className="min-h-screen bg-background">
         <Header />

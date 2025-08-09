@@ -32,7 +32,7 @@ const CertificationCard = ({ certification }) => {
   };
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6 hover:shadow-brand-lg transition-all duration-300 group">
+    <div className="bg-card border border-border rounded-xl p-6 hover:shadow-brand-lg transition-all duration-300 group ">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-4">
           <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
@@ -73,17 +73,17 @@ const CertificationCard = ({ certification }) => {
         {certification?.skills?.map((skill, index) => (
           <span
             key={index}
-            className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-md"
+            className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded-xl"
           >
             {skill}
           </span>
         ))}
       </div>
       <div className="flex items-center justify-between pt-4 border-t border-border">
-        <div className="flex items-center space-x-2 text-xs text-muted-foreground">
+        {/* <div className="flex items-center space-x-2 text-xs text-muted-foreground">
           <Icon name="Award" size={14} />
           <span>ID: {certification?.credentialId}</span>
-        </div>
+        </div> */}
         <div className="flex items-center space-x-2">
           {certification?.verificationUrl && (
             <Button
@@ -91,6 +91,7 @@ const CertificationCard = ({ certification }) => {
               size="xs"
               onClick={() => window.open(certification?.verificationUrl, '_blank')}
               iconName="ExternalLink"
+              className='rounded-xl'
               iconPosition="right"
               iconSize={12}
             >
