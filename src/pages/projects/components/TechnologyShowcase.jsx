@@ -44,7 +44,7 @@ const TechnologyShowcase = ({ technologies }) => {
         {filteredTechnologies?.map((tech, index) => (
           <div
             key={index}
-            className="group relative bg-background border border-border rounded-lg p-4 text-center hover:border-primary/30 hover:shadow-brand transition-all duration-200 cursor-pointer rounded-xl"
+            className="group relative bg-background border border-border rounded-lg p-2 text-center hover:border-primary/30 hover:shadow-brand transition-all duration-200 cursor-pointer rounded-xl"
           >
             {/* Technology Icon/Logo */}
             <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">

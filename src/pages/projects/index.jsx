@@ -148,7 +148,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <div className="min-h-screen bg-primary overflow-x-hidden">
       <Helmet>
         <title>Projects</title>
         <meta name="description" content="Explore my portfolio of full-stack development projects, featuring modern web applications, APIs, and mobile solutions built with cutting-edge technologies." />
@@ -157,7 +157,7 @@ const Projects = () => {
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative py-16 lg:py-24 overflow-hidden">
+        <section className="relative py-5 lg:py-24 overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
@@ -172,11 +172,11 @@ const Projects = () => {
                   <Icon name="FolderOpen" size={24} color="white" />
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold">
-                  <span className="gradient-text">My Projects</span>
+                  <span className="text-[#002B5C]">My Projects</span>
                 </h1>
               </div>
               
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-black-foreground font-semibold max-w-3xl mx-auto leading-relaxed">
                 Explore my portfolio of full-stack development projects, featuring modern web applications, 
                 APIs, and mobile solutions built with cutting-edge technologies and best practices.
               </p>
@@ -189,7 +189,7 @@ const Projects = () => {
                     className="text-muted-foreground hover:text-primary transition-colors duration-200"
                   >
                 <Button
-                  variant="default"
+                  variant="outline"
                   size="lg"
                   iconName="Github"
                   iconPosition="left"
@@ -200,7 +200,7 @@ const Projects = () => {
                 </a>
                 <Button
                   variant="outline"
-                  className='rounded-xl'
+                  className='rounded-xl gradient-primary text-white hover:opacity-90 rounded-xl'
                   onClick={handleDownload}
                   size="lg"
                   iconName="Download"
@@ -226,7 +226,7 @@ const Projects = () => {
         )} */}
 
         {/* Technology Showcase */}
-        <section className="py-12">
+        <section className="py-5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <TechnologyShowcase technologies={technologies} />
           </div>
@@ -319,7 +319,7 @@ const Projects = () => {
               <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                 <Icon name="Code2" size={18} color="white" />
               </div>
-              <span className="text-lg font-bold gradient-text">Full Stack Developer Portfolio</span>
+              <span className="text-lg font-bold gradient-text">Ifthikar Portfolio</span>
             </div>
             <div className="text-sm text-muted-foreground">
               © {new Date()?.getFullYear()} Ifthikar. All rights reserved.

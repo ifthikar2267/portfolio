@@ -70,14 +70,14 @@ const SkillsVisualization = () => {
   };
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-5 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-5"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-0">
             Technical <span className="gradient-text">Expertise</span>

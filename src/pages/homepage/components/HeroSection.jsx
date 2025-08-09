@@ -93,9 +93,30 @@ export async function getProducts() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-10"
           >
-            <div className="space-y-4">
+            <div className="space-y-2">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+              >
+                Hi,{' '}
+                <span className="text-primary">I'm</span>
+                <br />
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+              >
+                Seyed Ahamed{' '}
+                <span className="gradient-text">Ifthikar</span>
+                <br />
+              </motion.h1>
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -108,17 +129,7 @@ export async function getProducts() {
                 </span>
               </motion.div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
-              >
-                Seyed Ahamed{' '}
-                <span className="gradient-text">Ifthikar</span>
-                <br />
-              </motion.h1>
-
+              
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
