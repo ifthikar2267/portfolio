@@ -22,18 +22,6 @@ const Contact = () => {
       label: 'Contact Methods',
       icon: 'Phone',
       description: 'Multiple ways to reach me'
-    },
-    {
-      id: 'availability',
-      label: 'Availability',
-      icon: 'Calendar',
-      description: 'Schedule a consultation'
-    },
-    {
-      id: 'references',
-      label: 'References',
-      icon: 'Users',
-      description: 'Professional recommendations'
     }
   ];
 
@@ -43,10 +31,10 @@ const Contact = () => {
         return <ContactForm />;
       case 'methods':
         return <ContactMethods />;
-      case 'availability':
-        return <AvailabilityCalendar />;
-      case 'references':
-        return <ProfessionalReferences />;
+      // case 'availability':
+      //   return <AvailabilityCalendar />;
+      // case 'references':
+      //   return <ProfessionalReferences />;
       default:
         return <ContactForm />;
     }
@@ -55,13 +43,13 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Contact - DevPortfolio Pro | Let's Build Something Amazing</title>
+        <title>Contact - Ifthikar | Let's Build Something Amazing</title>
         <meta name="description" content="Get in touch to discuss your next project. Available for full-time roles, contract work, consultations, and collaborations. Professional references available." />
-        <meta name="keywords" content="contact developer, hire full-stack developer, project consultation, web development services, technical consultation" />
-        <meta property="og:title" content="Contact - DevPortfolio Pro" />
+        <meta name="keywords" content="contact developer, hire full-stack developer, project consultation, web development services" />
+        <meta property="og:title" content="Contact - Ifthikar" />
         <meta property="og:description" content="Let's discuss your next project. Professional full-stack developer available for new opportunities." />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://devportfolio-pro.com/contact" />
+        <link rel="canonical" href="https://ifthikar-portfolio.vercel.app/contact" />
       </Helmet>
       <Header />
       <main className="pt-16">
@@ -85,8 +73,7 @@ const Contact = () => {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-              Whether you're looking to hire a full-stack developer, need technical consultation, 
-              or want to collaborate on an exciting project, I'd love to hear from you.
+              Whether you're looking to hire a full-stack developer, or want to collaborate on an exciting project, I'd love to hear from you.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
@@ -115,7 +102,7 @@ const Contact = () => {
                   <button
                     key={tab?.id}
                     onClick={() => setActiveTab(tab?.id)}
-                    className={`p-4 rounded-lg text-left transition-all duration-200 ${
+                    className={`p-4 rounded-xl text-left transition-all duration-200 ${
                       activeTab === tab?.id
                         ? 'bg-primary text-white shadow-md'
                         : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
@@ -164,19 +151,19 @@ const Contact = () => {
                   For time-sensitive projects or immediate consultation needs, 
                   reach out directly via email or LinkedIn.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center rounded-xl">
                   <a
-                    href="mailto:alex.developer@email.com?subject=Urgent Project Inquiry"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors duration-200"
+                    href="mailto:meetifthikarhere@gmail.com"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white text-primary rounded-lg font-semibold hover:bg-white/90 transition-colors duration-200 rounded-xl"
                   >
                     <Icon name="Mail" size={20} />
                     <span>Email Directly</span>
                   </a>
                   <a
-                    href="https://linkedin.com/in/alex-developer-pro"
+                    href="https://www.linkedin.com/in/ifthikar-mj-59b8a8250"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors duration-200"
+                    className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors duration-200 rounded-xl"
                   >
                     <Icon name="Linkedin" size={20} />
                     <span>Connect on LinkedIn</span>
@@ -197,8 +184,8 @@ const Contact = () => {
                   <Icon name="Code2" size={18} color="white" strokeWidth={2.5} />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-lg font-bold gradient-text">DevPortfolio</span>
-                  <span className="text-xs text-muted-foreground -mt-1">Pro</span>
+                  <span className="text-lg font-bold gradient-text">Ifthikar</span>
+                  <span className="text-xs text-muted-foreground -mt-1">Portfolio</span>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
@@ -206,14 +193,11 @@ const Contact = () => {
                 full-stack expertise and user-first thinking.
               </p>
               <div className="flex space-x-4">
-                <a href="https://github.com/alexdeveloper" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                <a href="https://github.com/ifthikar2267" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                   <Icon name="Github" size={20} />
                 </a>
-                <a href="https://linkedin.com/in/alex-developer-pro" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                <a href="https://www.linkedin.com/in/ifthikar-mj-59b8a8250" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                   <Icon name="Linkedin" size={20} />
-                </a>
-                <a href="https://twitter.com/alexdev" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  <Icon name="Twitter" size={20} />
                 </a>
               </div>
             </div>
@@ -231,9 +215,7 @@ const Contact = () => {
             <div>
               <h4 className="font-semibold text-foreground mb-4">Contact Info</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
-                <p>alex.developer@email.com</p>
-                <p>+1 (555) 123-4567</p>
-                <p>Available Mon-Fri, 9 AM - 6 PM EST</p>
+                <p>meetifthikarhere@gmail.com</p>
                 <p>Currently accepting new projects</p>
               </div>
             </div>
@@ -241,7 +223,7 @@ const Contact = () => {
           
           <div className="border-t border-border mt-8 pt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              © {new Date()?.getFullYear()} DevPortfolio Pro. All rights reserved.
+              © {new Date()?.getFullYear()} Ifthikar. All rights reserved.
             </p>
           </div>
         </div>

@@ -4,12 +4,13 @@ import Input from '../../../components/ui/Input';
 import Select from '../../../components/ui/Select';
 import { Checkbox } from '../../../components/ui/Checkbox';
 import Icon from '../../../components/AppIcon';
+import emailjs from 'emailjs-com';
+
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
     projectType: '',
     budget: '',
     timeline: '',
@@ -24,9 +25,7 @@ const ContactForm = () => {
   const projectTypes = [
     { value: 'full-time', label: 'Full-time Position' },
     { value: 'contract', label: 'Contract Work' },
-    { value: 'consultation', label: 'Technical Consultation' },
-    { value: 'collaboration', label: 'Open Source Collaboration' },
-    { value: 'mentorship', label: 'Mentorship/Coaching' }
+    { value: 'collaboration', label: 'Open Source Collaboration' }
   ];
 
   const budgetRanges = [
@@ -50,11 +49,8 @@ const ContactForm = () => {
     { value: 'frontend', label: 'Frontend Development' },
     { value: 'backend', label: 'Backend Development' },
     { value: 'fullstack', label: 'Full-Stack Development' },
-    { value: 'mobile', label: 'Mobile Development' },
-    { value: 'devops', label: 'DevOps & Infrastructure' },
-    { value: 'consulting', label: 'Technical Consulting' },
-    { value: 'code-review', label: 'Code Review & Audit' },
-    { value: 'architecture', label: 'System Architecture' }
+    { value: 'web', label: 'Website Development' }
+    
   ];
 
   const handleInputChange = (field, value) => {
@@ -74,15 +70,38 @@ const ContactForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e?.preventDefault();
+    e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+
+    try {
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        projectType: formData.projectType,
+        budget: formData.budget,
+        timeline: formData.timeline,
+        description: formData.description,
+        services: formData.services.join(', '),
+        preferredContact: formData.preferredContact
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_nfdbnnk',     // ⬅ Replace with EmailJS service ID
+        'template_tjba5yp',    // ⬅ Replace with EmailJS template ID
+        templateParams,
+        'niJWn9ljVu12-Vojb'      // ⬅ Replace with EmailJS public key
+      );
+
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      alert('Failed to send message. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   if (isSubmitted) {
     return (
@@ -102,7 +121,6 @@ const ContactForm = () => {
             setFormData({
               name: '',
               email: '',
-              company: '',
               projectType: '',
               budget: '',
               timeline: '',
@@ -133,7 +151,7 @@ const ContactForm = () => {
           <Input
             label="Full Name"
             type="text"
-            placeholder="John Doe"
+            placeholder="Your Name"
             value={formData?.name}
             onChange={(e) => handleInputChange('name', e?.target?.value)}
             required
@@ -141,20 +159,20 @@ const ContactForm = () => {
           <Input
             label="Email Address"
             type="email"
-            placeholder="john@company.com"
+            placeholder="Email"
             value={formData?.email}
             onChange={(e) => handleInputChange('email', e?.target?.value)}
             required
           />
         </div>
 
-        <Input
+        {/* <Input
           label="Company/Organization"
           type="text"
           placeholder="Your Company Name (Optional)"
           value={formData?.company}
           onChange={(e) => handleInputChange('company', e?.target?.value)}
-        />
+        /> */}
 
         {/* Project Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -208,7 +226,7 @@ const ContactForm = () => {
             Project Description <span className="text-error">*</span>
           </label>
           <textarea
-            className="w-full px-4 py-3 border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none bg-background text-foreground placeholder:text-muted-foreground"
+            className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none bg-background text-foreground placeholder:text-muted-foreground"
             rows={6}
             placeholder="Please describe your project in detail. Include any specific requirements, technologies you prefer, and what success looks like for you..."
             value={formData?.description}
@@ -218,7 +236,7 @@ const ContactForm = () => {
         </div>
 
         {/* Additional Options */}
-        <div className="space-y-4">
+        {/* <div className="space-y-4">
           <Checkbox
             label="I have an NDA that needs to be signed before discussing details"
             checked={formData?.hasNDA}
@@ -265,7 +283,7 @@ const ContactForm = () => {
               </label>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Submit Button */}
         <div className="pt-4">
@@ -275,14 +293,14 @@ const ContactForm = () => {
             size="lg"
             fullWidth
             loading={isSubmitting}
-            className="gradient-primary hover:opacity-90 transition-opacity duration-200"
+            className="gradient-primary hover:opacity-90 transition-opacity duration-200 rounded-xl"
           >
             {isSubmitting ? 'Sending Message...' : 'Send Project Brief'}
           </Button>
         </div>
       </form>
       {/* Response Time Notice */}
-      <div className="mt-6 p-4 bg-accent/10 rounded-lg border border-accent/20">
+      <div className="mt-6 p-4 bg-accent/10 rounded-xl border border-accent/20">
         <div className="flex items-start space-x-3">
           <Icon name="Clock" size={20} className="text-accent mt-0.5" />
           <div>

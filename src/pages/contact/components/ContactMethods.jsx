@@ -9,9 +9,9 @@ const ContactMethods = () => {
       icon: 'Mail',
       title: 'Email',
       description: 'Best for detailed project discussions',
-      value: 'alex.developer@email.com',
+      value: 'meetifthikarhere@gmail.com',
       action: 'Send Email',
-      href: 'mailto:alex.developer@email.com?subject=Project Inquiry&body=Hi Alex, I\'d like to discuss a project opportunity...',
+      href: 'mailto:meetifthikarhere@gmail.com',
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200'
@@ -21,9 +21,9 @@ const ContactMethods = () => {
       icon: 'Linkedin',
       title: 'LinkedIn',
       description: 'Professional networking and quick connections',
-      value: '/in/alex-developer-pro',
+      value: '/in/ifthikar-mj',
       action: 'Connect',
-      href: 'https://linkedin.com/in/alex-developer-pro',
+      href: 'https://www.linkedin.com/in/ifthikar-mj-59b8a8250',
       color: 'text-blue-700',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200'
@@ -33,24 +33,12 @@ const ContactMethods = () => {
       icon: 'Github',
       title: 'GitHub',
       description: 'Code collaboration and technical discussions',
-      value: '@alexdeveloper',
+      value: '@ifthikar2267',
       action: 'Follow',
-      href: 'https://github.com/alexdeveloper',
+      href: 'https://github.com/ifthikar2267',
       color: 'text-gray-700',
       bgColor: 'bg-gray-50',
       borderColor: 'border-gray-200'
-    },
-    {
-      id: 'phone',
-      icon: 'Phone',
-      title: 'Phone',
-      description: 'For urgent matters and consultations',
-      value: '+1 (555) 123-4567',
-      action: 'Call Now',
-      href: 'tel:+15551234567',
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
-      borderColor: 'border-green-200'
     }
   ];
 
@@ -116,7 +104,7 @@ const ContactMethods = () => {
         </div>
       </div>
       {/* Social Media Links */}
-      <div>
+      {/* <div>
         <h4 className="text-lg font-semibold text-foreground mb-4">Connect on Social</h4>
         <div className="flex flex-wrap gap-3">
           {socialLinks?.map((social) => (
@@ -132,9 +120,9 @@ const ContactMethods = () => {
             </a>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* Quick Actions */}
-      <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-6 border border-primary/10">
+      {/* <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-6 border border-primary/10">
         <h4 className="text-lg font-semibold text-foreground mb-4">Quick Actions</h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Button
@@ -162,7 +150,7 @@ const ContactMethods = () => {
             Download Resume
           </Button>
         </div>
-      </div>
+      </div> */}
       {/* Response Time & Availability */}
       <div className="bg-card rounded-xl p-6 border border-border">
         <div className="flex items-start space-x-4">
@@ -174,8 +162,7 @@ const ContactMethods = () => {
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>• Email responses: Within 24 hours</p>
               <p>• LinkedIn messages: Within 12 hours</p>
-              <p>• Phone calls: Available Mon-Fri, 9 AM - 6 PM EST</p>
-              <p>• Currently accepting new projects starting February 2025</p>
+              <p>• Currently accepting new projects starting</p>
             </div>
           </div>
         </div>
