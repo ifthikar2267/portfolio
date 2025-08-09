@@ -78,7 +78,7 @@ const FeaturedProjects = () => {
             <motion.div
               key={project?.id}
               variants={projectVariants}
-              className={`group relative bg-card border border-border rounded-xl overflow-hidden hover:shadow-brand-lg transition-all bg-[#007BFF] duration-300 ${
+              className={`group relative bg-card border border-border rounded-xl overflow-hidden hover:shadow-brand-lg transition-all bg-primary duration-300 ${
                 index === 0 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
               onMouseEnter={() => setHoveredProject(project?.id)}
