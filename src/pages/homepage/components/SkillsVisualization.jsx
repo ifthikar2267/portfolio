@@ -79,7 +79,7 @@ const SkillsVisualization = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-0">
             Technical <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -89,7 +89,7 @@ const SkillsVisualization = () => {
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-5">
           {Object.entries(skillCategories)?.map(([key, category]) => (
             <motion.button
               key={key}
@@ -110,56 +110,46 @@ const SkillsVisualization = () => {
 
         {/* Skills Grid */}
         <motion.div
-          key={selectedCategory}
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
-          {skillCategories?.[selectedCategory]?.skills?.map((skill, index) => (
-            <motion.div
-              key={skill?.name}
-              variants={skillVariants}
-              className="bg-card border border-border rounded-xl p-6 hover:shadow-brand-lg transition-all duration-300 group"
-            >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <div className={`p-2 rounded-lg bg-muted group-hover:scale-110 transition-transform duration-200 ${skill?.color}`}>
-                    <Icon name={skill?.icon} size={20} />
-                  </div>
-                  <h3 className="font-semibold text-foreground">{skill?.name}</h3>
-                </div>
-                <span className="text-sm font-medium text-primary">{skill?.level}%</span>
-              </div>
+  key={selectedCategory}
+  variants={containerVariants}
+  initial="hidden"
+  animate="visible"
+  className="grid md:grid-cols-2 lg:grid-cols-3 gap-0"
+>
+  {skillCategories?.[selectedCategory]?.skills?.map((skill, index) => (
+    <motion.div
+      key={skill?.name}
+      variants={skillVariants}
+      className="p-2 mt-2"
+    >
+      {/* Skill Name and Level with Icon */}
+      <div className="flex items-center justify-between mb-1">
+        <div className="flex items-center space-x-2">
+          <Icon name={skill?.icon} size={20} />
+          <h3 className="font-semibold text-foreground">{skill?.name}</h3>
+        </div>
+        <span className="text-sm font-medium text-primary">{skill?.level}%</span>
+      </div>
 
-              {/* Progress Bar */}
-              <div className="relative">
-                <div className="w-full bg-muted rounded-full h-2">
-                  <motion.div
-                    className="h-2 gradient-primary rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${skill?.level}%` }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
-                  />
-                </div>
-                
-                {/* Skill Level Indicator */}
-                <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                  <span>Beginner</span>
-                  <span>Expert</span>
-                </div>
-              </div>
+      {/* Progress Bar */}
+      <div className="relative">
+        <div className="w-full bg-muted rounded-full h-2">
+          <motion.div
+            className="h-2 gradient-primary rounded-full"
+            initial={{ width: 0 }}
+            animate={{ width: `${skill?.level}%` }}
+            transition={{ duration: 1, delay: index * 0.1 }}
+          />
+        </div>
+        <div className="flex justify-between text-xs text-muted-foreground mt-2">
+          <span>Beginner</span>
+          <span>Expert</span>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</motion.div>
 
-              {/* Proficiency Description */}
-              {/* <div className="mt-3 text-sm text-muted-foreground">
-                {skill?.level >= 90 && "Expert level with extensive project experience"}
-                {skill?.level >= 80 && skill?.level < 90 && "Advanced proficiency with solid understanding"}
-                {skill?.level >= 70 && skill?.level < 80 && "Intermediate level with growing expertise"}
-                {skill?.level < 70 && "Learning and developing proficiency"}
-              </div> */}
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Overall Stats */}
         <motion.div
@@ -167,7 +157,7 @@ const SkillsVisualization = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           <div className="text-center p-6 bg-card border border-border rounded-xl">
             <div className="text-2xl font-bold gradient-text mb-2">15+</div>

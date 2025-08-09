@@ -81,11 +81,11 @@ export async function getProducts() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-violet-50 via-pink-50 to-purple-50">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0">
+      {/* <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 gradient-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
-      </div>
+      </div> */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -181,15 +181,15 @@ export async function getProducts() {
           </motion.div>
 
           {/* Right Content - Code Animation */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative bg-card border border-border rounded-xl shadow-brand-lg overflow-hidden">
+            <div className="relative bg-card border border-border rounded-xl shadow-brand-lg overflow-hidden"> */}
               {/* Terminal Header */}
-              <div className="flex items-center justify-between px-4 py-3 bg-muted border-b border-border">
+              {/* <div className="flex items-center justify-between px-4 py-3 bg-muted border-b border-border">
                 <div className="flex items-center space-x-2">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
@@ -198,10 +198,10 @@ export async function getProducts() {
                 <div className="text-sm text-muted-foreground font-mono">
                   {codeSnippets?.[currentCodeIndex]?.language}
                 </div>
-              </div>
+              </div> */}
 
               {/* Code Content */}
-              <div className="p-6 bg-slate-900 text-green-400 font-mono text-sm leading-relaxed min-h-[300px] overflow-hidden">
+              {/* <div className="p-6 bg-slate-900 text-green-400 font-mono text-sm leading-relaxed min-h-[300px] overflow-hidden">
                 <motion.pre
                   key={currentCodeIndex}
                   initial={{ opacity: 0, y: 20 }}
@@ -212,10 +212,10 @@ export async function getProducts() {
                 >
                   {codeSnippets?.[currentCodeIndex]?.code}
                 </motion.pre>
-              </div>
+              </div> */}
 
               {/* Language Indicators */}
-              <div className="absolute bottom-4 right-4 flex space-x-2">
+              {/* <div className="absolute bottom-4 right-4 flex space-x-2">
                 {codeSnippets?.map((_, index) => (
                   <div
                     key={index}
@@ -226,7 +226,7 @@ export async function getProducts() {
                   />
                 ))}
               </div>
-            </div>
+            </div> */}
 
             {/* Floating Elements */}
             {/* <motion.div
@@ -244,11 +244,11 @@ export async function getProducts() {
             >
               <Icon name="Zap" size={20} />
             </motion.div> */}
-          </motion.div>
+          {/* </motion.div>
         </div>
-      </div>
+      </div> */}
       {/* Scroll Indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.6 }}
@@ -262,7 +262,9 @@ export async function getProducts() {
           <span className="text-sm">Scroll to explore</span>
           <Icon name="ChevronDown" size={20} />
         </motion.div>
-      </motion.div>
+      </motion.div> */}
+      </div>
+      </div>
     </section>
   );
 };

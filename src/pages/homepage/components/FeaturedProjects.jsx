@@ -52,7 +52,7 @@ const FeaturedProjects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -61,7 +61,7 @@ const FeaturedProjects = () => {
           </p>
           
           <Link to="/projects">
-            <Button variant="outline" iconName="ArrowRight" iconPosition="right" className='rounded-xl'>
+            <Button variant="outline" iconName="ArrowRight" iconPosition="right" className='rounded-xl bg-[#007BFF]'>
               View All Projects
             </Button>
           </Link>
@@ -78,7 +78,7 @@ const FeaturedProjects = () => {
             <motion.div
               key={project?.id}
               variants={projectVariants}
-              className={`group relative bg-card border border-border rounded-xl overflow-hidden hover:shadow-brand-lg transition-all duration-300 ${
+              className={`group relative bg-card border border-border rounded-xl overflow-hidden hover:shadow-brand-lg transition-all bg-[#007BFF] duration-300 ${
                 index === 0 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
               onMouseEnter={() => setHoveredProject(project?.id)}
@@ -136,10 +136,10 @@ const FeaturedProjects = () => {
               {/* Project Content */}
               <div className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-200">
+                  <h3 className="text-xl font-semibold text-foreground text-white mb-2 group-hover:text-[#002B5C] transition-colors duration-200">
                     {project?.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-black-foreground text-sm leading-relaxed font-semibold">
                     {project?.description}
                   </p>
                 </div>
@@ -159,16 +159,16 @@ const FeaturedProjects = () => {
                 {/* Metrics */}
                 <div className="grid grid-cols-3 gap-4 mb-4 pt-4 border-t border-border">
                   <div className="text-center">
-                    <div className="text-sm font-semibold text-primary">{project?.metrics?.users}</div>
-                    <div className="text-xs text-muted-foreground">Users</div>
+                    <div className="text-sm font-semibold text-white">{project?.metrics?.users}</div>
+                    <div className="text-xs text-black-foreground font-semibold">Users</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-sm font-semibold text-primary">{project?.metrics?.performance}</div>
-                    <div className="text-xs text-muted-foreground">Performance</div>
+                    <div className="text-sm font-semibold text-white">{project?.metrics?.performance}</div>
+                    <div className="text-xs text-black-foreground font-semibold">Performance</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-sm font-semibold text-primary">{project?.metrics?.uptime}</div>
-                    <div className="text-xs text-muted-foreground">Uptime</div>
+                    <div className="text-sm font-semibold text-white">{project?.metrics?.uptime}</div>
+                    <div className="text-xs text-black-foreground font-semibold">Uptime</div>
                   </div>
                 </div>
 
@@ -181,8 +181,8 @@ const FeaturedProjects = () => {
                     className="flex-1"
                   >
                     <Button 
-                      variant="default" 
-                      className='rounded-xl'
+                      variant="outline" 
+                      className='rounded-xl bg-white text-black'
                       size="sm" 
                       fullWidth
                       iconName="ExternalLink"
@@ -198,7 +198,7 @@ const FeaturedProjects = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className='rounded-xl'
+                      className='rounded-xl bg-white'
                       size="sm"
                       iconName="Github"
                     >
