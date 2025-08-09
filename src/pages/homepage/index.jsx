@@ -23,7 +23,7 @@ const Homepage = () => {
         <title>Ifthikar - Full-Stack Developer | Building the Future Through Code</title>
         <meta 
           name="description" 
-          content="Professional full-stack developer specializing in React, Expree.js, and Node.js. Creating scalable web applications that drive real business results. View projects, certifications, and get in touch." 
+          content="Professional full-stack developer specializing in React, Express.js, and Node.js. Creating scalable web applications that drive real business results. View projects, certifications, and get in touch." 
         />
         <meta 
           name="keywords" 

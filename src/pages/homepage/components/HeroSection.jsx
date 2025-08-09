@@ -123,7 +123,7 @@ export async function getProducts() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-lg text-muted-foreground max-w-lg leading-relaxed gradient-text"
+                className="text-lg text-muted-foreground max-w-lg leading-relaxed text-black"
               >
                 Crafting seamless digital experiences with the MERN stack (MongoDB, Express.js, React, Node.js) — transforming ideas into scalable, user-centric applications that blend functionality with intuitive design, delivering performance, accessibility, and innovation at every step.
               </motion.p>
