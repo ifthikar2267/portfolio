@@ -43,14 +43,14 @@ const CertificationCard = ({ certification }) => {
             <p className="text-sm text-muted-foreground">{certification?.issuer}</p>
           </div>
         </div>
-        <div className="flex flex-col items-end space-y-2">
+        {/* <div className="flex flex-col items-end space-y-2">
           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(certification?.status)}`}>
             {certification?.status}
           </span>
           <span className={`px-2 py-1 rounded border text-xs font-medium ${getLevelColor(certification?.level)}`}>
             {certification?.level}
           </span>
-        </div>
+        </div> */}
       </div>
       <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
         {certification?.description}

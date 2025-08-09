@@ -56,7 +56,7 @@ const CertificationsPage = () => {
       category: 'Server',
       earnedDate: '2023-08-15',
       verificationUrl: 'https://drive.google.com/file/d/1P1Wnq2JW4gt8ZQi_sK6EGSnFZgFnvbY-/view?usp=drivesdk',
-      icon: 'Server',
+      icon: 'Code2',
       skills: ['Python']
     },
     {
