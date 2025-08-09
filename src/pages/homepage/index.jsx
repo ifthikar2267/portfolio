@@ -117,24 +117,7 @@ const Homepage = () => {
                     </svg>
 
                   </a>
-                   <a 
-                    href="mailto:meetifthikarhere@gmail.com"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  >
-                    <span className="sr-only">Instagram</span>
-                  <svg
-                    className="w-5 h-5"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 1.5A4 4 0 0 0 3.5 7.5v9A4 4 0 0 0 7.5 20.5h9a4 4 0 0 0 4-4v-9a4 4 0 0 0-4-4h-9zm9.75 2.25a.75.75 0 0 1 .743.648l.007.102v1.5a.75.75 0 0 1-1.493.102L16.5 8V6.5a.75.75 0 0 1 .75-.75zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" />
-                  </svg>
-
-
-                  </a>
+  
                 </div>
               </div>
 

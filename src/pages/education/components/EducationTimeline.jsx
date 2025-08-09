@@ -13,13 +13,15 @@ const EducationTimeline = ({ educationData }) => {
             <div className="relative z-10 flex-shrink-0">
               <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-brand-lg ${
                 item?.type === 'degree' ? 'gradient-primary' :
-                item?.type === 'bootcamp' ? 'bg-secondary' :
+                item?.type === 'HSC' ? 'bg-secondary' :
+                item?.type === 'SSLC' ? 'bg-secondary' :
                 item?.type === 'certification'? 'bg-accent' : 'bg-warning'
               }`}>
                 <Icon 
                   name={
                     item?.type === 'degree' ? 'GraduationCap' :
-                    item?.type === 'bootcamp' ? 'Code2' :
+                    item?.type === 'HSC' ? 'Code2' :
+                    item?.type === 'SSLC' ? 'Code2' :
                     item?.type === 'certification'? 'Award' : 'BookOpen'
                   } 
                   size={24} 

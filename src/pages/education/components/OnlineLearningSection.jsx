@@ -9,8 +9,7 @@ const OnlineLearningSection = ({ courses }) => {
     { id: 'all', name: 'All Courses', icon: 'BookOpen' },
     { id: 'frontend', name: 'Frontend', icon: 'Monitor' },
     { id: 'backend', name: 'Backend', icon: 'Server' },
-    { id: 'fullstack', name: 'Full Stack', icon: 'Layers' },
-    { id: 'devops', name: 'DevOps', icon: 'Settings' }
+    { id: 'fullstack', name: 'Full Stack', icon: 'Layers' }
   ];
 
   const filteredCourses = selectedCategory === 'all' 
@@ -31,7 +30,7 @@ const OnlineLearningSection = ({ courses }) => {
           <button
             key={category?.id}
             onClick={() => setSelectedCategory(category?.id)}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+            className={`flex items-center rounded-xl space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
               selectedCategory === category?.id
                 ? 'bg-primary text-white shadow-sm'
                 : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
@@ -83,7 +82,7 @@ const OnlineLearningSection = ({ courses }) => {
             {/* Skills Learned */}
             <div className="mb-3">
               <div className="flex flex-wrap gap-1">
-                {course?.skills?.slice(0, 3)?.map((skill, idx) => (
+                {course?.skills?.slice(0, 4)?.map((skill, idx) => (
                   <span 
                     key={idx}
                     className="px-2 py-1 bg-accent/10 text-accent text-xs rounded"
@@ -91,7 +90,7 @@ const OnlineLearningSection = ({ courses }) => {
                     {skill}
                   </span>
                 ))}
-                {course?.skills?.length > 3 && (
+                {course?.skills?.length > 4 && (
                   <span className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded">
                     +{course?.skills?.length - 3} more
                   </span>
@@ -116,18 +115,24 @@ const OnlineLearningSection = ({ courses }) => {
             {/* Action Buttons */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <div className="flex items-center space-x-1">
+                {/* <div className="flex items-center space-x-1">
                   <Icon name="Star" size={14} className="text-warning" />
                   <span className="text-sm text-muted-foreground">{course?.rating}</span>
-                </div>
+                </div> */}
               </div>
               
-              {course?.hasCertificate && (
-                <Button variant="outline" size="xs">
-                  <Icon name="ExternalLink" size={12} className="mr-1" />
-                  View Certificate
-                </Button>
-              )}
+              {course?.hasCertificate && course?.certificateLink && (
+                  <Button
+                    variant="outline"
+                    size="xs"
+                    className='rounded-xl'
+                    onClick={() => window.open(course.certificateLink, "_blank")}
+                  >
+                    <Icon name="ExternalLink" size={12} className="mr-1" />
+                    View Certificate
+                  </Button>
+                )}
+
             </div>
           </div>
         ))}

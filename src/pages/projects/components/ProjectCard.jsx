@@ -134,6 +134,12 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Action Button */}
+        <a 
+                    href="https://github.com/ifthikar2267" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                  >
         <Button
           variant="outline"
           size="sm"
@@ -144,6 +150,7 @@ const ProjectCard = ({ project }) => {
         >
           View Details
         </Button>
+        </a>
       </div>
     </div>
   );
