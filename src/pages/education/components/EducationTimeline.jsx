@@ -68,13 +68,13 @@ const EducationTimeline = ({ educationData }) => {
                   </div>
                   
                   {/* Status Badge */}
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  {/* <div className={`px-3 py-1 rounded-full text-xs font-medium ${
                     item?.status === 'completed' ? 'bg-success/10 text-success' :
                     item?.status === 'in-progress'? 'bg-warning/10 text-warning' : 'bg-muted text-muted-foreground'
                   }`}>
                     {item?.status === 'completed' ? 'Completed' :
                      item?.status === 'in-progress'? 'In Progress' : 'Planned'}
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Description */}
