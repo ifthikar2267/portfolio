@@ -32,15 +32,15 @@ const CertificationCard = ({ certification }) => {
   };
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6 hover:shadow-brand-lg transition-all duration-300 group ">
+    <div className="bg-card shadow-brand border border-border rounded-xl p-6 hover:shadow-brand-lg transition-all duration-300 group ">
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center space-x-4">
           <div className="w-16 h-16 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
-            <Icon name={certification?.icon} size={32} className="text-primary" />
+            <Icon name={certification?.icon} size={32} className="text-[#0077FF]" />
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-foreground mb-1">{certification?.name}</h3>
-            <p className="text-sm text-muted-foreground">{certification?.issuer}</p>
+            <h3 className="text-lg font-semibold text-black font-worksans mb-1">{certification?.name}</h3>
+            <p className="text-sm  font-semibold text-muted-foreground font-worksans">{certification?.issuer}</p>
           </div>
         </div>
         {/* <div className="flex flex-col items-end space-y-2">
@@ -52,7 +52,7 @@ const CertificationCard = ({ certification }) => {
           </span>
         </div> */}
       </div>
-      <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+      <p className="text-sm text-muted-foreground  font-semibold mb-4 line-clamp-2">
         {certification?.description}
       </p>
       <div className="flex items-center justify-between text-xs text-muted-foreground mb-4">
@@ -91,7 +91,7 @@ const CertificationCard = ({ certification }) => {
               size="xs"
               onClick={() => window.open(certification?.verificationUrl, '_blank')}
               iconName="ExternalLink"
-              className='rounded-xl'
+              className='rounded-full border border-[#0077FF] text-[#0077FF]'
               iconPosition="right"
               iconSize={12}
             >

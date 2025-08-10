@@ -54,27 +54,32 @@ const AchievementStory = () => {
   const currentStory = stories?.[selectedStory];
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6">
+    <div className="bg-card shadow-brand border border-border rounded-xl p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h3 className="text-xl font-semibold text-foreground mb-2">Achievement Stories</h3>
+          <h3 className="text-xl font-semibold text-black mb-2">Achievement Stories</h3>
           {/* <p className="text-sm text-muted-foreground">Personal journeys behind the certifications</p> */}
         </div>
         <div className="flex flex-wrap items-center gap-2">
 
           {stories?.map((story, index) => (
             <Button
-              key={story?.id}
-              variant={selectedStory === index ? "default" : "outline"}
-              size="sm"
-              onClick={() => setSelectedStory(index)}
-              iconName={story?.icon}
-              iconPosition="left"
-              iconSize={16}
-              className='rounded-xl'
-            >
-              {story?.title?.split(' ')?.[0]}
-            </Button>
+  key={story?.id}
+  variant="default" // keep this static, we'll control colors via className
+  size="sm"
+  onClick={() => setSelectedStory(index)}
+  iconName={story?.icon}
+  iconPosition="left"
+  iconSize={16}
+  className={`rounded-full
+    ${selectedStory === index 
+      ? 'bg-[#0077FF] text-white border border-[#0077FF]' 
+      : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-[#0077FF] hover:text-white'
+    }`}
+>
+  {story?.title?.split(' ')?.[0]}
+</Button>
+
           ))}
         </div>
       </div>
@@ -85,8 +90,8 @@ const AchievementStory = () => {
             <Icon name={currentStory?.icon} size={24} className={currentStory?.color} />
           </div>
           <div>
-            <h4 className="text-lg font-semibold text-foreground">{currentStory?.title}</h4>
-            <p className="text-sm text-muted-foreground">{currentStory?.certification}</p>
+            <h4 className="text-lg font-semibold text-black font-worksans">{currentStory?.title}</h4>
+            <p className="text-sm text-muted-foreground font-worksans">{currentStory?.certification}</p>
           </div>
         </div>
 
@@ -95,48 +100,48 @@ const AchievementStory = () => {
           {/* Left Column */}
           <div className="space-y-6">
             <div>
-              <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center">
+              <h5 className="text-sm font-semibold text-black font-worksans mb-3 flex items-center">
                 <Icon name="Target" size={16} className="mr-2 text-primary" />
                 Motivation
               </h5>
-              <p className="text-sm text-muted-foreground leading-relaxed">{currentStory?.motivation}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed font-worksans">{currentStory?.motivation}</p>
             </div>
 
             <div>
-              <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center">
+              <h5 className="text-sm font-semibold text-black font-worksans mb-3 flex items-center">
                 <Icon name="Zap" size={16} className="mr-2 text-amber-600" />
                 Challenge
               </h5>
-              <p className="text-sm text-muted-foreground leading-relaxed">{currentStory?.challenge}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed font-worksans">{currentStory?.challenge}</p>
             </div>
 
             <div>
-              <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center">
+              <h5 className="text-sm font-semibold text-black font-worksans mb-3 flex items-center">
                 <Icon name="BookOpen" size={16} className="mr-2 text-blue-600" />
                 Preparation Strategy
               </h5>
-              <p className="text-sm text-muted-foreground leading-relaxed">{currentStory?.preparation}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed font-worksans">{currentStory?.preparation}</p>
             </div>
           </div>
 
           {/* Right Column */}
           <div className="space-y-6">
             <div>
-              <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center">
+              <h5 className="text-sm font-semibold text-black font-worksans mb-3 flex items-center">
                 <Icon name="TrendingUp" size={16} className="mr-2 text-green-600" />
                 Impact & Growth
               </h5>
-              <p className="text-sm text-muted-foreground leading-relaxed">{currentStory?.impact}</p>
+              <p className="text-sm text-muted-foreground font-worksans leading-relaxed">{currentStory?.impact}</p>
             </div>
 
             <div>
-              <h5 className="text-sm font-semibold text-foreground mb-3 flex items-center">
+              <h5 className="text-sm font-semibold text-black font-worksans mb-3 flex items-center">
                 <Icon name="Library" size={16} className="mr-2 text-purple-600" />
                 Key Resources
               </h5>
               <ul className="space-y-2">
                 {currentStory?.resources?.map((resource, index) => (
-                  <li key={index} className="flex items-center text-sm text-muted-foreground">
+                  <li key={index} className="flex items-center text-sm text-muted-foreground font-worksans">
                     <Icon name="CheckCircle" size={14} className="mr-2 text-green-600 flex-shrink-0" />
                     {resource}
                   </li>
@@ -148,17 +153,17 @@ const AchievementStory = () => {
               <div className="bg-muted/50 rounded-lg p-4">
                 <div className="flex items-center space-x-2 mb-2">
                   <Icon name="Clock" size={16} className="text-blue-600" />
-                  <span className="text-sm font-medium text-foreground">Study Timeline</span>
+                  <span className="text-sm font-medium text-black font-worksans">Study Timeline</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{currentStory?.timeline}</p>
+                <p className="text-sm text-muted-foreground font-worksans">{currentStory?.timeline}</p>
               </div>
 
               <div className="bg-muted/50 rounded-lg p-4">
                 <div className="flex items-center space-x-2 mb-2">
                   <Icon name="ArrowRight" size={16} className="text-primary" />
-                  <span className="text-sm font-medium text-foreground">Next Goal</span>
+                  <span className="text-sm font-medium text-black font-worksans">Next Goal</span>
                 </div>
-                <p className="text-sm text-muted-foreground">{currentStory?.nextGoal}</p>
+                <p className="text-sm text-muted-foreground font-worksans">{currentStory?.nextGoal}</p>
               </div>
             </div>
           </div>
@@ -167,13 +172,16 @@ const AchievementStory = () => {
         {/* Navigation */}
         <div className="flex items-center justify-between pt-6 border-t border-border">
           <Button
-            variant="outline"
             size="sm"
             onClick={() => setSelectedStory(selectedStory > 0 ? selectedStory - 1 : stories?.length - 1)}
             iconName="ChevronLeft"
             iconPosition="left"
             iconSize={16}
-            className='rounded-xl'
+            className={`rounded-full transition-colors duration-200
+              ${selectedStory === 0
+                ? 'bg-[#0077FF] text-white border border-[#0077FF]'
+                : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-[#0077FF] hover:text-white'
+              }`}
           >
             Previous
           </Button>
@@ -184,20 +192,23 @@ const AchievementStory = () => {
                 key={index}
                 onClick={() => setSelectedStory(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  selectedStory === index ? 'bg-primary w-6' : 'bg-muted-foreground/30'
+                  selectedStory === index ? 'bg-[#0077FF] w-6' : 'bg-muted-foreground/30 border'
                 }`}
               />
             ))}
           </div>
 
-          <Button
-            variant="outline"
+         <Button
             size="sm"
             onClick={() => setSelectedStory(selectedStory < stories?.length - 1 ? selectedStory + 1 : 0)}
             iconName="ChevronRight"
             iconPosition="right"
             iconSize={16}
-            className='rounded-xl'
+            className={`rounded-full transition-colors duration-200
+              ${selectedStory === stories?.length - 1
+                ? 'bg-[#0077FF] text-white border border-[#0077FF]'
+                : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-[#0077FF] hover:text-white'
+              }`}
           >
             Next
           </Button>

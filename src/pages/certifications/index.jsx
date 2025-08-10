@@ -111,28 +111,28 @@ const CertificationsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Professional Certifications</title>
         <meta name="description" content="Comprehensive display of professional certifications, technical credentials, and continuous learning achievements in Fullstac development, web development and cloud." />
         <meta name="keywords" content="certifications, Oracle, React, Node.js, MongoDB, professional development, technical credentials" />
       </Helmet>
       <Header />
-      <main className="pt-16">
+      <main className="pt-15">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 gradient-primary opacity-5"></div>
+          <div className="absolute inset-0 bg-white opacity-5"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center">
+              <div className="w-16 h-16 bg-[#0077FF] rounded-2xl flex items-center justify-center">
                 <Icon name="Award" size={32} color="white" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Professional <span className="gradient-text">Certifications</span>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+              Professional <span className="text-black">Certifications</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Industry-recognized credentials validating expertise in web development, full-stack development, cloud computing. Each certification represents a commitment to excellence and continuous learning.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 font-worksans text-justify [hyphens:auto]">
+              Industry-recognized credentials <br/>validating expertise in web development, full-stack development, cloud computing. Each certification represents a commitment to excellence and continuous learning.
             </p>
             <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
@@ -183,13 +183,13 @@ const CertificationsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex items-center justify-between mb-8">
               <div>
-                <h2 className="text-2xl font-bold text-foreground mb-2">
+                <h2 className="text-2xl font-bold text-black font-worksans mb-2">
                   {filteredCertifications?.length === certifications?.length 
                     ? 'All Certifications' 
                     : `Filtered Results (${filteredCertifications?.length})`
                   }
                 </h2>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground font-worksans">
                   Click on verification links to validate credentials with issuing organizations
                 </p>
               </div>
@@ -240,11 +240,11 @@ const CertificationsPage = () => {
         </section> */}
 
         {/* Achievement Stories */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-12 bg-[#0077FF] px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Achievement Stories</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-white mb-4 font-worksans">Achievement Stories</h2>
+              <p className="text-lg text-white max-w-2xl mx-auto font-worksans">
                 Personal journeys behind each certification, including challenges overcome and lessons learned
               </p>
             </div>
@@ -287,54 +287,54 @@ const CertificationsPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                  <Icon name="Code2" size={18} color="white" />
+                <div className="w-8 h-8 bg-[#0077FF] rounded-lg flex items-center justify-center">
+                  <Icon name="Code2" size={24} color="white" />
                 </div>
-                <span className="text-lg font-bold gradient-text">Ifthikar-Portfolio</span>
+                <span className="text-xl font-bold text-[#0077FF] font-worksans">Ifthikar-Portfolio</span>
               </div>
-              <p className="text-muted-foreground mb-4 max-w-md">
+              <p className="text-muted-foreground mb-4 max-w-md font-worksans">
                 Professional certifications validate expertise and demonstrate commitment to continuous learning 
                 in the ever-evolving technology landscape.
               </p>
               <div className="flex items-center space-x-4">
-                <a href="https://github.com/ifthikar2267" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://github.com/ifthikar2267" className="text-[#0077FF] hover:text-primary transition-colors">
                   <Icon name="Github" size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/ifthikar-mj-59b8a8250" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="https://www.linkedin.com/in/ifthikar-mj-59b8a8250" className="text-[#0077FF] hover:text-primary transition-colors">
                   <Icon name="Linkedin" size={20} />
                 </a>
               </div>
             </div>
             
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
+              <h4 className="font-semibold text-black font-worksans mb-4">Navigation</h4>
               <ul className="space-y-2">
-                <li><a href="/homepage" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-                <li><a href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a></li>
-                <li><a href="/about" className="text-muted-foreground hover:text-primary transition-colors">About</a></li>
-                <li><a href="/education" className="text-muted-foreground hover:text-primary transition-colors">Education</a></li>
+                <li><a href="/homepage" className="text-muted-foreground hover:text-primary transition-colors font-worksans">Home</a></li>
+                <li><a href="/projects" className="text-muted-foreground hover:text-primary transition-colors font-worksans">Projects</a></li>
+                <li><a href="/about" className="text-muted-foreground hover:text-primary transition-colors font-worksans">About</a></li>
+                <li><a href="/education" className="text-muted-foreground hover:text-primary transition-colors font-worksans">Education</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Certifications</h4>
+              <h4 className="font-semibold text-black mb-4 font-worksans">Certifications</h4>
               <ul className="space-y-2">
-                <li><span className="text-muted-foreground">MERN Fullstack Development</span></li>
-                <li><span className="text-muted-foreground">MongoDB</span></li>
-                <li><span className="text-muted-foreground">Python</span></li>
-                <li><span className="text-muted-foreground">Blockchain</span></li>
+                <li><span className="text-muted-foreground font-worksans">MERN Fullstack Development</span></li>
+                <li><span className="text-muted-foreground font-worksans">MongoDB</span></li>
+                <li><span className="text-muted-foreground font-worksans">Python</span></li>
+                <li><span className="text-muted-foreground font-worksans">Blockchain</span></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between">
-            <p className="text-muted-foreground text-sm">
+            <p className="text-black font-worksans text-sm">
               © {new Date()?.getFullYear()} Ifthikar. All rights reserved.
             </p>
-            <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-muted-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>
-              <a href="/contact" className="text-muted-foreground hover:text-primary text-sm transition-colors">Contact</a>
+            <div className="flex items-center space-x-6 mt-4 md:mt-0 font-worksans">
+              <a href="#" className="text-black-foreground hover:text-primary text-sm transition-colors">Privacy Policy</a>
+              <a href="#" className="text-black-foreground hover:text-primary text-sm transition-colors">Terms of Service</a>
+              <a href="/contact" className="text-black-foreground hover:text-primary text-sm transition-colors">Contact</a>
             </div>
           </div>
         </div>

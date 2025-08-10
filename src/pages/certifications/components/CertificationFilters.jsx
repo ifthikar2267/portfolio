@@ -19,9 +19,9 @@ const CertificationFilters = ({
   const hasActiveFilters = selectedCategory !== 'All' || selectedLevel !== 'All' || selectedStatus !== 'All' || searchTerm;
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6 mb-8">
+    <div className="bg-card shadow-brand border border-border rounded-xl p-6 mb-8">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-lg font-semibold text-foreground">Filter Certifications</h3>
+        <h3 className="text-2xl font-black font-worksans text-foreground">Filter Certifications</h3>
         {hasActiveFilters && (
           <Button
             variant="ghost"
@@ -29,7 +29,7 @@ const CertificationFilters = ({
             onClick={onClearFilters}
             iconName="X"
             iconPosition="left"
-            className='rounded-xl'
+            className='rounded-full'
             iconSize={14}
           >
             Clear Filters
@@ -39,8 +39,8 @@ const CertificationFilters = ({
       <div className="space-y-6">
         {/* Search */}
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">Search</label>
-          <div className="relative">
+          <label className="block text-sm font-medium text-black mb-2 font-worksans">Search</label>
+          <div className="relative rounded-full shadow-brand">
             <Icon name="Search" size={16} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
             <input
               type="text"
@@ -54,16 +54,16 @@ const CertificationFilters = ({
 
         {/* Category Filter */}
         <div>
-          <label className="block text-sm font-medium text-foreground mb-3">Category</label>
+          <label className="block text-sm font-medium text-black font-worksans mb-3">Category</label>
           <div className="flex flex-wrap gap-2">
             {categories?.map((category) => (
               <button
                 key={category}
                 onClick={() => onCategoryChange(category)}
-                className={`px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
+                className={`px-3 py-2 rounded-full font-worksans text-sm font-medium transition-all duration-200 ${
                   selectedCategory === category
-                    ? 'bg-primary text-white shadow-sm'
-                    : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
+                    ? 'bg-[#0077FF] text-white shadow-sm'
+                    : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-muted/80 hover:text-foreground'
                 }`}
               >
                 {category}

@@ -48,7 +48,7 @@ const CertificationStats = ({ certifications }) => {
       {statItems?.map((stat, index) => (
         <div
           key={index}
-          className="bg-card border border-border rounded-xl p-4 hover:shadow-brand transition-all duration-200"
+          className="bg-card shadow-brand border border-border rounded-xl p-4 hover:shadow-brand transition-all duration-200"
         >
           <div className="flex items-center space-x-3">
             <div className={`w-10 h-10 rounded-lg ${stat?.bgColor} flex items-center justify-center`}>
