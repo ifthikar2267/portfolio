@@ -12,10 +12,10 @@ const EducationTimeline = ({ educationData }) => {
             {/* Timeline Node */}
             <div className="relative z-10 flex-shrink-0">
               <div className={`w-16 h-16 rounded-full flex items-center justify-center shadow-brand-lg ${
-                item?.type === 'degree' ? 'gradient-primary' :
+                item?.type === 'degree' ? 'bg-[#0077FF]' :
                 item?.type === 'HSC' ? 'bg-secondary' :
                 item?.type === 'SSLC' ? 'bg-secondary' :
-                item?.type === 'certification'? 'bg-accent' : 'bg-warning'
+                item?.type === 'certification'? 'bg-[#0077FF]' : 'bg-warning'
               }`}>
                 <Icon 
                   name={
@@ -43,13 +43,13 @@ const EducationTimeline = ({ educationData }) => {
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-1">
+                    <h3 className="text-xl font-bold text-black mb-1 font-worksans">
                       {item?.title}
                     </h3>
-                    <p className="text-primary font-semibold mb-2">
+                    <p className="text-[#0077FF] font-semibold mb-2 font-worksans">
                       {item?.institution}
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                    <div className="flex items-center space-x-4 text-sm text-black">
                       <div className="flex items-center space-x-1">
                         <Icon name="Calendar" size={14} />
                         <span>{item?.duration}</span>
@@ -78,22 +78,22 @@ const EducationTimeline = ({ educationData }) => {
                 </div>
 
                 {/* Description */}
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-4 leading-relaxed font-worksans">
                   {item?.description}
                 </p>
 
                 {/* Key Learnings */}
                 {item?.keyLearnings && item?.keyLearnings?.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-foreground mb-2 flex items-center">
-                      <Icon name="Lightbulb" size={16} className="mr-2" />
+                    <h4 className="text-sm font-semibold text-black mb-2 flex items-center font-worksans">
+                      <Icon name="Lightbulb" size={16} className="mr-2 text-black" />
                       Key Learnings
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 font-worksans">
                       {item?.keyLearnings?.map((learning, idx) => (
                         <span 
                           key={idx}
-                          className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full"
+                          className="px-3 py-1 bg-primary/10 text-[#0077FF] text-xs rounded-full"
                         >
                           {learning}
                         </span>
@@ -105,7 +105,7 @@ const EducationTimeline = ({ educationData }) => {
                 {/* Projects */}
                 {item?.projects && item?.projects?.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-foreground mb-2 flex items-center">
+                    <h4 className="text-sm font-semibold text-black mb-2 flex items-center font-worksans">
                       <Icon name="FolderOpen" size={16} className="mr-2" />
                       Notable Projects
                     </h4>
@@ -113,7 +113,7 @@ const EducationTimeline = ({ educationData }) => {
                       {item?.projects?.map((project, idx) => (
                         <div key={idx} className="flex items-start space-x-2">
                           <Icon name="ArrowRight" size={14} className="mt-0.5 text-muted-foreground" />
-                          <span className="text-sm text-muted-foreground">{project}</span>
+                          <span className="text-sm text-muted-foreground font-worksans">{project}</span>
                         </div>
                       ))}
                     </div>

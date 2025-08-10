@@ -251,7 +251,7 @@ const Education = () => {
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Header />
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="pt-8 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* <div className="text-center mb-16"> */}
             {/* <div className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -278,10 +278,10 @@ const Education = () => {
       <section className="py-0 px-4 sm:px-6 lg:px-8 bg-surface/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 font-worksans">
               Educational Timeline
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground font-worksans max-w-2xl mx-auto text-justify [hyphens:auto]">
               I pursued my studies in Information Technology, gaining a strong foundation in programming, database management, and software development. Throughout my coursework, I developed problem-solving skills, hands-on project experience, and a solid understanding of modern technologies, preparing me for real-world IT challenges.
             </p>
           </div>
@@ -296,13 +296,13 @@ const Education = () => {
         </div>
       </section>
       {/* Online Learning Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-surface/50">
+      <section className="px-4 sm:px-6 lg:px-8 bg-surface/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 font-worksans">
               Continuous Learning
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-worksans text-justify [hyphens:auto]">
               Staying current with technology through online courses, certifications, 
               and hands-on practice across multiple platforms and learning resources.
             </p>
@@ -359,9 +359,9 @@ const Education = () => {
         </div>
       </section> */}
       {/* Footer */}
-      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border">
+      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border bg-[#0077FF]">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-muted-foreground">
+          <p className="text-white">
             © {new Date()?.getFullYear()} Ifthikar. Committed to lifelong learning and growth.
           </p>
         </div>

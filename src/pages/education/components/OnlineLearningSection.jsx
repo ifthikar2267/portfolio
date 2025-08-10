@@ -17,10 +17,10 @@ const OnlineLearningSection = ({ courses }) => {
     : courses?.filter(course => course?.category === selectedCategory);
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6">
+    <div className="bg-white border border-border rounded-xl p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-bold text-foreground">Online Learning Journey</h3>
-        <div className="text-sm text-muted-foreground">
+        <h3 className="text-xl font-bold text-black font-worksans">Online Learning Journey</h3>
+        <div className="text-sm text-mute font-worksans">
           {courses?.length} courses completed
         </div>
       </div>
@@ -30,10 +30,10 @@ const OnlineLearningSection = ({ courses }) => {
           <button
             key={category?.id}
             onClick={() => setSelectedCategory(category?.id)}
-            className={`flex items-center rounded-xl space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+            className={`flex items-center font-worksans rounded-full space-x-2 px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               selectedCategory === category?.id
-                ? 'bg-primary text-white shadow-sm'
-                : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
+                ? 'bg-[#0077FF] text-white border border-white shadow-sm'
+                : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-muted/80 hover:text-foreground'
             }`}
           >
             <Icon name={category?.icon} size={16} />
@@ -46,23 +46,23 @@ const OnlineLearningSection = ({ courses }) => {
         {filteredCourses?.map((course, index) => (
           <div 
             key={course?.id}
-            className="border border-border rounded-lg p-4 hover:shadow-brand transition-all duration-300 animate-fade-in"
+            className="border border-border rounded-xl p-4 hover:shadow-brand transition-all duration-300 animate-fade-in bg-[#0077FF]"
             style={{ animationDelay: `${index * 100}ms` }}
           >
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
-                <h4 className="font-semibold text-foreground mb-1">
+                <h4 className="font-semibold text-white mb-1 font-worksans">
                   {course?.title}
                 </h4>
-                <p className="text-sm text-primary font-medium mb-2">
+                <p className="text-sm text-white font-worksans font-medium mb-2">
                   {course?.platform}
                 </p>
                 <div className="flex items-center space-x-4 text-xs text-muted-foreground">
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center text-white space-x-1">
                     <Icon name="Clock" size={12} />
                     <span>{course?.duration}</span>
                   </div>
-                  <div className="flex items-center space-x-1">
+                  <div className="flex items-center text-white space-x-1">
                     <Icon name="Calendar" size={12} />
                     <span>{course?.completedDate}</span>
                   </div>
@@ -70,13 +70,13 @@ const OnlineLearningSection = ({ courses }) => {
               </div>
               
               {/* Certificate Badge */}
-              {course?.hasCertificate && (
+              {/* {course?.hasCertificate && (
                 <div className="flex-shrink-0 ml-3">
                   <div className="w-8 h-8 bg-success/10 rounded-full flex items-center justify-center">
                     <Icon name="Award" size={16} className="text-success" />
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
 
             {/* Skills Learned */}
@@ -85,13 +85,13 @@ const OnlineLearningSection = ({ courses }) => {
                 {course?.skills?.slice(0, 4)?.map((skill, idx) => (
                   <span 
                     key={idx}
-                    className="px-2 py-1 bg-accent/10 text-accent text-xs rounded"
+                    className="px-2 py-1 bg-accent/10 text-white text-xs rounded"
                   >
                     {skill}
                   </span>
                 ))}
                 {course?.skills?.length > 4 && (
-                  <span className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded">
+                  <span className="px-2 py-1 bg-muted text-white text-xs rounded">
                     +{course?.skills?.length - 3} more
                   </span>
                 )}
@@ -100,7 +100,7 @@ const OnlineLearningSection = ({ courses }) => {
 
             {/* Progress Bar */}
             <div className="mb-3">
-              <div className="flex items-center justify-between text-xs text-muted-foreground mb-1">
+              <div className="flex items-center justify-between text-xs text-white mb-1">
                 <span>Progress</span>
                 <span>{course?.progress}%</span>
               </div>
@@ -125,7 +125,7 @@ const OnlineLearningSection = ({ courses }) => {
                   <Button
                     variant="outline"
                     size="xs"
-                    className='rounded-xl'
+                    className='rounded-full bg-white text-[#0077FF]'
                     onClick={() => window.open(course.certificateLink, "_blank")}
                   >
                     <Icon name="ExternalLink" size={12} className="mr-1" />

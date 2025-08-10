@@ -19,10 +19,10 @@ const SkillProgressChart = ({ skillData }) => {
   return (
     <div className="bg-card border border-border rounded-xl p-6">
       <div className="flex items-center justify-between mb-6">
-        <h3 className="text-xl font-bold text-foreground">Skill Development Progress</h3>
-        <div className="text-sm text-muted-foreground">
+        <h3 className="text-3xl font-bold text-black font-worksans">Skill Development Progress</h3>
+        {/* <div className="text-sm text-muted-foreground">
           Based on education & practice
-        </div>
+        </div> */}
       </div>
       
       <div className="w-full h-80">
@@ -56,10 +56,11 @@ const SkillProgressChart = ({ skillData }) => {
               radius={[4, 4, 0, 0]}
             />
             <defs>
-              <linearGradient id="skillGradient" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="var(--color-primary)" stopOpacity={0.9}/>
-                <stop offset="95%" stopColor="var(--color-secondary)" stopOpacity={0.7}/>
-              </linearGradient>
+             <linearGradient id="skillGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#0077FF" stopOpacity={0.9} />
+              <stop offset="95%" stopColor="#005FCC" stopOpacity={0.7} />
+            </linearGradient>
+
             </defs>
           </BarChart>
         </ResponsiveContainer>
