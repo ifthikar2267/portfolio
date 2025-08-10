@@ -33,16 +33,16 @@ const ProjectFilters = ({
   return (
     <div className="bg-white border border-border rounded-xl p-6 mb-8">
       {/* Search Bar */}
-      <div className="relative mb-6 bg-white border border-[#0077FF] rounded-xl">
+      <div className="relative mb-6 bg-white border border-black rounded-full">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ">
-          <Icon name="Search" size={18} className="text-[#0077FF]" />
+          <Icon name="Search" size={18} className="text-black" />
         </div>
         <input
           type="text"
           placeholder="Search projects by name, technology, or description..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e?.target?.value)}
-          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder-[#0077FF] focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 font-worksans"
+          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder-grey focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 font-worksans"
         />
         {searchQuery && (
           <button
@@ -63,7 +63,7 @@ const ProjectFilters = ({
             iconName={filter?.icon}
             iconPosition="left"
             onClick={() => onFilterChange(filter?.id)}
-            className={activeFilter === filter?.id ? 'bg-[#0077FF] font-worksans text-white rounded-xl' : 'rounded-xl border border-[#0077FF] text-[#0077FF]'}
+            className={activeFilter === filter?.id ? 'bg-[#0077FF] font-worksans text-white rounded-full' : 'rounded-full border border-[#0077FF] text-[#0077FF]'}
           >
             {filter?.label}
           </Button>
@@ -98,7 +98,7 @@ const ProjectFilters = ({
                 iconName={sort?.icon}
                 iconPosition="left"
                 onClick={() => onSortChange(sort?.id)}
-                className={`rounded-xl ${
+                className={`rounded-full ${
                   activeSort === sort?.id
                     ? 'bg-[#0077FF] text-white'
                     : 'bg-white text-[#0077FF] border border-[#0077FF]'

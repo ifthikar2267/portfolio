@@ -176,7 +176,7 @@ const Projects = () => {
                 </h1>
               </div>
               
-              <p className="text-l text-muted-foreground font-semibold max-w-3xl mx-auto leading-relaxed font-worksans">
+              <p className="text-l text-muted-foreground font-semibold max-w-3xl mx-auto leading-relaxed font-worksans text-justify">
                 Explore my portfolio of full-stack development projects, featuring modern web applications, 
                 APIs, and mobile solutions built with cutting-edge technologies and best practices.
               </p>
@@ -193,14 +193,14 @@ const Projects = () => {
                   size="lg"
                   iconName="Github"
                   iconPosition="left"
-                  className="bg-[#0077FF] text-white hover:bg-white hover:text-[#0077FF] border border-[#0077FF] rounded-xl font-worksans"
+                  className="bg-[#0077FF] text-white hover:bg-white hover:text-[#0077FF] border border-[#0077FF] rounded-full font-worksans"
                 >
                   View GitHub Profile
                 </Button>
                 </a>
                 <Button
                   variant="outline"
-                  className='bg-[#0077FF] text-white hover:bg-white hover:text-[#0077FF] border border-[#0077FF] rounded-xl font-worksansfont-worksans'
+                  className='bg-white text-[#0077FF] hover:bg-[#0077FF] hover:text-white border border-[#0077FF] rounded-full font-worksansfont-worksans'
                   onClick={handleDownload}
                   size="lg"
                   iconName="Download"

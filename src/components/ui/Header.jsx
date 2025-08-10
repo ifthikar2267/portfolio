@@ -134,7 +134,7 @@ const Header = () => {
           <div className="hidden md:block">
            <button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
     >
      
       <span>Download CV</span>
@@ -183,7 +183,7 @@ const Header = () => {
             <div className="pt-4 border-t border-border">
               <button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
     >
      
       <span>Download CV</span>

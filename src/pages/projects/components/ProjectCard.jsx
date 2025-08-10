@@ -146,7 +146,7 @@ const ProjectCard = ({ project }) => {
           fullWidth
           iconName="ArrowRight"
           iconPosition="right"
-          className="text-white bg-[#0077FF] group-hover:border-[#0077FF] group-hover:text-[#0077FF]  group-hover:bg-white transition-colors duration-200 rounded-xl"
+          className="text-white bg-[#0077FF] group-hover:border-[#0077FF] group-hover:text-[#0077FF]  group-hover:bg-white transition-colors duration-200 rounded-full"
         >
           View Details
         </Button>

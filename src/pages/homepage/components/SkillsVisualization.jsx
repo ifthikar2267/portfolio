@@ -79,8 +79,8 @@ const SkillsVisualization = () => {
           viewport={{ once: true }}
           className="text-center mb-5"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-worksans">
-            Technical <span className="text-3xl sm:text-4xl font-bold text-foreground">Expertise</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-black font-worksans">
+            Technical <span className="text-3xl sm:text-4xl font-bold text-black">Expertise</span>
           </h2>
           <p className="text-lg text-black-foreground max-w-2xl mx-auto font-worksans">
             Proficiency levels across modern technologies and frameworks, 
@@ -94,7 +94,7 @@ const SkillsVisualization = () => {
             <motion.button
               key={key}
               onClick={() => setSelectedCategory(key)}
-              className={`flex items-center rounded-xl space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+              className={`flex items-center rounded-full space-x-2 px-6 py-3 font-medium transition-all duration-200 ${
                 selectedCategory === key
                   ? 'bg-[#0077ff] text-white shadow-brand'
                   : 'bg-white text-[#0077ff] border border-[#0077FF]'

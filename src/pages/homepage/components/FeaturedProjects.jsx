@@ -61,7 +61,7 @@ const FeaturedProjects = () => {
           </p>
           
           <Link to="/projects">
-            <Button variant="outline" iconName="ArrowRight" iconPosition="right" className='rounded-xl bg-white text-[#0077FF] font-worksans'>
+            <Button variant="outline" iconName="ArrowRight" iconPosition="right" className='rounded-full bg-white text-[#0077FF] font-worksans'>
               View All Projects
             </Button>
           </Link>
@@ -182,7 +182,7 @@ const FeaturedProjects = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className='rounded-xl bg-white text-[#0077FF] border border-[#0077FF]'
+                      className='rounded-full bg-white text-[#0077FF] border border-[#0077FF]'
                       size="sm" 
                       fullWidth
                       iconName="ExternalLink"
@@ -198,7 +198,7 @@ const FeaturedProjects = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className='rounded-xl bg-white text-[#0077FF] border border-[#0077FF]'
+                      className='rounded-full bg-white text-[#0077FF] border border-[#0077FF]'
                       size="sm"
                       iconName="Github"
                     >
@@ -230,7 +230,7 @@ const FeaturedProjects = () => {
               <Button 
                 variant="default" 
                 size="lg"
-                className="bg-[#0077FF] text-white rounded-xl hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
+                className="bg-[#0077FF] text-white rounded-full hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
                 iconName="MessageCircle"
                 iconPosition="right"
               >

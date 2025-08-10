@@ -105,7 +105,7 @@ export async function getProducts() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight font-worksans"
+                className="text-3xl sm:text-3xl lg:text-4xl font-bold text-black leading-tight font-worksans"
               >
                 Hi{' '}
                 <span className="text-black">I'm</span>
@@ -115,7 +115,7 @@ export async function getProducts() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight font-worksans"
+                className="text-4xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight font-worksans"
               >
                 <span className="text-[#0077ff]">Ifthikar</span>
                 <br />
@@ -136,7 +136,7 @@ export async function getProducts() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-md text-black-foreground max-w-lg leading-relaxed text-black font-worksans"
+                className="text-md text-black-foreground max-w-lg leading-relaxed text-black font-worksans text-justify"
               >
                 Crafting seamless digital experiences with the MERN stack (MongoDB, Express.js, React, Node.js) — transforming ideas into scalable, user-centric applications that blend functionality with intuitive design, delivering performance, accessibility, and innovation at every step.
               </motion.p>
@@ -144,35 +144,35 @@ export async function getProducts() {
 
             {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-             className="flex flex-col sm:flex-row gap-4 items-center justify-center font-worksans"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.8, duration: 0.6 }}
+  className="flex flex-col sm:flex-row gap-4 items-center justify-center font-worksans"
+>
+  <Link to="/projects">
+    <Button
+      variant="default"
+      size="lg"
+      className="bg-white text-[#0077FF] border border-[#0077FF] hover:bg-[#0077FF] hover:text-white w-full sm:w-auto rounded-full"
+      iconName="FolderOpen"
+      iconPosition="right"
+    >
+      View Projects
+    </Button>
+  </Link>
 
-            >
-              <Link to="/projects">
-                <Button 
-                  variant="default" 
-                  size="lg"
-                  className="bg-white text-[#0077FF] border border-[#0077FF] hover:bg-[#0077FF] hover:text-white w-full sm:w-auto rounded-xl "
+  <Button
+  variant="default"
+  size="lg"
+  className="bg-[#0077FF] hover:bg-white hover:text-[#0077FF] border border-[#0077FF] sm:w-auto rounded-full text-white flex items-center gap-2"
+  onClick={handleDownload}
+>
+  Download CV
+  <FiDownload size={18} />
+</Button>
 
-                  iconName="FolderOpen"
-                  iconPosition="right"
-                >
-                  View Projects
-                </Button>
-              </Link>
-              
-              <button
-                onClick={handleDownload}
-                className="bg-[#0077FF] hover:bg-white hover:text-[#0077FF] border border-[#0077FF] w-full sm:w-auto rounded-xl text-white flex items-center justify-center gap-2 px-4 py-2"
-              >
-               
-                <span>Download CV</span>
-                 <FiDownload size={18} />
-              </button>
+</motion.div>
 
-            </motion.div>
 
             {/* Quick Stats */}
             {/* <motion.div
