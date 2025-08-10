@@ -79,62 +79,69 @@ export async function getProducts() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-violet-50 via-pink-50 to-purple-50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white  from-violet-50 via-pink-50 to-purple-50">
       {/* Animated Background Elements */}
       {/* <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 gradient-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
         <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
         <div className="absolute -bottom-8 left-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
       </div> */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+       <div className="flex justify-center items-center gap-12">
+
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-10"
+            className="space-y-10 text-center"
           >
-            <div className="space-y-2">
+            <div className="space-y-2 ">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+                className="text-1xl sm:text-2xl lg:text-3xl font-bold text-foreground leading-tight"
               >
-                Hi,{' '}
-                <span className="text-primary">I'm</span>
+                <span className="font-worksans text-black">Welcome to my Portfolio</span>
                 <br />
               </motion.h1>
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground leading-tight font-worksans"
               >
-                Seyed Ahamed{' '}
-                <span className="gradient-text">Ifthikar</span>
+                Hi{' '}
+                <span className="text-black">I'm</span>
+                <br />
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight font-worksans"
+              >
+                <span className="text-[#0077ff]">Ifthikar</span>
                 <br />
               </motion.h1>
 
-              <motion.div
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="flex items-center space-x-2"
+                transition={{ delay: 0.4, duration: 0.6 }}
+                className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground leading-tight font-worksans"
               >
-                <div className="w-2 h-2 gradient-primary rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium text-primary uppercase tracking-wider">
-                  Full-Stack Developer
-                </span>
-              </motion.div>
+                <span className="text-black">Fullstack Developer</span>
+                <br />
+              </motion.h1>
 
               
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-lg text-muted-foreground max-w-lg leading-relaxed text-black"
+                className="text-md text-black-foreground max-w-lg leading-relaxed text-black font-worksans"
               >
                 Crafting seamless digital experiences with the MERN stack (MongoDB, Express.js, React, Node.js) — transforming ideas into scalable, user-centric applications that blend functionality with intuitive design, delivering performance, accessibility, and innovation at every step.
               </motion.p>
@@ -145,13 +152,15 @@ export async function getProducts() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+             className="flex flex-col sm:flex-row gap-4 items-center justify-center font-worksans"
+
             >
               <Link to="/projects">
                 <Button 
                   variant="default" 
                   size="lg"
-                  className="gradient-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto rounded-xl"
+                  className="bg-white text-[#0077FF] border border-[#0077FF] hover:bg-[#0077FF] hover:text-white w-full sm:w-auto rounded-xl "
+
                   iconName="FolderOpen"
                   iconPosition="right"
                 >
@@ -160,12 +169,13 @@ export async function getProducts() {
               </Link>
               
               <button
-  onClick={handleDownload}
-  className="gradient-primary hover:opacity-90 transition-opacity duration-200 w-full sm:w-auto rounded-xl text-white flex items-center justify-center gap-2 px-4 py-2"
->
-  <FiDownload size={18} />
-  <span>Resume</span>
-</button>
+                onClick={handleDownload}
+                className="bg-[#0077FF] hover:bg-white hover:text-[#0077FF] border border-[#0077FF] w-full sm:w-auto rounded-xl text-white flex items-center justify-center gap-2 px-4 py-2"
+              >
+               
+                <span>Download CV</span>
+                 <FiDownload size={18} />
+              </button>
 
             </motion.div>
 

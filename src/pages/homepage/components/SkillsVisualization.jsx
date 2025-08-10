@@ -70,7 +70,7 @@ const SkillsVisualization = () => {
   };
 
   return (
-    <section className="py-5 bg-background">
+    <section className="py-2 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,25 +79,25 @@ const SkillsVisualization = () => {
           viewport={{ once: true }}
           className="text-center mb-5"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mt-0">
-            Technical <span className="gradient-text">Expertise</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-worksans">
+            Technical <span className="text-3xl sm:text-4xl font-bold text-foreground">Expertise</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-black-foreground max-w-2xl mx-auto font-worksans">
             Proficiency levels across modern technologies and frameworks, 
             continuously updated through hands-on projects and learning.
           </p>
         </motion.div>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center gap-4 mb-5">
+        <div className="flex flex-wrap justify-center gap-4 mb-5 font-worksans">
           {Object.entries(skillCategories)?.map(([key, category]) => (
             <motion.button
               key={key}
               onClick={() => setSelectedCategory(key)}
               className={`flex items-center rounded-xl space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                 selectedCategory === key
-                  ? 'bg-primary text-white shadow-brand'
-                  : 'bg-card text-muted-foreground hover:text-foreground hover:bg-muted/50 border border-border'
+                  ? 'bg-[#0077ff] text-white shadow-brand'
+                  : 'bg-white text-[#0077ff] border border-[#0077FF]'
               }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -123,28 +123,28 @@ const SkillsVisualization = () => {
       className="p-2 mt-2"
     >
       {/* Skill Name and Level with Icon */}
-      <div className="flex items-center justify-between mb-1">
+      <div className="flex items-center justify-between mb-3">
         <div className="flex items-center space-x-2">
           <Icon name={skill?.icon} size={20} />
           <h3 className="font-semibold text-foreground">{skill?.name}</h3>
         </div>
-        <span className="text-sm font-medium text-primary">{skill?.level}%</span>
+        {/* <span className="text-sm font-medium text-primary">{skill?.level}%</span> */}
       </div>
 
       {/* Progress Bar */}
       <div className="relative">
         <div className="w-full bg-muted rounded-full h-2">
           <motion.div
-            className="h-2 gradient-primary rounded-full"
+            className="h-2 bg-[#0077FF] rounded-full"
             initial={{ width: 0 }}
             animate={{ width: `${skill?.level}%` }}
             transition={{ duration: 1, delay: index * 0.1 }}
           />
         </div>
-        <div className="flex justify-between text-xs text-muted-foreground mt-2">
+        {/* <div className="flex justify-between text-xs text-muted-foreground mt-2">
           <span>Beginner</span>
           <span>Expert</span>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   ))}
@@ -159,20 +159,20 @@ const SkillsVisualization = () => {
           viewport={{ once: true }}
           className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <div className="text-center p-6 bg-card border border-border rounded-xl">
-            <div className="text-2xl font-bold gradient-text mb-2">15+</div>
+          <div className="text-center p-6 bg-card border border-border rounded-xl shadow-lg">
+            <div className="text-2xl font-bold text-black mb-2">15+</div>
             <div className="text-sm text-muted-foreground">Technologies</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-xl">
-            <div className="text-2xl font-bold gradient-text mb-2">1+</div>
+          <div className="text-center p-6 bg-card border border-border rounded-xl shadow-lg">
+            <div className="text-2xl font-bold text-black mb-2">1+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-xl">
-            <div className="text-2xl font-bold gradient-text mb-2">1+</div>
+          <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
+            <div className="text-2xl font-bold text-black mb-2">1+</div>
             <div className="text-sm text-muted-foreground">Projects Built</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-xl">
-            <div className="text-2xl font-bold gradient-text mb-2">10+</div>
+          <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
+            <div className="text-2xl font-bold text-black mb-2">10+</div>
             <div className="text-sm text-muted-foreground">Certifications</div>
           </div>
         </motion.div>

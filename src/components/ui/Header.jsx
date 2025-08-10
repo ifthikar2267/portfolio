@@ -14,12 +14,13 @@ const Header = () => {
     { name: 'Home', path: '/homepage', icon: 'Home' },
     { name: 'Projects', path: '/projects', icon: 'FolderOpen' },
     { name: 'Education', path: '/education', icon: 'GraduationCap' },
-    { name: 'Certifications', path: '/certifications', icon: 'Award' }
+    { name: 'Certifications', path: '/certifications', icon: 'Award' },
+     { name: 'About', path: '/about', icon: 'User' },
+    { name: 'Contact', path: '/contact', icon: 'Mail' }
   ];
 
   const moreMenuItems = [
-    { name: 'About', path: '/about', icon: 'User' },
-    { name: 'Contact', path: '/contact', icon: 'Mail' }
+   
   ];
 
   useEffect(() => {
@@ -85,7 +86,7 @@ const Header = () => {
           </Link> */}
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-1">
+          <nav className="hidden md:flex items-center space-x-1 text-center">
             {navigationItems?.map((item) => (
               <Link
                 key={item?.path}
@@ -102,14 +103,14 @@ const Header = () => {
             ))}
             
             {/* More Menu */}
-            <div className="relative group">
+            {/* <div className="relative group">
               <button className="flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-all duration-200">
                 <Icon name="MoreHorizontal" size={16} />
                 <span>More</span>
-              </button>
+              </button> */}
               
               {/* Dropdown */}
-              <div className="absolute top-full right-0 mt-2 w-48 bg-popover border border-border rounded-lg
+              {/* <div className="absolute top-full right-0 mt-2 w-48 bg-popover border border-border rounded-lg
               shadow-brand-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-1 group-hover:translate-y-0">
                 <div className="py-2">
                   {moreMenuItems?.map((item) => (
@@ -126,15 +127,15 @@ const Header = () => {
                     </Link>
                   ))}
                 </div>
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </nav>
 
           {/* CTA Button - Desktop */}
           <div className="hidden md:block">
            <button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#3F72AF] text-[#F9F7F7] font-medium hover:bg-[#112D4E] transition-colors duration-200"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
     >
       <FiDownload size={18} />
       <span>Resume</span>
@@ -169,7 +170,7 @@ const Header = () => {
                 onClick={closeMobileMenu}
                 className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActivePath(item?.path)
-                    ? 'bg-primary/10 text-warning shadow-sm'
+                    ? 'bg-primary/10 text-[#0077FF] shadow-sm'
                     : 'text-black-foreground hover:text-foreground hover:bg-muted/50'
                 }`}
               >
@@ -182,7 +183,7 @@ const Header = () => {
             <div className="pt-4 border-t border-border">
               <button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#112D4E] text-[#F9F7F7] font-medium hover:bg-[#3F72AF] transition-colors duration-200"
+      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
     >
       <FiDownload size={18} />
       <span>Resume</span>

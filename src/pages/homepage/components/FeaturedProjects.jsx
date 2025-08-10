@@ -43,7 +43,7 @@ const FeaturedProjects = () => {
   };
 
   return (
-    <section className="py-5 bg-muted/30">
+    <section className="py-7 bg-[#0077FF]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,16 +52,16 @@ const FeaturedProjects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
-            Featured <span className="gradient-text">Projects</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 font-worksans">
+            Featured <span className="text-white">Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-white max-w-2xl mx-auto mb-8 font-worksans">
             Showcasing real-world applications built with modern technologies, 
             delivering measurable business results and exceptional user experiences.
           </p>
           
           <Link to="/projects">
-            <Button variant="outline" iconName="ArrowRight" iconPosition="right" className='rounded-xl bg-[#007BFF]'>
+            <Button variant="outline" iconName="ArrowRight" iconPosition="right" className='rounded-xl bg-white text-[#0077FF] font-worksans'>
               View All Projects
             </Button>
           </Link>
@@ -78,7 +78,7 @@ const FeaturedProjects = () => {
             <motion.div
               key={project?.id}
               variants={projectVariants}
-              className={`group relative bg-card border border-border rounded-xl overflow-hidden hover:shadow-brand-lg transition-all bg-primary duration-300 ${
+              className={`group relative bg-white border border-border rounded-xl overflow-hidden hover:shadow-brand-lg transition-all bg-primary duration-300 ${
                 index === 0 ? 'md:col-span-2 lg:col-span-1' : ''
               }`}
               onMouseEnter={() => setHoveredProject(project?.id)}
@@ -136,10 +136,10 @@ const FeaturedProjects = () => {
               {/* Project Content */}
               <div className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-foreground text-white mb-2 group-hover:text-[#002B5C] transition-colors duration-200">
+                  <h3 className="text-xl font-semibold text-foreground text-black mb-2 group-hover:text-[#002B5C] transition-colors duration-200 font-worksans">
                     {project?.title}
                   </h3>
-                  <p className="text-black-foreground text-sm leading-relaxed font-semibold">
+                  <p className="text-black-foreground text-sm leading-relaxed font-semibold font-worksans">
                     {project?.description}
                   </p>
                 </div>
@@ -159,16 +159,16 @@ const FeaturedProjects = () => {
                 {/* Metrics */}
                 <div className="grid grid-cols-3 gap-4 mb-4 pt-4 border-t border-border">
                   <div className="text-center">
-                    <div className="text-sm font-semibold text-white">{project?.metrics?.users}</div>
-                    <div className="text-xs text-black-foreground font-semibold">Users</div>
+                    <div className="text-sm font-semibold text-black font-worksans">{project?.metrics?.users}</div>
+                    <div className="text-xs text-black-foreground font-semibold font-worksans">Users</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-sm font-semibold text-white">{project?.metrics?.performance}</div>
-                    <div className="text-xs text-black-foreground font-semibold">Performance</div>
+                    <div className="text-sm font-semibold text-black font-worksans">{project?.metrics?.performance}</div>
+                    <div className="text-xs text-black-foreground font-semibold font-worksans">Performance</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-sm font-semibold text-white">{project?.metrics?.uptime}</div>
-                    <div className="text-xs text-black-foreground font-semibold">Uptime</div>
+                    <div className="text-sm font-semibold text-black font-worksans">{project?.metrics?.uptime}</div>
+                    <div className="text-xs text-black-foreground font-semibold font-worksans">Uptime</div>
                   </div>
                 </div>
 
@@ -182,7 +182,7 @@ const FeaturedProjects = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className='rounded-xl bg-white text-black'
+                      className='rounded-xl bg-white text-[#0077FF] border border-[#0077FF]'
                       size="sm" 
                       fullWidth
                       iconName="ExternalLink"
@@ -198,7 +198,7 @@ const FeaturedProjects = () => {
                   >
                     <Button 
                       variant="outline" 
-                      className='rounded-xl bg-white'
+                      className='rounded-xl bg-white text-[#0077FF] border border-[#0077FF]'
                       size="sm"
                       iconName="Github"
                     >
@@ -220,17 +220,17 @@ const FeaturedProjects = () => {
           className="text-center mt-12"
         >
           <div className="bg-card border border-border rounded-xl p-8">
-            <h3 className="text-2xl font-semibold text-foreground mb-4">
+            <h3 className="text-2xl font-semibold text-foreground mb-4 font-worksans">
               Ready to build something amazing?
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto font-worksans">
               Let's discuss your project requirements and create a solution that drives real business results.
             </p>
             <Link to="/contact">
               <Button 
                 variant="default" 
                 size="lg"
-                className="gradient-primary rounded-xl hover:opacity-90 transition-opacity duration-200"
+                className="bg-[#0077FF] text-white rounded-xl hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
                 iconName="MessageCircle"
                 iconPosition="right"
               >

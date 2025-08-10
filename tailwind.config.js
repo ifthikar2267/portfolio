@@ -18,8 +18,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+         worksans: ['"Work Sans"', 'sans-serif'],
+        sans: ['Inter', 'sans-serif']
       },
       colors: {
         border: 'var(--color-border)', /* slate-200 */

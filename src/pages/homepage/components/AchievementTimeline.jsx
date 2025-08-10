@@ -123,7 +123,7 @@ const AchievementTimeline = () => {
   };
 
   return (
-    <section className="py-8 bg-background">
+    <section className="py-8 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -132,10 +132,10 @@ const AchievementTimeline = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Recent <span className="gradient-text">Achievements</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 font-worksans">
+            Recent <span className="text-black ">Achievements</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-worksans">
             Continuous learning and professional growth through certifications, 
             project milestones, and community contributions.
           </p>
@@ -183,14 +183,14 @@ const AchievementTimeline = () => {
                           <Icon name={achievement?.icon} size={20} className={achievement?.color} />
                         </div>
                         <div>
-                          <h3 className="font-semibold text-foreground text-lg">
+                          <h3 className="font-semibold text-foreground text-lg font-worksans">
                             {achievement?.title}
                           </h3>
-                          <div className="flex items-center space-x-2 mt-1">
+                          <div className="flex items-center space-x-2 mt-1 font-worksans">
                             <span className="text-sm text-muted-foreground">
                               {formatDate(achievement?.date)}
                             </span>
-                            <span className="text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full">
+                            <span className="text-xs px-2 py-1 bg-muted text-muted-foreground rounded-full font-worksans">
                               {achievement?.category}
                             </span>
                           </div>
@@ -205,7 +205,7 @@ const AchievementTimeline = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-muted-foreground mb-4 font-worksans">
                       {achievement?.description}
                     </p>
 
@@ -260,12 +260,12 @@ const AchievementTimeline = () => {
         >
           <div className="text-center p-6 bg-card border border-border rounded-xl">
             <Icon name="Award" size={24} className="text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold gradient-text mb-1">10+</div>
+            <div className="text-2xl font-bold text-black mb-1">10+</div>
             <div className="text-sm text-muted-foreground">Certifications</div>
           </div>
           <div className="text-center p-6 bg-card border border-border rounded-xl">
             <Icon name="Rocket" size={24} className="text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold gradient-text mb-1">1+</div>
+            <div className="text-2xl font-bold text-black mb-1">1+</div>
             <div className="text-sm text-muted-foreground">Projects</div>
           </div>
           {/* <div className="text-center p-6 bg-card border border-border rounded-xl">

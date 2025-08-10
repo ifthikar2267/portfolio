@@ -39,7 +39,7 @@ const Homepage = () => {
         <meta property="og:url" content="https://ifthikar-portfolio.vercel.app" />
         <link rel="canonical" href="https://ifthikar-portfolio.vercel.app" />
       </Helmet>
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <Header />
         
         <main>
@@ -70,11 +70,11 @@ const Homepage = () => {
                     <span className="text-white font-bold text-sm">SAI</span>
                   </div> */}
                   <div>
-                    <div className="text-lg font-bold text-black">Ifthikar</div>
-                    <div className="text-xs text-white font-semibold -mt-1">Portfolio</div>
+                    <div className="text-xl font-bold text-white font-worksans">Ifthikar</div>
+                    <div className="text-md text-white font-semibold mt-1 font-worksans">Portfolio</div>
                   </div>
                 </div>
-                <p className="text-black-foreground mb-4 max-w-md">
+                <p className="text-white mb-6 max-w-md font-worksans">
                   Code meets creativity. Full-stack developer building scalable, high-impact web applications that shape the future.
                 </p>
                 <div className="flex space-x-4">
@@ -82,7 +82,7 @@ const Homepage = () => {
                     href="https://github.com/ifthikar2267" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-black hover:text-white transition-colors duration-200"
+                    className="text-white hover:text-white transition-colors duration-200"
                   >
                     <span className="sr-only">GitHub</span>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@ const Homepage = () => {
                     href="https://www.linkedin.com/in/ifthikar-mj-59b8a8250" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-black hover:text-white transition-colors duration-200"
+                    className="text-white hover:text-white transition-colors duration-200"
                   >
                     <span className="sr-only">LinkedIn</span>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -104,7 +104,7 @@ const Homepage = () => {
                     href="mailto:meetifthikarhere@gmail.com"
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-black hover:text-white transition-colors duration-200"
+                    className="text-white hover:text-white transition-colors duration-200"
                   >
                     <span className="sr-only">Gmail</span>
                     <svg
@@ -123,12 +123,12 @@ const Homepage = () => {
 
               {/* Quick Links */}
               <div>
-                <h3 className="font-bold text-foreground mb-4">Quick Links</h3>
+                <h3 className="font-bold text-white mb-4 font-worksans">Quick Links</h3>
                 <ul className="space-y-2">
-                  <li><a href="/projects" className="text-white hover:text-black transition-colors duration-200">Projects</a></li>
-                  <li><a href="/about" className="text-white hover:text-black transition-colors duration-200">About</a></li>
-                  <li><a href="/certifications" className="text-white hover:text-black transition-colors duration-200">Certifications</a></li>
-                  <li><a href="/contact" className="text-white hover:text-black transition-colors duration-200">Contact</a></li>
+                  <li><a href="/projects" className="text-white hover:text-black transition-colors duration-200 font-worksans">Projects</a></li>
+                  <li><a href="/about" className="text-white hover:text-black transition-colors duration-200 font-worksans">About</a></li>
+                  <li><a href="/certifications" className="text-white hover:text-black transition-colors duration-200 font-worksans">Certifications</a></li>
+                  <li><a href="/contact" className="text-white hover:text-black transition-colors duration-200 font-worksans">Contact</a></li>
                 </ul>
               </div>
 
@@ -145,14 +145,14 @@ const Homepage = () => {
             </div>
 
             <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-black-foreground text-sm font-semibold">
+              <p className="text-white text-sm font-semibold font-worksans">
                 © {new Date()?.getFullYear()} Ifthikar Portfolio. All rights reserved.
               </p>
-              <div className="flex space-x-6 mt-4 md:mt-0">
-                <a href="/privacy" className="text-black-foreground font-semibold hover:text-white text-sm transition-colors duration-200">
+              <div className="flex space-x-6 mt-4 md:mt-0 font-worksans">
+                <a href="/privacy" className="text-white font-semibold hover:text-black text-sm transition-colors duration-200">
                   Privacy Policy
                 </a>
-                <a href="/terms" className="text-black-foreground font-semibold hover:text-white text-sm transition-colors duration-200">
+                <a href="/terms" className="text-white font-semibold hover:text-black text-sm transition-colors duration-200">
                   Terms of Service
                 </a>
               </div>
