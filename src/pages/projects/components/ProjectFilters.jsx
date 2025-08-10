@@ -42,7 +42,7 @@ const ProjectFilters = ({
           placeholder="Search projects by name, technology, or description..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e?.target?.value)}
-          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder-grey focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 font-worksans"
+          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-full text-foreground placeholder-grey focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 font-worksans"
         />
         {searchQuery && (
           <button

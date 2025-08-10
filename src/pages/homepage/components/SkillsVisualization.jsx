@@ -82,8 +82,9 @@ const SkillsVisualization = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-black font-worksans">
             Technical <span className="text-3xl sm:text-4xl font-bold text-black">Expertise</span>
           </h2>
-          <p className="text-lg text-black-foreground max-w-2xl mx-auto font-worksans">
-            Proficiency levels across modern technologies and frameworks, 
+          <p className="text-lg text-black-foreground max-w-2xl mx-auto font-worksans text-justify [hyphens:auto]">
+            Proficiency levels across modern 
+            technologies and frameworks, 
             continuously updated through hands-on projects and learning.
           </p>
         </motion.div>
