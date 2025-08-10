@@ -171,12 +171,12 @@ const Projects = () => {
                 <div className="w-12 h-12 bg-[#0077FF] rounded-xl flex items-center justify-center">
                   <Icon name="FolderOpen" size={24} color="white" />
                 </div>
-                <h1 className="text-4xl lg:text-6xl font-bold font-worksans">
+                <h1 className="text-3xl lg:text-6xl font-bold font-worksans">
                   <span className="text-black">My Projects</span>
                 </h1>
               </div>
               
-              <p className="text-xl text-black-foreground font-semibold max-w-3xl mx-auto leading-relaxed font-worksans">
+              <p className="text-l text-muted-foreground font-semibold max-w-3xl mx-auto leading-relaxed font-worksans">
                 Explore my portfolio of full-stack development projects, featuring modern web applications, 
                 APIs, and mobile solutions built with cutting-edge technologies and best practices.
               </p>
