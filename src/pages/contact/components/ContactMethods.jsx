@@ -12,7 +12,7 @@ const ContactMethods = () => {
       value: 'meetifthikarhere@gmail.com',
       action: 'Send Email',
       href: 'mailto:meetifthikarhere@gmail.com',
-      color: 'text-blue-600',
+      color: 'text-[#0077FF] ',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200'
     },
@@ -24,7 +24,7 @@ const ContactMethods = () => {
       value: '/in/ifthikar-mj',
       action: 'Connect',
       href: 'https://www.linkedin.com/in/ifthikar-mj-59b8a8250',
-      color: 'text-blue-700',
+      color: 'text-[#0077FF] ',
       bgColor: 'bg-blue-50',
       borderColor: 'border-blue-200'
     },
@@ -73,7 +73,7 @@ const ContactMethods = () => {
     <div className="space-y-8">
       {/* Primary Contact Methods */}
       <div>
-        <h3 className="text-xl font-bold text-foreground mb-6">Get In Touch</h3>
+        <h3 className="text-2xl font-bold text-black  font-worksans mb-6">Get In Touch</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {contactMethods?.map((method) => (
             <div
@@ -85,9 +85,9 @@ const ContactMethods = () => {
                   <Icon name={method?.icon} size={24} className={method?.color} />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-semibold text-foreground mb-1">{method?.title}</h4>
-                  <p className="text-sm text-muted-foreground mb-2">{method?.description}</p>
-                  <p className="text-sm font-mono text-foreground mb-3 break-all">{method?.value}</p>
+                  <h4 className="font-semibold text-black  font-worksans mb-1">{method?.title}</h4>
+                  <p className="text-sm text-muted-foreground mb-2  font-worksans">{method?.description}</p>
+                  <p className="text-sm font-mono text-black mb-3 break-all  font-worksans">{method?.value}</p>
                   <a
                     href={method?.href}
                     target={method?.id === 'email' || method?.id === 'phone' ? '_self' : '_blank'}
@@ -155,11 +155,11 @@ const ContactMethods = () => {
       <div className="bg-card rounded-xl p-6 border border-border">
         <div className="flex items-start space-x-4">
           <div className="p-3 rounded-lg bg-accent/10 border border-accent/20">
-            <Icon name="Clock" size={24} className="text-accent" />
+            <Icon name="Clock" size={24} className="text-[#0077FF]" />
           </div>
           <div>
-            <h4 className="font-semibold text-foreground mb-2">Response Time & Availability</h4>
-            <div className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="font-semibold text-black  font-worksans mb-2">Response Time & Availability</h4>
+            <div className="space-y-2 text-sm text-muted-foreground font-worksans">
               <p>• Email responses: Within 24 hours</p>
               <p>• LinkedIn messages: Within 12 hours</p>
               <p>• Currently accepting new projects starting</p>

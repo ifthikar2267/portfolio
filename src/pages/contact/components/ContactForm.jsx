@@ -105,12 +105,12 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="bg-card rounded-xl p-8 shadow-brand-lg border border-border text-center">
+      <div className="bg-card shadow-brand rounded-xl p-8 shadow-brand-lg border border-border text-center">
         <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
           <Icon name="CheckCircle" size={32} color="white" />
         </div>
-        <h3 className="text-2xl font-bold text-foreground mb-4">Message Sent Successfully!</h3>
-        <p className="text-muted-foreground mb-6">
+        <h3 className="text-2xl font-bold text-black  font-worksans mb-4">Message Sent Successfully!</h3>
+        <p className="text-muted-foreground mb-6  font-worksans">
           Thank you for reaching out! I'll review your project details and get back to you within 24 hours. 
           You should receive a confirmation email shortly.
         </p>
@@ -140,14 +140,14 @@ const ContactForm = () => {
   return (
     <div className="bg-card rounded-xl p-8 shadow-brand-lg border border-border">
       <div className="mb-8">
-        <h3 className="text-2xl font-bold text-foreground mb-2">Let's Build Something Amazing</h3>
-        <p className="text-muted-foreground">
+        <h3 className="text-2xl font-semibold text-black  font-worksans mb-2">Let's Build Something Amazing</h3>
+        <p className="text-muted-foreground font-worksans">
           Tell me about your project and let's discuss how we can bring your vision to life.
         </p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Basic Information */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid font-worksans grid-cols-1 md:grid-cols-2 gap-6">
           <Input
             label="Full Name"
             type="text"
@@ -205,7 +205,7 @@ const ContactForm = () => {
 
         {/* Services Needed */}
         <div>
-          <label className="block text-sm font-medium text-foreground mb-3">
+          <label className="block text-sm font-medium text-foreground mb-3 font-worksans">
             Services Needed <span className="text-error">*</span>
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -222,11 +222,11 @@ const ContactForm = () => {
 
         {/* Project Description */}
         <div>
-          <label className="block text-sm font-medium text-foreground mb-2">
+          <label className="block text-sm font-medium text-foreground mb-2  font-worksans">
             Project Description <span className="text-error">*</span>
           </label>
           <textarea
-            className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none bg-background text-foreground placeholder:text-muted-foreground"
+            className="w-full px-4 py-3 border border-input rounded-xl focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none bg-background text-foreground placeholder:text-muted-foreground shadow-brand font-worksans"
             rows={6}
             placeholder="Please describe your project in detail. Include any specific requirements, technologies you prefer, and what success looks like for you..."
             value={formData?.description}
@@ -293,7 +293,7 @@ const ContactForm = () => {
             size="lg"
             fullWidth
             loading={isSubmitting}
-            className="gradient-primary hover:opacity-90 transition-opacity duration-200 rounded-xl"
+            className="bg-[#0077FF] rounded-full hover:opacity-90 transition-opacity duration-200"
           >
             {isSubmitting ? 'Sending Message...' : 'Send Project Brief'}
           </Button>
@@ -304,8 +304,8 @@ const ContactForm = () => {
         <div className="flex items-start space-x-3">
           <Icon name="Clock" size={20} className="text-accent mt-0.5" />
           <div>
-            <p className="text-sm font-medium text-foreground">Response Time</p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm font-medium text-black  font-worksans">Response Time</p>
+            <p className="text-sm text-muted-foreground  font-worksans">
               I typically respond to project inquiries within 24 hours. For urgent matters, 
               feel free to reach out via LinkedIn or email directly.
             </p>
