@@ -68,22 +68,21 @@ const Header = () => {
       <div className="w-full">
         <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
           {/* Logo */}
-          {/* <Link 
+           <Link 
             to="/homepage" 
             className="flex items-center space-x-2 group"
             onClick={closeMobileMenu}
           >
             <div className="relative">
-              <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
+              {/* <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
               <Icon name="Code2" size={18} color="white" strokeWidth={2.5} />
-              </div>
+              </div> */}
               <div className="absolute -inset-1 gradient-primary rounded-lg opacity-20 group-hover:opacity-30 transition-opacity duration-200 blur-sm"></div>
             </div>
              <div className="flex flex-col">
-              <span className="text-lg font-bold gradient-text">Ifthikar</span>
-              <span className="text-xs text-muted-foreground -mt-1">Portfolio</span>
+              <span className="text-lg font-bold text-[#0077FF] -mt-1 font-worksans">Portfolio</span>
             </div> 
-          </Link> */}
+          </Link> 
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-1 text-center">
