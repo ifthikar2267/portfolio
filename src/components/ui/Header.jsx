@@ -46,12 +46,12 @@ const Header = () => {
 
   const handleDownload = () => {
     const fileUrl =
-      "https://drive.google.com/file/d/1yeRdoTSmDM7ASUJ2OBpNtOqDqjIDL7d9/view?usp=drivesdk";
+      "/assets/images/Ifthikar - Full Stack Developer Resume.pdfk";
 
     // Create a hidden link and trigger click
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.setAttribute("download", "My_Resume.pdf"); // This suggests a filename
+    link.setAttribute("download", "Ifthikar_Resume.pdf"); // This suggests a filename
     document.body.appendChild(link);
     link.click();
     link.remove();
@@ -77,7 +77,7 @@ const Header = () => {
               {/* <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center transform group-hover:scale-105 transition-transform duration-200">
               <Icon name="Code2" size={18} color="white" strokeWidth={2.5} />
               </div> */}
-              <div className="absolute -inset-1 gradient-primary rounded-lg opacity-20 group-hover:opacity-30 transition-opacity duration-200 blur-sm"></div>
+              {/* <div className="absolute -inset-1 gradient-primary rounded-lg opacity-20 group-hover:opacity-30 transition-opacity duration-200 blur-sm"></div> */}
             </div>
              <div className="flex flex-col">
               <span className="text-lg font-bold text-[#0077FF] -mt-1 font-worksans">Portfolio</span>
@@ -136,8 +136,9 @@ const Header = () => {
       onClick={handleDownload}
       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
     >
-      <FiDownload size={18} />
-      <span>Resume</span>
+     
+      <span>Download CV</span>
+       <FiDownload size={18} />
     </button>
           </div>
 
@@ -184,8 +185,9 @@ const Header = () => {
       onClick={handleDownload}
       className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#0077FF] text-white font-medium hover:bg-white hover:text-[#0077FF] border border-[#0077FF]"
     >
-      <FiDownload size={18} />
-      <span>Resume</span>
+     
+      <span>Download CV</span>
+       <FiDownload size={18} />
     </button>
             </div>
           </nav>

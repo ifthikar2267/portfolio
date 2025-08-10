@@ -20,7 +20,7 @@ const TechnologyShowcase = ({ technologies }) => {
     <div className="bg-card border border-border rounded-xl p-6 mb-8">
       <div className="flex items-center space-x-2 mb-6">
         <Icon name="Layers" size={24} className="text-primary" />
-        <h3 className="text-xl font-semibold text-foreground">Technology Stack</h3>
+        <h3 className="text-xl font-semibold text-black font-worksans">Technology Stack</h3>
       </div>
       {/* Category Filters */}
       <div className="flex flex-wrap gap-2 mb-6">
@@ -30,8 +30,8 @@ const TechnologyShowcase = ({ technologies }) => {
             onClick={() => setSelectedCategory(category?.id)}
             className={`flex items-center space-x-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
               selectedCategory === category?.id
-                ? 'bg-primary text-white shadow-sm'
-                : 'bg-muted text-muted-foreground hover:bg-muted/80 hover:text-foreground'
+                ? 'bg-[#0077FF] text-white shadow-sm'
+                : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-muted/80 hover:text-foreground'
             }`}
           >
             <Icon name={category?.icon} size={16} />
@@ -44,12 +44,12 @@ const TechnologyShowcase = ({ technologies }) => {
         {filteredTechnologies?.map((tech, index) => (
           <div
             key={index}
-            className="group relative bg-background border border-border rounded-lg p-2 text-center hover:border-primary/30 hover:shadow-brand transition-all duration-200 cursor-pointer rounded-xl"
+            className="group relative bg-[#0077FF] border border-border rounded-lg p-2 text-center hover:border-primary/30 hover:shadow-brand transition-all duration-200 cursor-pointer rounded-xl"
           >
             {/* Technology Icon/Logo */}
             <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center">
               {tech?.icon ? (
-                <Icon name={tech?.icon} size={32} className="text-primary group-hover:scale-110 transition-transform duration-200" />
+                <Icon name={tech?.icon} size={32} className="text-white group-hover:scale-110 transition-transform duration-200" />
               ) : (
                 <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
                   <span className="text-lg font-bold text-primary">
@@ -60,7 +60,7 @@ const TechnologyShowcase = ({ technologies }) => {
             </div>
 
             {/* Technology Name */}
-            <h4 className="text-sm font-medium text-foreground mb-1">
+            <h4 className="text-sm font-medium text-white mb-1 font-worksans">
               {tech?.name}
             </h4>
 
@@ -70,14 +70,14 @@ const TechnologyShowcase = ({ technologies }) => {
                 <div
                   key={i}
                   className={`w-1.5 h-1.5 rounded-full ${
-                    i < tech?.level ? 'bg-primary' : 'bg-muted'
+                    i < tech?.level ? 'bg-white' : 'bg-muted'
                   }`}
                 />
               ))}
             </div>
 
             {/* Project Count */}
-            <div className="text-xs text-muted-foreground">
+            <div className="text-xs text-white font-worksans">
               {tech?.projectCount} project{tech?.projectCount !== 1 ? 's' : ''}
             </div>
 

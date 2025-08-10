@@ -148,7 +148,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="min-h-screen bg-primary overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Helmet>
         <title>Projects</title>
         <meta name="description" content="Explore my portfolio of full-stack development projects, featuring modern web applications, APIs, and mobile solutions built with cutting-edge technologies." />
@@ -168,15 +168,15 @@ const Projects = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center space-x-2 mb-6">
-                <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-[#0077FF] rounded-xl flex items-center justify-center">
                   <Icon name="FolderOpen" size={24} color="white" />
                 </div>
-                <h1 className="text-4xl lg:text-6xl font-bold">
-                  <span className="text-[#002B5C]">My Projects</span>
+                <h1 className="text-4xl lg:text-6xl font-bold font-worksans">
+                  <span className="text-black">My Projects</span>
                 </h1>
               </div>
               
-              <p className="text-xl text-black-foreground font-semibold max-w-3xl mx-auto leading-relaxed">
+              <p className="text-xl text-black-foreground font-semibold max-w-3xl mx-auto leading-relaxed font-worksans">
                 Explore my portfolio of full-stack development projects, featuring modern web applications, 
                 APIs, and mobile solutions built with cutting-edge technologies and best practices.
               </p>
@@ -193,14 +193,14 @@ const Projects = () => {
                   size="lg"
                   iconName="Github"
                   iconPosition="left"
-                  className="gradient-primary text-white hover:opacity-90 rounded-xl"
+                  className="bg-[#0077FF] text-white hover:bg-white hover:text-[#0077FF] border border-[#0077FF] rounded-xl font-worksans"
                 >
                   View GitHub Profile
                 </Button>
                 </a>
                 <Button
                   variant="outline"
-                  className='rounded-xl gradient-primary text-white hover:opacity-90 rounded-xl'
+                  className='bg-[#0077FF] text-white hover:bg-white hover:text-[#0077FF] border border-[#0077FF] rounded-xl font-worksansfont-worksans'
                   onClick={handleDownload}
                   size="lg"
                   iconName="Download"
@@ -312,16 +312,16 @@ const Projects = () => {
         </section> */}
       </main>
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-8">
+      <footer className="bg-[#0077FF] border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                <Icon name="Code2" size={18} color="white" />
+              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+                <Icon name="Code2" size={20} color="black" />
               </div>
-              <span className="text-lg font-bold gradient-text">Ifthikar Portfolio</span>
+              <span className="text-lg font-bold text-white font-worksans">Ifthikar Portfolio</span>
             </div>
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-white font-worksans">
               © {new Date()?.getFullYear()} Ifthikar. All rights reserved.
             </div>
           </div>

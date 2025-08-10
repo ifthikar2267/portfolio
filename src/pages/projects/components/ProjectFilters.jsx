@@ -31,18 +31,18 @@ const ProjectFilters = ({
   ];
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6 mb-8">
+    <div className="bg-white border border-border rounded-xl p-6 mb-8">
       {/* Search Bar */}
-      <div className="relative mb-6">
-        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-          <Icon name="Search" size={18} className="text-muted-foreground" />
+      <div className="relative mb-6 bg-white border border-[#0077FF] rounded-xl">
+        <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ">
+          <Icon name="Search" size={18} className="text-[#0077FF]" />
         </div>
         <input
           type="text"
           placeholder="Search projects by name, technology, or description..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e?.target?.value)}
-          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+          className="w-full pl-10 pr-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder-[#0077FF] focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 font-worksans"
         />
         {searchQuery && (
           <button
@@ -63,7 +63,7 @@ const ProjectFilters = ({
             iconName={filter?.icon}
             iconPosition="left"
             onClick={() => onFilterChange(filter?.id)}
-            className={activeFilter === filter?.id ? 'gradient-primary text-white rounded-xl' : 'rounded-xl'}
+            className={activeFilter === filter?.id ? 'bg-[#0077FF] font-worksans text-white rounded-xl' : 'rounded-xl border border-[#0077FF] text-[#0077FF]'}
           >
             {filter?.label}
           </Button>
@@ -71,13 +71,13 @@ const ProjectFilters = ({
       </div>
       {/* Technology Tags */}
       <div className="mb-6">
-        <h4 className="text-sm font-medium text-foreground mb-3">Filter by Technology:</h4>
+        <h4 className="text-sm font-medium text-black font-worksans mb-3">Filter by Technology:</h4>
         <div className="flex flex-wrap gap-2">
           {technologyFilters?.map((tech) => (
             <button
               key={tech}
               onClick={() => onSearchChange(tech)}
-              className="px-3 py-1.5 text-xs font-medium bg-muted text-muted-foreground rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-200 rounded-xl"
+              className="px-3 py-1.5 text-xs font-medium bg-muted text-muted-foreground rounded-md hover:bg-primary/10 hover:text-primary transition-colors duration-200 rounded-xl font-worksans"
             >
               {tech}
             </button>
@@ -88,8 +88,8 @@ const ProjectFilters = ({
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         {/* Sort Options */}
         <div className="flex items-center space-x-2">
-          <span className="text-sm text-muted-foreground">Sort by:</span>
-          <div className="flex space-x-1">
+          <span className="text-sm text-muted-foreground font-worksans">Sort by:</span>
+          <div className="flex space-x-1 font-worksans">
             {sortOptions?.map((sort) => (
               <Button
                 key={sort?.id}
@@ -98,7 +98,11 @@ const ProjectFilters = ({
                 iconName={sort?.icon}
                 iconPosition="left"
                 onClick={() => onSortChange(sort?.id)}
-                className='rounded-xl'
+                className={`rounded-xl ${
+                  activeSort === sort?.id
+                    ? 'bg-[#0077FF] text-white'
+                    : 'bg-white text-[#0077FF] border border-[#0077FF]'
+                }`}
               >
                 {sort?.label}
               </Button>
@@ -107,7 +111,7 @@ const ProjectFilters = ({
         </div>
 
         {/* Results Count */}
-        <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+        <div className="flex items-center space-x-2 text-sm text-muted-foreground font-worksans">
           <Icon name="Filter" size={16} />
           <span>
             Showing {filteredCount} of {totalProjects} projects

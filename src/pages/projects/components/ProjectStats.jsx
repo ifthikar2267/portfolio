@@ -42,7 +42,7 @@ const ProjectStats = ({ stats }) => {
       {statItems?.map((stat, index) => (
         <div
           key={index}
-          className={`bg-card border ${stat?.borderColor} rounded-xl p-1 text-center hover:shadow-brand transition-shadow duration-200`}
+          className={`bg-card border ${stat?.borderColor} rounded-xl p-1 text-center shadow-lg hover:shadow-brand transition-shadow duration-200`}
         >
           <div className={`inline-flex items-center justify-center w-12 h-12 ${stat?.bgColor} rounded-lg mb-3`}>
             <Icon name={stat?.icon} size={24} className={stat?.color} />

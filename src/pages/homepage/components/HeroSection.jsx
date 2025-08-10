@@ -67,12 +67,12 @@ export async function getProducts() {
 
   const handleDownload = () => {
     const fileUrl =
-      "https://drive.google.com/file/d/1yeRdoTSmDM7ASUJ2OBpNtOqDqjIDL7d9/view?usp=drivesdk";
+      "/assets/images/Ifthikar - Full Stack Developer Resume.pdf";
 
     // Create a hidden link and trigger click
     const link = document.createElement("a");
     link.href = fileUrl;
-    link.setAttribute("download", "My_Resume.pdf"); // This suggests a filename
+    link.setAttribute("download", "Ifthikar_Resume.pdf"); // This suggests a filename
     document.body.appendChild(link);
     link.click();
     link.remove();

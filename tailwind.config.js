@@ -25,7 +25,7 @@ export default {
         border: 'var(--color-border)', /* slate-200 */
         input: 'var(--color-input)', /* slate-200 */
         ring: 'var(--color-ring)', /* violet-500 */
-        background: 'var(--color-background)', /* gray-50 */
+        background: 'var(--color-white)', /* gray-50 */
         foreground: 'var(--color-foreground)', /* slate-900 */
         surface: 'var(--color-surface)', /* slate-100 */
         primary: {

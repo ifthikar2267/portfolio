@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div 
-      className="group relative bg-card border border-border rounded-xl overflow-hidden shadow-brand hover:shadow-brand-lg transition-all duration-300 transform hover:-translate-y-1"
+      className="group relative bg-card border border-border rounded-xl overflow-hidden shadow-lg hover:shadow-brand-lg transition-all duration-300 transform hover:-translate-y-1"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -81,18 +81,18 @@ const ProjectCard = ({ project }) => {
         {/* Header */}
         <div className="flex items-start justify-between mb-3">
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-primary transition-colors duration-200">
+            <h3 className="text-lg font-semibold text-black font-worksans mb-1 group-hover:text-primary transition-colors duration-200">
               {project?.title}
             </h3>
-            <p className="text-sm text-muted-foreground line-clamp-2">
+            <p className="text-sm text-muted-foreground line-clamp-2 font-worksans">
               {project?.description}
             </p>
           </div>
-          {project?.featured && (
+          {/* {project?.featured && (
             <div className="ml-3">
               <Icon name="Star" size={16} className="text-warning fill-warning" />
             </div>
-          )}
+          )} */}
         </div>
 
         {/* Technology Stack */}
@@ -100,7 +100,7 @@ const ProjectCard = ({ project }) => {
           {project?.technologies?.slice(0, 4)?.map((tech, index) => (
             <span
               key={index}
-              className="px-2 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-xl"
+              className="px-2 py-1 text-xs font-medium bg-muted text-muted-foreground rounded-xl font-worksans"
             >
               {tech}
             </span>
@@ -146,7 +146,7 @@ const ProjectCard = ({ project }) => {
           fullWidth
           iconName="ArrowRight"
           iconPosition="right"
-          className="group-hover:border-primary group-hover:text-primary transition-colors duration-200 rounded-xl"
+          className="text-white bg-[#0077FF] group-hover:border-[#0077FF] group-hover:text-[#0077FF]  group-hover:bg-white transition-colors duration-200 rounded-xl"
         >
           View Details
         </Button>
