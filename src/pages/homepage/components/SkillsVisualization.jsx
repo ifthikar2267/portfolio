@@ -95,7 +95,7 @@ const SkillsVisualization = () => {
             <motion.button
               key={key}
               onClick={() => setSelectedCategory(key)}
-              className={`flex items-center rounded-full space-x-2 px-6 py-3 font-medium transition-all duration-200 ${
+              className={`flex items-center justify-center text-center rounded-full space-x-2 px-6 py-3 font-medium w-80 transition-all duration-200 ${
                 selectedCategory === key
                   ? 'bg-[#0077ff] text-white shadow-brand'
                   : 'bg-white text-[#0077ff] border border-[#0077FF]'
