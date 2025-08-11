@@ -64,7 +64,7 @@ const HeroSection = () => {
               <span className="text-black">crafting scalable and dynamic applications</span>
             </h3>
               
-              <p className="text-xl text-slate-600 leading-relaxed max-w-2xl font-worksans text-justify [hyphens:auto]">
+              <p className="text-lg text-slate-600 leading-relaxed max-w-2xl font-worksans text-justify">
               Hello there! I'm <span className='font-bold'>Ifthikar</span>. I specialize in web design and development, and I’m deeply passionate about creating innovative, user-friendly solutions. With hands-on experience in full stack development, I strive to deliver high-quality, scalable, and impactful digital experiences. 
               </p>
             </div>
