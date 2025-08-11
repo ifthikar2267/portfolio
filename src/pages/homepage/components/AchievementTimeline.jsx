@@ -132,10 +132,10 @@ const AchievementTimeline = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 font-worksans">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 font-worksans">
             Recent <span className="text-black ">Achievements</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-worksans">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-worksans max-w-lg lg:max-w-6xl">
             Continuous learning and professional growth through certifications, 
             project milestones, and community contributions.
           </p>
