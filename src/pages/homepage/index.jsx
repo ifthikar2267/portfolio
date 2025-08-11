@@ -49,6 +49,9 @@ const Homepage = () => {
           {/* Skills Visualization */}
           <SkillsVisualization />
           
+          {/* Abbout me */}
+          {/* <HeroSection /> */}
+          
           {/* Featured Projects */}
           <FeaturedProjects />
           

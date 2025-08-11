@@ -17,7 +17,7 @@ const TechnologyShowcase = ({ technologies }) => {
     : technologies?.filter(tech => tech?.category === selectedCategory);
 
   return (
-    <div className="bg-card border border-border rounded-xl p-6 mb-8">
+    <div className="bg-card shadow-brand border border-border rounded-xl p-6 mb-8">
       <div className="flex items-center space-x-2 mb-6">
         <Icon name="Layers" size={24} className="text-primary" />
         <h3 className="text-xl font-semibold text-black font-worksans">Technology Stack</h3>
