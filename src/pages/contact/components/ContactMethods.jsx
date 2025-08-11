@@ -152,7 +152,7 @@ const ContactMethods = () => {
         </div>
       </div> */}
       {/* Response Time & Availability */}
-      <div className="bg-card rounded-xl p-6 border border-border">
+      <div className="bg-card shadow-brand rounded-xl p-6 border border-border">
         <div className="flex items-start space-x-4">
           <div className="p-3 rounded-lg bg-accent/10 border border-accent/20">
             <Icon name="Clock" size={24} className="text-[#0077FF]" />

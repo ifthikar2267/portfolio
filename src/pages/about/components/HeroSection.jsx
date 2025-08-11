@@ -27,7 +27,7 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative bg-white py-8 lg:py-32 overflow-hidden">
+    <section className="relative bg-white py-8 lg:py-15  min-h-screen flex items-center justify-center">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-32 h-32 gradient-primary rounded-full blur-3xl"></div>
@@ -35,8 +35,8 @@ const HeroSection = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-7xl w-full px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-1 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-4">
@@ -44,8 +44,8 @@ const HeroSection = () => {
                 <Icon name="Sparkles" size={16} className="text-violet-600" />
                 <span className="text-sm font-medium text-violet-700">About Me</span>
               </div> */}
-              <div className="relative animate-slide-up">
-           <div className="w-60 h-60 mx-auto overflow-hidden rounded-full">
+              <div className="relative animate-slide-up flex justify-center">
+           <div className="w-60 h-60 overflow-hidden rounded-full">
               <Image
                 src="/assets/images/ifthikar.jpeg"
                 alt="ifthikar - Full Stack Developer"
@@ -55,7 +55,7 @@ const HeroSection = () => {
             </div>
             </div>
               
-              <h3 className="text-xl text-center text-[#0077FF]  lg:text-4xl font-bold leading-tight">
+              <h3 className="text-xl text-center text-[#0077FF]  lg:text-2xl font-bold leading-tight">
                 ABOUT ME
               </h3>
 
@@ -64,8 +64,8 @@ const HeroSection = () => {
               <span className="text-black">crafting scalable and dynamic applications</span>
             </h3>
               
-              <p className="text-lg text-slate-600 leading-relaxed max-w-2xl font-worksans text-justify">
-              Hello there! I'm <span className='font-bold'>Ifthikar</span>. I specialize in web design and development, and I’m deeply passionate about creating innovative, user-friendly solutions. With hands-on experience in full stack development, I strive to deliver high-quality, scalable, and impactful digital experiences. 
+              <p className="text-lg text-slate-600 leading-relaxed lg:max-w-6xl font-worksans text-justify break-words">
+              Hello there! I'm <span className='font-bold'>Ifthikar</span>. I specialize in web design and development, and I’m deeply passionate about creating innovative, user-friendly solutions. With hands-on experience in fullstack development, I strive to deliver high-quality, scalable, and impactful digital experiences. 
               </p>
             </div>
 
@@ -86,7 +86,7 @@ const HeroSection = () => {
             </div> */}
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col lg:justify-between sm:flex-row gap-4">
               <Button
                 variant="default"
                 size="lg"

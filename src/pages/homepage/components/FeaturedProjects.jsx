@@ -55,7 +55,7 @@ const FeaturedProjects = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-2 font-worksans">
             Featured <span className="text-white">Projects</span>
           </h2>
-          <p className="text-lg text-white max-w-2xl mx-auto mb-8 font-worksans">
+          <p className="text-lg text-white max-w-lg lg:max-w-4xl mx-auto mb-8 font-worksans">
             Showcasing real-world applications built with modern technologies, 
             delivering measurable business results and exceptional user experiences.
           </p>
@@ -72,7 +72,7 @@ const FeaturedProjects = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-2 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-1 gap-8"
         >
           {featuredProjects?.slice(0, 4)?.map((project, index) => (
             <motion.div

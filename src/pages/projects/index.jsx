@@ -157,7 +157,7 @@ const Projects = () => {
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative py-5 lg:py-24 overflow-hidden">
+        <section className="relative py-5 lg:py-12 overflow-hidden">
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-5">
             <div className="absolute inset-0" style={{
@@ -171,12 +171,12 @@ const Projects = () => {
                 <div className="w-12 h-12 bg-[#0077FF] rounded-xl flex items-center justify-center">
                   <Icon name="FolderOpen" size={24} color="white" />
                 </div>
-                <h1 className="text-3xl lg:text-6xl font-bold font-worksans">
+                <h1 className="text-3xl lg:text-4xl font-bold font-worksans">
                   <span className="text-black">My Projects</span>
                 </h1>
               </div>
               
-              <p className="text-l text-muted-foreground font-semibold max-w-3xl mx-auto leading-relaxed font-worksans text-justify [hyphens:auto]">
+              <p className="text-lg text-muted-foreground  max-w-lg lg:max-w-6xl mx-auto leading-relaxed font-worksans text-justify break-normal">
                 Explore my portfolio of full-stack development projects, featuring modern web applications, 
                 APIs, and mobile solutions built with cutting-edge technologies and best practices.
               </p>
@@ -249,7 +249,7 @@ const Projects = () => {
 
             {/* Projects Grid */}
             {filteredAndSortedProjects?.length > 0 ? (
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 mb-5 xl:grid-cols-1 gap-8">
                 {filteredAndSortedProjects?.map((project) => (
                   <ProjectCard key={project?.id} project={project} />
                 ))}

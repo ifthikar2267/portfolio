@@ -25,7 +25,7 @@ const FeaturedProject = ({ project }) => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-1 gap-8 lg:gap-12 items-center">
           {/* Content */}
           <div className="space-y-6">
             <div>
@@ -120,7 +120,7 @@ const FeaturedProject = ({ project }) => {
 
           {/* Project Preview */}
           <div className="relative">
-            <div className="relative bg-background border border-border rounded-xl overflow-hidden shadow-brand-lg">
+            <div className="relative bg-background border border-border rounded-xl  overflow-hidden shadow-brand-lg">
               <Image
                 src={project?.image}
                 alt={project?.title}

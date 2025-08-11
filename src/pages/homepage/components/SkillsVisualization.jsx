@@ -82,7 +82,7 @@ const SkillsVisualization = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-black font-worksans">
             Technical <span className="text-3xl sm:text-4xl font-bold text-black">Expertise</span>
           </h2>
-          <p className="text-lg text-black-foreground max-w-2xl mx-auto font-worksans text-justify [hyphens:auto]">
+          <p className="text-lg text-black-foreground max-w-lg lg:max-w-6xl mx-auto font-worksans text-justify [hyphens:auto]">
             Proficiency levels across modern 
             technologies and frameworks, 
             continuously updated through hands-on projects and learning.
@@ -160,11 +160,11 @@ const SkillsVisualization = () => {
           viewport={{ once: true }}
           className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <div className="text-center p-6 bg-card border border-border rounded-xl shadow-lg">
+          <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
             <div className="text-2xl font-bold text-black mb-2">15+</div>
             <div className="text-sm text-muted-foreground">Technologies</div>
           </div>
-          <div className="text-center p-6 bg-card border border-border rounded-xl shadow-lg">
+          <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
             <div className="text-2xl font-bold text-black mb-2">1+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>

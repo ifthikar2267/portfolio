@@ -128,12 +128,14 @@ const CertificationsPage = () => {
                 <Icon name="Award" size={32} color="white" />
               </div>
             </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-black mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-6">
               Professional <span className="text-black">Certifications</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8 font-worksans text-justify [hyphens:auto]">
-              Industry-recognized credentials <br/>validating expertise in web development, full-stack development, cloud computing. Each certification represents a commitment to excellence and continuous learning.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-lg lg:max-w-6xl mx-auto mb-8 font-worksans text-justify break-normal [hyphens:auto]">
+  Industry-recognized credentials validating expertise in web development, full-stack development, cloud computing. Each certification represents a commitment to excellence and continuous learning.
+</p>
+
+
             <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
               <div className="flex items-center space-x-2">
                 <Icon name="CheckCircle" size={16} className="text-green-600" />
@@ -152,7 +154,7 @@ const CertificationsPage = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <section className="px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <CertificationStats certifications={certifications} />
           </div>

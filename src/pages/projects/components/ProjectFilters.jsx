@@ -54,7 +54,7 @@ const ProjectFilters = ({
         )}
       </div>
       {/* Filter Tabs */}
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="flex flex-wrap gap-2 mb-6 lg:justify-between">
         {filterOptions?.map((filter) => (
           <Button
             key={filter?.id}

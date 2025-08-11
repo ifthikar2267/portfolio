@@ -30,7 +30,7 @@ const OnlineLearningSection = ({ courses }) => {
           <button
             key={category?.id}
             onClick={() => setSelectedCategory(category?.id)}
-            className={`flex items-center font-worksans rounded-full space-x-2 px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+            className={`flex items-center font-worksans rounded-full lg:justify-between space-x-2 px-6 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               selectedCategory === category?.id
                 ? 'bg-[#0077FF] text-white border border-white shadow-sm'
                 : 'bg-white text-[#0077FF] border border-[#0077FF] hover:bg-muted/80 hover:text-foreground'

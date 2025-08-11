@@ -67,14 +67,17 @@ const Contact = () => {
               <span>Let's Connect</span>
             </div>
             
-            <h1 className="text-3xl md:text-6xl font-bold text-black mb-6  font-worksans">
+            <h1 className="text-3xl md:text-4xl font-bold text-black mb-6  font-worksans">
               Ready to Build
               <span className="text-black block  font-worksans">Something Amazing?</span>
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed font-worksans text-justify [hyphens:auto]">
-              Whether you're looking to hire a full-stack developer, or want to<br/> collaborate on an exciting project, I'd love to hear from you.
-            </p>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-worksans text-justify break-normal max-w-lg lg:max-w-6xl mx-auto">
+  Whether you're looking to hire a full-stack developer, or want to
+  collaborate on an exciting project, I'd love to hear from you.
+</p>
+
+
 
             <div className="flex flex-wrap justify-center gap-4 text-sm text-black-foreground">
               <div className="flex items-center space-x-2">
@@ -97,7 +100,7 @@ const Contact = () => {
         <section className="px-4 sm:px-6 lg:px-8 mb-12">
           <div className="max-w-6xl mx-auto">
             <div className="bg-card rounded-xl p-2 shadow-brand border border-border">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+              <div className="grid grid-cols-2 lg:grid-cols-2 gap-2">
                 {tabs?.map((tab) => (
                   <button
                     key={tab?.id}

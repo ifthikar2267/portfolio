@@ -23,7 +23,7 @@ const TechnologyShowcase = ({ technologies }) => {
         <h3 className="text-xl font-semibold text-black font-worksans">Technology Stack</h3>
       </div>
       {/* Category Filters */}
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="flex flex-wrap gap-2 mb-6 lg:justify-between">
         {categories?.map((category) => (
           <button
             key={category?.id}
@@ -93,7 +93,7 @@ const TechnologyShowcase = ({ technologies }) => {
       <div className="mt-6 pt-6 border-t border-border">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
-            <div className="text-lg font-bold text-primary">
+            <div className="text-lg font-bold text-[#0077FF]">
               {technologies?.filter(t => t?.category === 'frontend')?.length}
             </div>
             <div className="text-sm text-muted-foreground">Frontend</div>
@@ -111,7 +111,7 @@ const TechnologyShowcase = ({ technologies }) => {
             <div className="text-sm text-muted-foreground">Database</div>
           </div>
           <div>
-            <div className="text-lg font-bold text-warning">
+            <div className="text-lg font-bold text-black">
               {technologies?.filter(t => t?.category === 'tools')?.length}
             </div>
             <div className="text-sm text-muted-foreground">Tools</div>

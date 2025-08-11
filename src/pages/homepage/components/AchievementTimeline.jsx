@@ -256,7 +256,7 @@ const AchievementTimeline = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-16 grid grid-cols-2 lg:grid-cols-2 md:grid-cols-4 gap-6"
         >
           <div className="text-center p-6 bg-card border border-border rounded-xl">
             <Icon name="Award" size={24} className="text-primary mx-auto mb-2" />
