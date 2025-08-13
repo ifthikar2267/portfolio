@@ -176,9 +176,12 @@ const Projects = () => {
                 </h1>
               </div>
               
-              <p className="text-lg text-muted-foreground  max-w-lg lg:max-w-6xl mx-auto leading-relaxed font-worksans text-justify break-normal">
-                Explore my portfolio of full-stack development projects, featuring modern web applications, 
-                APIs, and mobile solutions built with cutting-edge technologies and best practices.
+              <p className="text-lg text-black font-opensans
+                text-left sm:text-justify
+                max-w-sm sm:max-w-2xl lg:max-w-6xl
+                leading-relaxed
+                [hyphens:auto] [overflow-wrap:anywhere]">
+               Discover a collection of full-stack projects showcasing responsive web apps, powerful APIs, and mobile solutions built with the latest technologies.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">

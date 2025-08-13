@@ -72,14 +72,18 @@ const Contact = () => {
               <span className="text-black block  font-worksans">Something Amazing?</span>
             </h1>
             
-          <p className="text-lg text-muted-foreground mb-8 leading-relaxed font-worksans text-justify break-normal max-w-lg lg:max-w-6xl mx-auto">
+          <p className="text-lg text-black font-opensans
+    text-left sm:text-justify
+    max-w-sm sm:max-w-2xl lg:max-w-6xl
+    leading-relaxed
+    [hyphens:auto] [overflow-wrap:anywhere]">
   Whether you're looking to hire a full-stack developer, or want to
   collaborate on an exciting project, I'd love to hear from you.
 </p>
 
 
 
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-black-foreground">
+            <div className="flex flex-wrap justify-center gap-4 text-sm pt-5 text-black-foreground">
               <div className="flex items-center space-x-2">
                 <Icon name="Clock" size={16} className="text-accent" />
                 <span>Responds within 24 hours</span>

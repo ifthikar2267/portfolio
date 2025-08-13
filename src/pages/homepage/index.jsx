@@ -77,7 +77,7 @@ const Homepage = () => {
                     <div className="text-md text-white font-semibold mt-1 font-worksans">Portfolio</div>
                   </div>
                 </div>
-                <p className="text-white mb-6 max-w-md font-worksans">
+                <p className="text-white mb-6 max-w-md font-opensans">
                   Code meets creativity. Full-stack developer building scalable, high-impact web applications that shape the future.
                 </p>
                 <div className="flex space-x-4">

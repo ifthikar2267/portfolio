@@ -135,7 +135,11 @@ const AchievementTimeline = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4 font-worksans">
             Recent <span className="text-black ">Achievements</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-worksans max-w-lg lg:max-w-6xl">
+          <p className="text-lg text-black font-opensans
+    text-left sm:text-justify
+    max-w-sm sm:max-w-2xl lg:max-w-6xl
+    leading-relaxed
+    [hyphens:auto] [overflow-wrap:anywhere]">
             Continuous learning and professional growth through certifications, 
             project milestones, and community contributions.
           </p>

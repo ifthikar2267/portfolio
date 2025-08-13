@@ -64,8 +64,12 @@ const HeroSection = () => {
               <span className="text-black">crafting scalable and dynamic applications</span>
             </h3>
               
-              <p className="text-lg text-slate-600 leading-relaxed lg:max-w-6xl font-worksans text-justify break-words">
-              Hello there! I'm <span className='font-bold'>Ifthikar</span>. I specialize in web design and development, and I’m deeply passionate about creating innovative, user-friendly solutions. With hands-on experience in fullstack development, I strive to deliver high-quality, scalable, and impactful digital experiences. 
+              <p className="text-lg text-black font-opensans
+    text-left sm:text-justify px-1
+    max-w-sm sm:max-w-2xl lg:max-w-6xl
+    leading-relaxed
+    [hyphens:auto] [overflow-wrap:anywhere]">
+              Hello there! I’m <span className='font-bold'>Ifthikar</span>, a passionate fullstack developer with a strong focus on creating seamless digital experiences. I specialize in building modern, responsive websites and applications that combine clean design, efficient functionality, and scalable architecture. 
               </p>
             </div>
 

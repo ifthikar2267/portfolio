@@ -70,23 +70,25 @@ const SkillsVisualization = () => {
   };
 
   return (
-    <section className="py-2 bg-white">
+    <section className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-5"
+          className="text-center space-y-2 mb-5"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-black font-worksans">
             Technical <span className="text-3xl sm:text-4xl font-bold text-black">Expertise</span>
           </h2>
-          <p className="text-lg text-black-foreground max-w-lg lg:max-w-6xl mx-auto font-worksans text-justify [hyphens:auto]">
-            Proficiency levels across modern 
-            technologies and frameworks, 
-            continuously updated through hands-on projects and learning.
-          </p>
+         <p className="text-lg text-black font-opensans
+  text-left sm:text-justify 
+  max-w-sm sm:max-w-2xl lg:max-w-6xl lg:px-2
+  leading-relaxed [overflow-wrap:normal]">
+Continuously evolving technical skills through the integration of modern tools, frameworks, and real-world projects.
+</p>
+
         </motion.div>
 
         {/* Category Tabs */}

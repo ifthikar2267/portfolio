@@ -281,8 +281,12 @@ const Education = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 font-worksans">
               Educational Timeline
             </h2>
-            <p className="text-lg text-muted-foreground font-worksans max-w-lg lg:max-w-6xl mx-auto text-justify break-normal">
-              I pursued my studies in Information Technology, gaining a strong foundation in programming, database management, and software development. Throughout my coursework, I developed problem-solving skills, hands-on project experience, and a solid understanding of modern technologies, preparing me for real-world IT challenges.
+            <p className="text-lg text-black font-opensans
+    text-left sm:text-justify
+    max-w-sm sm:max-w-2xl lg:max-w-7xl
+    leading-relaxed
+    [hyphens:auto] [overflow-wrap:anywhere]">
+             I hold a degree in Information Technology, with expertise in programming, database management, and software development. My academic journey equipped me with problem-solving abilities, practical project experience, and proficiency in modern technologies for real-world IT applications.
             </p>
           </div>
 
@@ -302,7 +306,11 @@ const Education = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4 font-worksans">
               Continuous Learning
             </h2>
-            <p className="text-lg text-muted-foreground max-w-lg lg:max-w-6xl mx-auto font-worksans text-justify break-normal">
+            <p className="text-lg text-black font-opensans
+    text-left sm:text-justify
+    max-w-sm sm:max-w-2xl lg:max-w-7xl
+    leading-relaxed
+    [hyphens:auto] [overflow-wrap:anywhere]">
               Staying current with technology through online courses, certifications, 
               and hands-on practice across multiple platforms and learning resources.
             </p>

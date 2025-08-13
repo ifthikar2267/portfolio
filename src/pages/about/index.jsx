@@ -35,7 +35,7 @@ const AboutPage = () => {
                   <div className="text-md text-white font-worksans">Full-Stack Developer</div>
                 </div>
               </div>
-              <p className="text-white leading-relaxed max-w-md font-worksans">
+              <p className="text-white leading-relaxed max-w-md font-opensans">
                 Building digital experiences that matter. Passionate about clean code, 
                 user-centered design, and continuous learning.
               </p>

@@ -82,7 +82,7 @@ export async function getProducts() {
     <section className="relative h-[80vh] flex items-center justify-center overflow-hidden bg-white">
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-       <div className="flex justify-center items-center gap-12">
+       <div className="flex justify-center items-center gap-12 ">
 
           {/* Left Content */}
           <motion.div
@@ -91,7 +91,7 @@ export async function getProducts() {
             transition={{ duration: 0.8 }}
             className="space-y-13 text-center"
           >
-            <div className="space-y-2 ">
+            <div className="space-y-2 mb-5 ">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -132,14 +132,20 @@ export async function getProducts() {
               </motion.h1>
 
               
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.6 }}
-                className="text-lg text-black-foreground max-w-lg lg:max-w-6xl leading-relaxed text-black font-worksans text-justify"
-              >
-                Crafting seamless digital experiences with the MERN stack (MongoDB, Express.js, React, Node.js) — transforming ideas into scalable, user-centric applications that blend functionality with intuitive design, delivering performance, accessibility, and innovation at every step.
-              </motion.p>
+             <motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.6, duration: 0.6 }}
+  className=" text-lg text-black font-opensans
+    text-left sm:text-justify
+    max-w-sm sm:max-w-2xl lg:max-w-7xl
+    leading-relaxed
+    [hyphens:auto] [overflow-wrap:anywhere]"
+>
+  Crafting seamless digital experiences with the MERN stack (MongoDB, Express.js, React, Node.js) transforming ideas into scalable, user-centric applications that blend functionality with intuitive design, delivering performance, accessibility, and innovation at every step.
+</motion.p>
+
+
             </div>
 
             {/* CTA Buttons */}
@@ -147,7 +153,7 @@ export async function getProducts() {
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.8, duration: 0.6 }}
-  className="flex flex-col sm:flex-row gap-4 items-center justify-center font-worksans"
+  className="flex flex-col sm:flex-row  gap-4 items-center justify-center font-worksans"
 >
   <Link to="/projects">
     <Button

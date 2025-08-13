@@ -19,7 +19,9 @@ export default {
     extend: {
       fontFamily: {
          worksans: ['"Work Sans"', 'sans-serif'],
-        sans: ['Inter', 'sans-serif']
+         inter: ['Inter', 'sans-serif'],
+         poppins: ['Poppins', 'sans-serif'],
+         opensans: ['"Open Sans"', 'sans-serif'],
       },
       colors: {
         border: 'var(--color-border)', /* slate-200 */

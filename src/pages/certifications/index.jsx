@@ -131,12 +131,16 @@ const CertificationsPage = () => {
             <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold text-black mb-6">
               Professional <span className="text-black">Certifications</span>
             </h1>
-            <p className="text-lg text-muted-foreground max-w-lg lg:max-w-6xl mx-auto mb-8 font-worksans text-justify break-normal [hyphens:auto]">
-  Industry-recognized credentials validating expertise in web development, full-stack development, cloud computing. Each certification represents a commitment to excellence and continuous learning.
-</p>
+            <p className="text-lg text-black font-opensans
+                  text-left sm:text-justify 
+                  max-w-sm sm:max-w-2xl lg:max-w-6xl lg:px-2
+                  leading-relaxed
+                  [hyphens:auto] [overflow-wrap:anywhere]">
+              Accredited credentials in web, full-stack, and cloud technologies highlight my skills while underscoring a strong commitment to staying ahead in a fast-evolving industry.
+              </p>
 
 
-            <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground">
+            <div className="flex items-center justify-center space-x-8 text-sm text-muted-foreground pt-5">
               <div className="flex items-center space-x-2">
                 <Icon name="CheckCircle" size={16} className="text-green-600" />
                 <span>6 Active Certifications</span>
