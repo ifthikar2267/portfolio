@@ -33,7 +33,7 @@ const ProjectFilters = ({
   return (
     <div className="bg-white shadow-brand border border-border rounded-xl p-6 mb-8">
       {/* Search Bar */}
-      <div className="relative mb-8 bg-white border border-mute shadow-lg rounded-full">
+      <div className="relative mb-8 bg-white border border-mute shadow-brand rounded-full">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none ">
           <Icon name="Search" size={18} className="text-black" />
         </div>

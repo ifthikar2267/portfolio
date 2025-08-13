@@ -85,9 +85,9 @@ const FeaturedProjects = () => {
               onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-70 overflow-hidden">
                 <Image
-                  src={project?.image}
+                   src="/assets/images/skinsaviour.jpeg"
                   alt={project?.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -132,6 +132,39 @@ const FeaturedProjects = () => {
                   </a>
                 </div>
               </div>
+
+              <div className="hidden lg:grid lg:grid-cols-4 gap-4 mb-4 pt-4 px-4 border-t border-border">
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/assets/images/homePage.jpeg"
+                      alt={project?.title}
+                      className="w-full h-50 object-cover"
+                    />
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/assets/images/productPage.jpeg"
+                      alt={project?.title}
+                      className="w-full h-50 object-cover"
+                    />
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/assets/images/productDetail.jpeg"
+                      alt={project?.title}
+                      className="w-full h-50 object-cover"
+                    />
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/assets/images/userProfile.jpeg"
+                      alt={project?.title}
+                      className="w-full h-50 object-cover"
+                    />
+                  </div>
+                </div>
+
+
 
               {/* Project Content */}
               <div className="p-6">

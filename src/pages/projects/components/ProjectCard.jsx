@@ -14,9 +14,9 @@ const ProjectCard = ({ project }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       {/* Project Image */}
-      <div className="relative h-48 overflow-hidden bg-surface">
+      <div className="relative h-70 overflow-hidden bg-surface">
         <Image
-          src={project?.image}
+           src="/assets/images/skinsaviour.jpeg"
           alt={project?.title}
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
@@ -36,7 +36,7 @@ const ProjectCard = ({ project }) => {
                 size="sm"
                 iconName="ExternalLink"
                 iconPosition="right"
-                className="bg-white/90 text-foreground hover:bg-white rounded-xl"
+                className="bg-white/90 text-foreground hover:bg-white rounded-full"
               >
                 Live Demo
               </Button>
@@ -54,7 +54,7 @@ const ProjectCard = ({ project }) => {
               variant="outline"
               size="sm"
               iconName="Github"
-              className="border-white/30 text-white hover:bg-white/10 rounded-xl"
+              className="border-white/30 text-white hover:bg-white/10 rounded-full"
             >
               Code
             </Button>
@@ -76,6 +76,38 @@ const ProjectCard = ({ project }) => {
           </div>
         )}
       </div>
+
+         <div className="hidden lg:grid lg:grid-cols-4 gap-4 mb-4 pt-4 px-4 border-t border-border">
+                          <div className="rounded-xl overflow-hidden">
+                            <Image
+                              src="/assets/images/homePage.jpeg"
+                              alt={project?.title}
+                              className="w-full h-50 object-cover"
+                            />
+                          </div>
+                          <div className="rounded-xl overflow-hidden">
+                            <Image
+                              src="/assets/images/productPage.jpeg"
+                              alt={project?.title}
+                              className="w-full h-50 object-cover"
+                            />
+                          </div>
+                          <div className="rounded-xl overflow-hidden">
+                            <Image
+                              src="/assets/images/productDetail.jpeg"
+                              alt={project?.title}
+                              className="w-full h-50 object-cover"
+                            />
+                          </div>
+                          <div className="rounded-xl overflow-hidden">
+                            <Image
+                              src="/assets/images/userProfile.jpeg"
+                              alt={project?.title}
+                              className="w-full h-50 object-cover"
+                            />
+                          </div>
+                        </div>
+
       {/* Content */}
       <div className="p-6">
         {/* Header */}

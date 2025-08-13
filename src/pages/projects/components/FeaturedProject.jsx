@@ -25,7 +25,7 @@ const FeaturedProject = ({ project }) => {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-1 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-1 gap-8 lg:gap-12 flex-justify items-center">
           {/* Content */}
           <div className="space-y-6">
             <div>
