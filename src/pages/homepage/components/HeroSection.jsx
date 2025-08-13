@@ -89,7 +89,7 @@ export async function getProducts() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-10 text-center"
+            className="space-y-13 text-center"
           >
             <div className="space-y-2 ">
               <motion.h1
