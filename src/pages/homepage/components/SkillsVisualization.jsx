@@ -83,7 +83,7 @@ const SkillsVisualization = () => {
             Technical <span className="text-3xl sm:text-4xl font-bold text-black">Expertise</span>
           </h2>
          <p className="text-lg text-black font-opensans
-  text-left sm:text-justify 
+  text-center sm:text-justify 
   max-w-sm sm:max-w-2xl lg:max-w-6xl lg:px-2
   leading-relaxed [overflow-wrap:normal]">
 Continuously evolving technical skills through the integration of modern tools, frameworks, and real-world projects.

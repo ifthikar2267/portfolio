@@ -92,7 +92,7 @@ export async function getProducts() {
             className="space-y-13 text-center"
           >
             <div className="space-y-2 mb-5 ">
-              <motion.h1
+              {/* <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
@@ -100,7 +100,7 @@ export async function getProducts() {
               >
                 <span className="font-worksans text-black">Welcome to my Portfolio</span>
                 <br />
-              </motion.h1>
+              </motion.h1> */}
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export async function getProducts() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground leading-tight font-worksans"
               >
-                <span className="text-black">Fullstack Developer</span>
+                <span className="text-black">a Fullstack Developer</span>
                 <br />
               </motion.h1>
 
@@ -137,7 +137,7 @@ export async function getProducts() {
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.6, duration: 0.6 }}
   className=" text-lg text-black font-opensans
-    text-left sm:text-justify
+    text-center sm:text-justify
     max-w-sm sm:max-w-2xl lg:max-w-7xl
     leading-relaxed
     [hyphens:auto] [overflow-wrap:anywhere]"

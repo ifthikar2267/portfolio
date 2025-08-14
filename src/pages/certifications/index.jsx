@@ -132,7 +132,7 @@ const CertificationsPage = () => {
               Professional <span className="text-black">Certifications</span>
             </h1>
             <p className="text-lg text-black font-opensans
-                  text-left sm:text-justify 
+                  text-center sm:text-justify 
                   max-w-sm sm:max-w-2xl lg:max-w-6xl lg:px-2
                   leading-relaxed
                   [hyphens:auto] [overflow-wrap:anywhere]">

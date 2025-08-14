@@ -65,7 +65,7 @@ const HeroSection = () => {
             </h3>
               
               <p className="text-lg text-black font-opensans
-    text-left sm:text-justify px-1
+    text-center sm:text-justify px-1
     max-w-sm sm:max-w-2xl lg:max-w-6xl
     leading-relaxed
     [hyphens:auto] [overflow-wrap:anywhere]">

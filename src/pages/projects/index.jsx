@@ -177,7 +177,7 @@ const Projects = () => {
               </div>
               
               <p className="text-lg text-black font-opensans
-                text-left sm:text-justify
+                text-center sm:text-justify
                 max-w-sm sm:max-w-2xl lg:max-w-6xl
                 leading-relaxed
                 [hyphens:auto] [overflow-wrap:anywhere]">
