@@ -127,7 +127,7 @@ export async function getProducts() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground leading-tight font-worksans"
               >
-                <span className="text-black">a Fullstack Developer</span>
+                <span className="text-black">Fullstack Developer</span>
                 <br />
               </motion.h1>
 
