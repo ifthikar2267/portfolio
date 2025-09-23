@@ -11,7 +11,9 @@ const SkillsVisualization = () => {
       title: 'Frontend Development',
       icon: 'Monitor',
       skills: [
-        { name: 'React', level: 95, icon: 'Atom', color: 'text-blue-500' },
+        { name: 'React.js', level: 95, icon: 'Atom', color: 'text-blue-500' },
+        { name: 'Next.js', level: 95, icon: 'Atom', color: 'text-blue-500' },
+        { name: 'MobX', level: 90, icon: 'Atom', color: 'text-blue-500' },
         { name: 'HTML/CSS', level: 96, icon: 'Layout', color: 'text-orange-500' },
         { name: 'JavaScript', level: 95, icon: 'FileCode', color: 'text-yellow-500' },
         { name: 'Bootstrap', level: 92, icon: 'Layout', color: 'text-cyan-500' },
