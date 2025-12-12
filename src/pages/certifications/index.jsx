@@ -76,15 +76,37 @@ const CertificationsPage = () => {
       issuer: 'Guvi',
       description: 'A certification course from Guvi on the fundamentals and applications of Artificial Intelligence.',
       category: 'Backend',
-      earnedDate: '2023-18-15',
+      earnedDate: '2023-08-15',
       verificationUrl: 'https://drive.google.com/file/d/1P1xWi5AT0gcuanWK3630KsuiVZTp5HCv/view?usp=drivesdk',
       icon: 'Brain',
       skills: ['Artificial Intelligence']
+    },
+    {
+      id: 7,
+      name: 'FullStack Web Development',
+      issuer: 'Intellia Sofpro Limited',
+      description: 'Demonstrating proficiency in HTML5, CSS3, JavaScript, Bootstrap, Databases and Modern Web Development practices',
+      category: 'Fullstack',
+      earnedDate: '2025-08-31',
+      verificationUrl: 'https://drive.google.com/file/d/1HFd4y2eEoGpRPRQIPLYgf7KvKdr6uS7Q/view?usp=drivesdk',
+      icon: 'Code2',
+      skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
+    },
+     {
+      id: 8,
+      name: 'Web Development',
+      issuer: 'Developers Arena',
+      description: 'An internship at Developers Arena focus on designing and developing responsive and user-friendly websites',
+      category: 'internship',
+      earnedDate: '2025-12-10',
+      verificationUrl: 'https://drive.google.com/file/d/1DGGY3kq0zT3RaVoAHYCwQH7v7bSucp_P/view?usp=drivesdk',
+      icon: "ClipboardList",
+      skills: ["MongoDB", "Express.js", "React", "Node.js"]
     }
   ];
 
   // Filter options
-  const categories = ['All', 'Cloud', 'Frontend', 'Backend', 'Database', 'Fullstack'];
+  const categories = ['All', 'Cloud', 'Frontend', 'Backend', 'Database', 'Fullstack', 'internship'];
   const levels = ['All', 'Foundational', 'Associate', 'Professional', 'Expert'];
   const statuses = ['All', 'Active', 'Renewal Due', 'Expired'];
 
