@@ -1,11 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
 
 const AchievementTimeline = () => {
   const [selectedAchievement, setSelectedAchievement] = useState(null);
 
-  const achievements = [
+  const achievements = useMemo(() => [
+    {
+      id: 7,
+      date: "2025-02-10",
+      title: "Frontend Developer Intern — Almosafer",
+      category: "Internship",
+      description:
+        "Completed a 4-month internship at Almosafer, one of the leading travel technology companies in the Middle East (part of Seera Group). Built three independent projects and contributed to one live production project including a multilingual static website, admin dashboard, Almosafer clone with AI chatbot, and the Athar production chatbot.",
+      icon: "Laptop",
+      color: "text-teal-500",
+      bgColor: "bg-teal-50",
+      borderColor: "border-teal-200",
+      details: {
+        company: "Almosafer (Seera Group)",
+        role: "Frontend Developer Intern",
+        duration: "February 10, 2025 – June 12, 2025",
+        location: "Dubai, UAE (Remote/Hybrid)",
+        projects: [
+          "Multilingual Static Website — Arabic/English with RTL/LTR layout switching",
+          "Admin Dashboard — React & Material UI with data tables, charts, and role-based UI",
+          "Almosafer Clone with AI Chatbot — Travel booking platform with AI assistance",
+          "Athar Chatbot Project (Live Production) — Frontend integration for deployed AI chatbot",
+        ],
+      },
+    },
     {
       id: 1,
       date: "2024-03-11",
@@ -100,7 +124,7 @@ const AchievementTimeline = () => {
 
       }
     }
-  ];
+  ].sort((a, b) => new Date(b.date) - new Date(a.date)), []);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);
@@ -114,6 +138,7 @@ const AchievementTimeline = () => {
   const getCategoryIcon = (category) => {
     switch (category) {
       case 'Certification': return 'Award';
+      case 'Internship': return 'Laptop';
       case 'Project': return 'Rocket';
       case 'Achievement': return 'Trophy';
       case 'Learning': return 'BookOpen';
@@ -269,7 +294,7 @@ const AchievementTimeline = () => {
           </div>
           <div className="text-center p-6 bg-card border border-border rounded-xl">
             <Icon name="Rocket" size={24} className="text-primary mx-auto mb-2" />
-            <div className="text-2xl font-bold text-black mb-1">1+</div>
+            <div className="text-2xl font-bold text-black mb-1">4+</div>
             <div className="text-sm text-muted-foreground">Projects</div>
           </div>
           {/* <div className="text-center p-6 bg-card border border-border rounded-xl">

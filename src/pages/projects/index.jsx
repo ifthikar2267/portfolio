@@ -8,59 +8,14 @@ import ProjectFilters from './components/ProjectFilters';
 //import FeaturedProject from './components/FeaturedProject';
 import ProjectStats from './components/ProjectStats';
 import TechnologyShowcase from './components/TechnologyShowcase';
+import { projects } from '../../data/projects';
+import { technologies } from '../../data/skills';
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState('all');
   const [activeSort, setActiveSort] = useState('newest');
   const [searchQuery, setSearchQuery] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-
-  // Mock data for projects
-  const projects = [
-    {
-      id: 1,
-      title: "AI Powered E-Commerce Platform",
-      description: "SkinSaviour is an AI-powered e-commerce platform specializing in homemade, toxin-free, vegan, and cruelty-free skincare products. Built with the MERN stack, it features personalized product recommendations, a chatbot for skincare advice, secure payments, real-time inventory tracking, and an intuitive admin dashboard for product and order management.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Express.js", "AI", "Razorpay"],
-      type: "web-app",
-      status: "completed",
-      featured: true,
-      liveDemo: "https://skinsaviour-store.web.app/",
-      github: "https://github.com/ifthikar2267",
-      duration: "6 months",
-      year: 2025,
-      features: [
-        "AI-powered skincare recommendations",
-        "Personalized product suggestions based on skin type",
-        "Toxin-free, vegan, and cruelty-free products",
-        "Secure checkout with multiple payment options",
-        "Customer reviews & ratings for every product",
-        "Mobile-friendly and fast-loading design"
-      ],
-      metrics: {
-        users: "1K+",
-        performance: "98%",
-        uptime: "99.9%"
-      }
-    }
-  ];
-
-  // Mock data for technologies
-  const technologies = [
-    { name: "React", category: "frontend", level: 5, icon: "Code2", description: "Modern UI library for building interactive interfaces" },
-     { name: "HTML5", category: "frontend", level: 5, icon: "FileCode", description: "Markup language for structuring and presenting content on the web" },
-     { name: "CSS3", category: "frontend", level: 5, icon: "Palette", description: "Style sheet language used to design and enhance the visual presentation of web pages" },
-    { name: "Node.js", category: "backend", level: 5, icon: "Server", description: "JavaScript runtime for server-side development" },
-    { name: "MongoDB", category: "database", level: 4, icon: "Database", description: "NoSQL document database" },
-    { name: "Express", category: "backend", level: 4, icon: "Server", description: "Fast, unopinionated web framework for Node.js" },
-    { name: "Git", category: "tools", level: 4, icon: "GitBranch", description: "Distributed version control system for tracking changes in source code" },
-    { name: "GitHub", category: "tools", level: 4, icon: "Github", description: "Cloud-based platform for hosting and collaborating on Git repositories" },
-    { name: "Visual Studio Code", category: "tools", level: 5, icon: "Code", description: "Lightweight yet powerful source code editor with extensions and debugging tools" },
-    { name: "MySQL", category: "database", level: 4, icon: "Database", description: "Open-source relational database management system for structured data storage" }
-
-
-  ];
 
   // Mock stats
   const stats = {
@@ -172,7 +127,7 @@ const Projects = () => {
                   <Icon name="FolderOpen" size={24} color="white" />
                 </div>
                 <h1 className="text-3xl lg:text-4xl font-bold font-worksans">
-                  <span className="text-black">My Projects</span>
+                  <span className="text-black">Recent Work</span>
                 </h1>
               </div>
               

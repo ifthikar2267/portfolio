@@ -1,0 +1,81 @@
+export const skillCategories = {
+  frontend: {
+    title: "Frontend",
+    icon: "Monitor",
+    skills: [
+      { name: "React.js", level: 95, icon: "Atom", color: "text-blue-500" },
+      { name: "Next.js", level: 95, icon: "Atom", color: "text-blue-500" },
+      { name: "Material UI (MUI)", level: 90, icon: "Layout", color: "text-blue-600" },
+      { name: "Tailwind CSS", level: 92, icon: "Wind", color: "text-cyan-500" },
+      { name: "HTML5 / CSS3", level: 96, icon: "Layout", color: "text-orange-500" },
+    ],
+  },
+  backend: {
+    title: "Backend & Database",
+    icon: "Server",
+    skills: [
+      { name: "Node.js", level: 90, icon: "Cpu", color: "text-green-600" },
+      { name: "PostgreSQL", level: 85, icon: "Database", color: "text-green-600" },
+      { name: "MongoDB", level: 90, icon: "Leaf", color: "text-green-600" },
+      { name: "REST APIs", level: 88, icon: "Network", color: "text-green-600" },
+      { name: "Express.js", level: 85, icon: "Layers", color: "text-gray-700" },
+    ],
+  },
+  ai: {
+    title: "AI & Automation",
+    icon: "Brain",
+    skills: [
+      { name: "RAG Architecture", level: 88, icon: "Brain", color: "text-purple-500" },
+      { name: "Vector Database", level: 85, icon: "Database", color: "text-purple-500" },
+      { name: "Claude AI", level: 90, icon: "Sparkles", color: "text-purple-600" },
+      { name: "n8n Workflow Automation", level: 82, icon: "Zap", color: "text-orange-500" },
+      { name: "LangChain", level: 85, icon: "Link", color: "text-green-500" },
+    ],
+  },
+  tools: {
+    title: "DevOps & Tools",
+    icon: "Settings",
+    skills: [
+      { name: "Git / GitHub", level: 93, icon: "Github", color: "text-orange-600" },
+      { name: "Vercel", level: 90, icon: "Triangle", color: "text-gray-900" },
+      { name: "Cursor IDE", level: 92, icon: "Code", color: "text-blue-500" },
+      { name: "VS Code", level: 95, icon: "Code", color: "text-blue-400" },
+      { name: "Postman", level: 85, icon: "Send", color: "text-red-500" },
+    ],
+  },
+  languages: {
+    title: "Languages",
+    icon: "FileCode",
+    skills: [
+      { name: "JavaScript", level: 95, icon: "FileCode", color: "text-yellow-500" },
+      { name: "TypeScript", level: 88, icon: "FileCode", color: "text-blue-500" },
+    ],
+  },
+};
+
+export const technologies = [
+  { name: "React", category: "frontend", level: 5, icon: "Code2", description: "Modern UI library for building interactive interfaces" },
+  { name: "Next.js", category: "frontend", level: 5, icon: "Atom", description: "React framework for production-grade web applications" },
+  { name: "Material UI", category: "frontend", level: 4, icon: "Layout", description: "React component library implementing Material Design" },
+  { name: "Tailwind CSS", category: "frontend", level: 5, icon: "Wind", description: "Utility-first CSS framework for rapid UI development" },
+  { name: "HTML5", category: "frontend", level: 5, icon: "FileCode", description: "Markup language for structuring web content" },
+  { name: "CSS3", category: "frontend", level: 5, icon: "Palette", description: "Style sheet language for web presentation" },
+  { name: "Node.js", category: "backend", level: 5, icon: "Server", description: "JavaScript runtime for server-side development" },
+  { name: "PostgreSQL", category: "database", level: 4, icon: "Database", description: "Powerful open-source relational database" },
+  { name: "MongoDB", category: "database", level: 4, icon: "Database", description: "NoSQL document database" },
+  { name: "REST APIs", category: "backend", level: 4, icon: "Network", description: "Architectural style for building web services" },
+  { name: "RAG Architecture", category: "ai", level: 4, icon: "Brain", description: "Retrieval-Augmented Generation for AI-powered search" },
+  { name: "Vector Database", category: "ai", level: 4, icon: "Database", description: "Database optimized for vector similarity search" },
+  { name: "Claude AI", category: "ai", level: 4, icon: "Sparkles", description: "Anthropic's AI assistant for intelligent applications" },
+  { name: "LangChain", category: "ai", level: 4, icon: "Link", description: "Framework for building LLM-powered applications" },
+  { name: "n8n", category: "ai", level: 3, icon: "Zap", description: "Workflow automation platform" },
+  { name: "JavaScript", category: "frontend", level: 5, icon: "FileCode", description: "Core programming language for web development" },
+  { name: "TypeScript", category: "frontend", level: 4, icon: "FileCode", description: "Typed superset of JavaScript" },
+  { name: "Python", category: "backend", level: 4, icon: "FileCode", description: "Versatile language for backend and AI development" },
+  { name: "Git", category: "tools", level: 4, icon: "GitBranch", description: "Distributed version control system" },
+  { name: "GitHub", category: "tools", level: 4, icon: "Github", description: "Platform for hosting and collaborating on code" },
+  { name: "Vercel", category: "tools", level: 4, icon: "Triangle", description: "Cloud platform for frontend deployment" },
+  { name: "Cursor IDE", category: "tools", level: 5, icon: "Code", description: "AI-powered code editor" },
+  { name: "VS Code", category: "tools", level: 5, icon: "Code", description: "Lightweight source code editor" },
+  { name: "Postman", category: "tools", level: 4, icon: "Send", description: "API development and testing platform" },
+];

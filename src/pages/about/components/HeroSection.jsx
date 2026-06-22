@@ -60,8 +60,8 @@ const HeroSection = () => {
               </h3>
 
              <h3 className="text-3xl text-center lg:text-4xl font-bold leading-tight font-worksans">
-              <span className="text-[#0077FF]">Full Stack Developer</span>{' '}
-              <span className="text-black">crafting scalable and dynamic applications</span>
+              <span className="text-[#0077FF]">Full-Stack & AI Developer</span>{' '}
+              <span className="text-black">crafting scalable, intelligent applications</span>
             </h3>
               
               <p className="text-lg text-black font-opensans
@@ -69,7 +69,7 @@ const HeroSection = () => {
     max-w-sm sm:max-w-2xl lg:max-w-6xl
     leading-relaxed
     [hyphens:auto] [overflow-wrap:anywhere]">
-              Hello there! I’m <span className='font-bold'>Ifthikar</span>, a passionate fullstack developer with a strong focus on creating seamless digital experiences. I specialize in building modern, responsive websites and applications that combine clean design, efficient functionality, and scalable architecture. 
+              Hello there! I'm <span className='font-bold'>Ifthikar</span>, a full-stack developer and AI engineer based in Dubai, UAE. I build production-grade web applications with React, Next.js, and RAG architecture — from corporate websites for UAE enterprises to AI-powered SaaS platforms with Claude integration and vector database search.
               </p>
             </div>
 

@@ -7,6 +7,8 @@ import CertificationStats from './components/CertificationStats';
 import CertificationFilters from './components/CertificationFilters';
 import CertificationRoadmap from './components/CertificationRoadmap';
 import AchievementStory from './components/AchievementStory';
+import InternshipSection from './components/InternshipSection';
+import { internships, internshipsAsCertifications } from '../../data/internships';
 
 const CertificationsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -14,8 +16,8 @@ const CertificationsPage = () => {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Mock certifications data
-  const certifications = [
+  // Certifications data (internships loaded from src/data/internships.js)
+  const certificationItems = [
     {
       id: 1,
       name: 'The MERN Fullstack',
@@ -92,21 +94,12 @@ const CertificationsPage = () => {
       icon: 'Code2',
       skills: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
     },
-     {
-      id: 8,
-      name: 'Web Development',
-      issuer: 'Developers Arena',
-      description: 'An internship at Developers Arena focus on designing and developing responsive and user-friendly websites',
-      category: 'internship',
-      earnedDate: '2025-12-10',
-      verificationUrl: 'https://drive.google.com/file/d/1DGGY3kq0zT3RaVoAHYCwQH7v7bSucp_P/view?usp=drivesdk',
-      icon: "ClipboardList",
-      skills: ["MongoDB", "Express.js", "React", "Node.js"]
-    }
   ];
 
+  const certifications = [...certificationItems, ...internshipsAsCertifications];
+
   // Filter options
-  const categories = ['All', 'Cloud', 'Frontend', 'Backend', 'Database', 'Fullstack', 'internship'];
+  const categories = ['All', 'Cloud', 'Frontend', 'Backend', 'Database', 'Fullstack', 'Internship'];
   const levels = ['All', 'Foundational', 'Associate', 'Professional', 'Expert'];
   const statuses = ['All', 'Active', 'Renewal Due', 'Expired'];
 
@@ -185,6 +178,9 @@ const CertificationsPage = () => {
             <CertificationStats certifications={certifications} />
           </div>
         </section>
+
+        {/* Internship Experience */}
+        <InternshipSection internships={internships} />
 
         {/* Filters Section */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">

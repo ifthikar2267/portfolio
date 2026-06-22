@@ -1,52 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Icon from '../../../components/AppIcon';
+import { skillCategories } from '../../../data/skills';
 
 const SkillsVisualization = () => {
   const [selectedCategory, setSelectedCategory] = useState('frontend');
   const [animatedSkills, setAnimatedSkills] = useState([]);
-
-  const skillCategories = {
-    frontend: {
-      title: 'Frontend Development',
-      icon: 'Monitor',
-      skills: [
-        { name: 'React.js', level: 95, icon: 'Atom', color: 'text-blue-500' },
-        { name: 'Next.js', level: 95, icon: 'Atom', color: 'text-blue-500' },
-        { name: 'MobX', level: 90, icon: 'Atom', color: 'text-blue-500' },
-        { name: 'HTML/CSS', level: 96, icon: 'Layout', color: 'text-orange-500' },
-        { name: 'JavaScript', level: 95, icon: 'FileCode', color: 'text-yellow-500' },
-        { name: 'Bootstrap', level: 92, icon: 'Layout', color: 'text-cyan-500' },
-        { name: 'Tailwind CSS', level: 92, icon: 'Wind', color: 'text-cyan-500' },
-
-        
-      ]
-    },
-    backend: {
-      title: 'Backend Development',
-      icon: 'Server',
-      skills: [
-        { name: 'Node.js', level: 90, icon: 'Cpu', color: 'text-green-600' },
-        { name: 'Express.js', level: 85, icon: 'Layers', color: 'text-gray-700' },
-        { name: 'MongoDB', level: 90, icon: 'Leaf', color: 'text-green-600' },
-        { name: 'MySQL', level: 90, icon: 'Database', color: 'text-green-600' },
-        { name: 'Rest APIs', level: 80, icon: 'Network', color: 'text-green-600' }
-      ]
-    },
-    tools: {
-      title: 'Tools',
-      icon: 'Settings',
-      skills: [
-        { name: 'Git', level: 93, icon: 'GitBranch', color: 'text-orange-600' },
-         { name: 'GitHub', level: 93, icon: 'Github', color: 'text-orange-600' },
-        { name: 'Visual Studio', level: 90, icon: 'Code', color: 'text-blue-400' },
-         { name: 'Postman', level: 85, icon: 'Send', color: 'text-red-500' },
-        { name: 'Vercel', level: 85, icon: 'Triangle', color: 'text-gray-900' },
-        { name: 'Firebase', level: 85, icon: 'Flame', color: 'text-red-500' }
-       
-      ]
-    }
-  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -71,6 +30,11 @@ const SkillsVisualization = () => {
     visible: { opacity: 1, x: 0 }
   };
 
+  const totalSkills = Object.values(skillCategories).reduce(
+    (sum, category) => sum + category.skills.length,
+    0
+  );
+
   return (
     <section className="bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,13 +46,13 @@ const SkillsVisualization = () => {
           className="text-center space-y-2 mb-5"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-black font-worksans">
-            Technical <span className="text-3xl sm:text-4xl font-bold text-black">Expertise</span>
+            Tools & <span className="text-3xl sm:text-4xl font-bold text-black">Technologies</span>
           </h2>
          <p className="text-lg text-black font-opensans
   text-center sm:text-justify 
   max-w-sm sm:max-w-2xl lg:max-w-6xl lg:px-2
   leading-relaxed [overflow-wrap:normal]">
-Continuously evolving technical skills through the integration of modern tools, frameworks, and real-world projects.
+Continuously evolving technical skills through the integration of modern tools, frameworks, AI technologies, and real-world projects.
 </p>
 
         </motion.div>
@@ -133,7 +97,6 @@ Continuously evolving technical skills through the integration of modern tools, 
           <Icon name={skill?.icon} size={20} />
           <h3 className="font-semibold text-foreground">{skill?.name}</h3>
         </div>
-        {/* <span className="text-sm font-medium text-primary">{skill?.level}%</span> */}
       </div>
 
       {/* Progress Bar */}
@@ -146,10 +109,6 @@ Continuously evolving technical skills through the integration of modern tools, 
             transition={{ duration: 1, delay: index * 0.1 }}
           />
         </div>
-        {/* <div className="flex justify-between text-xs text-muted-foreground mt-2">
-          <span>Beginner</span>
-          <span>Expert</span>
-        </div> */}
       </div>
     </motion.div>
   ))}
@@ -165,15 +124,15 @@ Continuously evolving technical skills through the integration of modern tools, 
           className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
-            <div className="text-2xl font-bold text-black mb-2">15+</div>
+            <div className="text-2xl font-bold text-black mb-2">{totalSkills}+</div>
             <div className="text-sm text-muted-foreground">Technologies</div>
           </div>
           <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
-            <div className="text-2xl font-bold text-black mb-2">1+</div>
+            <div className="text-2xl font-bold text-black mb-2">2+</div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">
-            <div className="text-2xl font-bold text-black mb-2">1+</div>
+            <div className="text-2xl font-bold text-black mb-2">4+</div>
             <div className="text-sm text-muted-foreground">Projects Built</div>
           </div>
           <div className="text-center p-6 mb-5 bg-card border border-border rounded-xl shadow-lg">

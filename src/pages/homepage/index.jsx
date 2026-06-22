@@ -20,14 +20,14 @@ const Homepage = () => {
   return (
     <>
       <Helmet>
-        <title>Ifthikar - Full-Stack Developer | Building the Future Through Code</title>
+        <title>Ifthikar | Full-Stack & AI Developer — Dubai, UAE</title>
         <meta 
           name="description" 
-          content="Professional full-stack developer specializing in React, Express.js, and Node.js. Creating scalable web applications that drive real business results. View projects, certifications, and get in touch." 
+          content="Portfolio of Ifthikar — Full-Stack Developer and AI Engineer specializing in React, Next.js, RAG architecture, and AI-powered web applications. Based in Dubai, UAE." 
         />
         <meta 
           name="keywords" 
-          content="full-stack developer, React developer, Node.js, web development, portfolio, software engineer" 
+          content="full-stack developer, AI engineer, React, Next.js, RAG, Claude AI, Dubai, UAE, web development, portfolio" 
         />
         <meta name="author" content="ifthikar-portfolio" />
         <meta property="og:title" content="DevPortfolio Pro - Full-Stack Developer" />
@@ -78,7 +78,7 @@ const Homepage = () => {
                   </div>
                 </div>
                 <p className="text-white mb-6 max-w-md font-opensans">
-                  Code meets creativity. Full-stack developer building scalable, high-impact web applications that shape the future.
+                  Full-stack & AI developer building scalable, intelligent web applications for UAE-based clients and global SaaS platforms.
                 </p>
                 <div className="flex space-x-4">
                   <a 

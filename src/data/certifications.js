@@ -1,0 +1,51 @@
+export const certifications = [
+  {
+    id: 1,
+    name: 'The MERN Fullstack',
+    issuer: 'Udemy',
+    earnedDate: '2024-03-11',
+    verificationUrl: 'https://www.udemy.com/certificate/UC-20a64cb5-be20-4132-bab2-a465ba040255/',
+  },
+  {
+    id: 2,
+    name: 'MongoDB',
+    issuer: 'Great Learning',
+    earnedDate: '2024-12-10',
+    verificationUrl: 'https://drive.google.com/file/d/1PPnPhO4xSAt8V-GBsoKrMnMJzny3rgDT/view?usp=drivesdk',
+  },
+  {
+    id: 3,
+    name: 'Blockchain',
+    issuer: 'Kerala Blockchain Academy',
+    earnedDate: '2024-10-05',
+    verificationUrl: 'https://drive.google.com/file/d/1P-Md0xy8LlDMdrCfF0zFPkg29A100Ro-/view?usp=drivesdk',
+  },
+  {
+    id: 4,
+    name: 'Python',
+    issuer: 'Guvi',
+    earnedDate: '2023-08-15',
+    verificationUrl: 'https://drive.google.com/file/d/1P1Wnq2JW4gt8ZQi_sK6EGSnFZgFnvbY-/view?usp=drivesdk',
+  },
+  {
+    id: 5,
+    name: 'Oracle Cloud',
+    issuer: 'Oracle',
+    earnedDate: '2024-03-28',
+    verificationUrl: 'https://drive.google.com/file/d/1PT0X0XoflrdppIB6ydc3eL4yumCv1ITT/view?usp=drivesdk',
+  },
+  {
+    id: 6,
+    name: 'AI',
+    issuer: 'Guvi',
+    earnedDate: '2023-08-15',
+    verificationUrl: 'https://drive.google.com/file/d/1P1xWi5AT0gcuanWK3630KsuiVZTp5HCv/view?usp=drivesdk',
+  },
+  {
+    id: 7,
+    name: 'FullStack Web Development',
+    issuer: 'Intellia Sofpro Limited',
+    earnedDate: '2025-08-31',
+    verificationUrl: 'https://drive.google.com/file/d/1HFd4y2eEoGpRPRQIPLYgf7KvKdr6uS7Q/view?usp=drivesdk',
+  },
+];

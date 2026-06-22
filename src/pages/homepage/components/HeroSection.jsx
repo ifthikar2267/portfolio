@@ -127,7 +127,7 @@ export async function getProducts() {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-3xl sm:text-4xl lg:text-4xl font-bold text-foreground leading-tight font-worksans"
               >
-                <span className="text-black">Fullstack Developer</span>
+                <span className="text-black">Full-Stack & AI Developer</span>
                 <br />
               </motion.h1>
 
@@ -142,7 +142,7 @@ export async function getProducts() {
     leading-relaxed
     [hyphens:auto] [overflow-wrap:anywhere]"
 >
-  Crafting seamless digital experiences with the MERN stack (MongoDB, Express.js, React, Node.js) transforming ideas into scalable, user-centric applications that blend functionality with intuitive design, delivering performance, accessibility, and innovation at every step.
+  Full-stack developer and AI engineer based in Dubai, UAE — building production-grade web applications with React, Next.js, and RAG architecture. I specialize in AI integration (Claude, vector databases), corporate websites for UAE clients, and scalable SaaS platforms that combine clean design with intelligent automation.
 </motion.p>
 
 

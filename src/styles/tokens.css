@@ -1,0 +1,25 @@
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0d0d15;
+  --bg-card: #111120;
+  --bg-card-hover: #161628;
+  --accent-cyan: #00f5ff;
+  --accent-purple: #bf00ff;
+  --accent-cyan-dim: rgba(0, 245, 255, 0.15);
+  --accent-purple-dim: rgba(191, 0, 255, 0.15);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.65);
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --border-glow-cyan: 0 0 8px rgba(0, 245, 255, 0.6), 0 0 20px rgba(0, 245, 255, 0.2);
+  --border-glow-purple: 0 0 8px rgba(191, 0, 255, 0.6), 0 0 20px rgba(191, 0, 255, 0.2);
+  --gradient-hero: linear-gradient(135deg, #00f5ff 0%, #bf00ff 100%);
+  --gradient-card: linear-gradient(145deg, #111120 0%, #0d0d15 100%);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --section-padding: 80px 0;
+  --section-padding-mobile: 56px 0;
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --content-max: 1200px;
+  --side-pad: clamp(16px, 4vw, 32px);
+}

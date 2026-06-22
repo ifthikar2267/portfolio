@@ -6,6 +6,9 @@ import Button from '../../../components/ui/Button';
 
 const ProjectCard = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const liveUrl = project?.liveUrl || project?.liveDemo;
+  const githubUrl = project?.githubUrl || project?.github;
+  const galleryImages = project?.galleryImages || [];
 
   return (
     <div 
@@ -15,19 +18,34 @@ const ProjectCard = ({ project }) => {
     >
       {/* Project Image */}
       <div className="relative h-70 overflow-hidden bg-surface">
-        <Image
-           src="/assets/images/skinsaviour.jpeg"
-          alt={project?.title}
-          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+        {liveUrl ? (
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-full"
+          >
+            <Image
+              src={project?.image}
+              alt={project?.imageAlt || project?.title}
+              className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+          </a>
+        ) : (
+          <Image
+            src={project?.image}
+            alt={project?.imageAlt || project?.title}
+            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        )}
         
         {/* Overlay with Quick Actions */}
         <div className={`absolute inset-0 bg-black/60 flex items-center justify-center space-x-3 transition-opacity duration-300 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
-          {project?.liveDemo && (
+          {liveUrl && (
             <a
-              href="https://skinsaviour-store.web.app/"
+              href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -42,22 +60,21 @@ const ProjectCard = ({ project }) => {
               </Button>
             </a>
           )}
-          {project?.github && (
-             <a 
-                    href="https://github.com/ifthikar2267" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  >
-              
-            <Button
-              variant="outline"
-              size="sm"
-              iconName="Github"
-              className="border-white/30 text-white hover:bg-white/10 rounded-full"
+          {githubUrl && (
+            <a 
+              href={githubUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-200"
             >
-              Code
-            </Button>
+              <Button
+                variant="outline"
+                size="sm"
+                iconName="Github"
+                className="border-white/30 text-white hover:bg-white/10 rounded-full"
+              >
+                Code
+              </Button>
             </a>
           )}
         </div>
@@ -77,36 +94,29 @@ const ProjectCard = ({ project }) => {
         )}
       </div>
 
-         <div className="hidden lg:grid lg:grid-cols-4 gap-4 mb-4 pt-4 px-4 border-t border-border">
-                          <div className="rounded-xl overflow-hidden">
-                            <Image
-                              src="/assets/images/homePage.jpeg"
-                              alt={project?.title}
-                              className="w-full h-50 object-cover"
-                            />
-                          </div>
-                          <div className="rounded-xl overflow-hidden">
-                            <Image
-                              src="/assets/images/productPage.jpeg"
-                              alt={project?.title}
-                              className="w-full h-50 object-cover"
-                            />
-                          </div>
-                          <div className="rounded-xl overflow-hidden">
-                            <Image
-                              src="/assets/images/productDetail.jpeg"
-                              alt={project?.title}
-                              className="w-full h-50 object-cover"
-                            />
-                          </div>
-                          <div className="rounded-xl overflow-hidden">
-                            <Image
-                              src="/assets/images/userProfile.jpeg"
-                              alt={project?.title}
-                              className="w-full h-50 object-cover"
-                            />
-                          </div>
-                        </div>
+      {galleryImages.length > 0 && (
+        <div className="hidden lg:grid lg:grid-cols-4 gap-4 mb-4 pt-4 px-4 border-t border-border">
+          {galleryImages.map((img, index) => (
+            <div key={index} className="rounded-xl overflow-hidden">
+              {liveUrl ? (
+                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src={img}
+                    alt={`${project?.imageAlt || project?.title} screenshot ${index + 1}`}
+                    className="w-full h-50 object-cover"
+                  />
+                </a>
+              ) : (
+                <Image
+                  src={img}
+                  alt={`${project?.imageAlt || project?.title} screenshot ${index + 1}`}
+                  className="w-full h-50 object-cover"
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Content */}
       <div className="p-6">
@@ -116,15 +126,10 @@ const ProjectCard = ({ project }) => {
             <h3 className="text-lg font-semibold text-black font-worksans mb-1 group-hover:text-primary transition-colors duration-200">
               {project?.title}
             </h3>
-            <p className="text-sm text-muted-foreground line-clamp-2 font-worksans">
-              {project?.description}
+            <p className="text-sm text-muted-foreground line-clamp-3 font-worksans">
+              {project?.shortDescription || project?.description}
             </p>
           </div>
-          {/* {project?.featured && (
-            <div className="ml-3">
-              <Icon name="Star" size={16} className="text-warning fill-warning" />
-            </div>
-          )} */}
         </div>
 
         {/* Technology Stack */}
@@ -147,16 +152,16 @@ const ProjectCard = ({ project }) => {
         {/* Metrics */}
         <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
           <div className="flex items-center space-x-4">
-            {project?.github && (
-              <div className="flex items-center space-x-1">
-                <Icon name="Star" size={14} />
-                <span>{project?.stars || 100}</span>
-              </div>
-            )}
             {project?.duration && (
               <div className="flex items-center space-x-1">
                 <Icon name="Clock" size={14} />
                 <span>{project?.duration}</span>
+              </div>
+            )}
+            {project?.category && (
+              <div className="flex items-center space-x-1">
+                <Icon name="Tag" size={14} />
+                <span className="text-xs">{project?.category}</span>
               </div>
             )}
           </div>
@@ -166,23 +171,25 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Action Button */}
-        <a 
-                    href="https://github.com/ifthikar2267" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors duration-200"
-                  >
-        <Button
-          variant="outline"
-          size="sm"
-          fullWidth
-          iconName="ArrowRight"
-          iconPosition="right"
-          className="text-white bg-[#0077FF] group-hover:border-[#0077FF] group-hover:text-[#0077FF]  group-hover:bg-white transition-colors duration-200 rounded-full"
-        >
-          View Details
-        </Button>
-        </a>
+        {liveUrl && (
+          <a 
+            href={liveUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-muted-foreground hover:text-primary transition-colors duration-200"
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              fullWidth
+              iconName="ExternalLink"
+              iconPosition="right"
+              className="text-white bg-[#0077FF] group-hover:border-[#0077FF] group-hover:text-[#0077FF] group-hover:bg-white transition-colors duration-200 rounded-full"
+            >
+              Visit Live Site
+            </Button>
+          </a>
+        )}
       </div>
     </div>
   );

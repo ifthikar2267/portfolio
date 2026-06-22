@@ -9,6 +9,7 @@ const TechnologyShowcase = ({ technologies }) => {
     { id: 'frontend', label: 'Frontend', icon: 'Monitor' },
     { id: 'backend', label: 'Backend', icon: 'Server' },
     { id: 'database', label: 'Database', icon: 'Database' },
+    { id: 'ai', label: 'AI & Automation', icon: 'Brain' },
     { id: 'tools', label: 'Tools', icon: 'Settings' }
   ];
 
@@ -20,7 +21,7 @@ const TechnologyShowcase = ({ technologies }) => {
     <div className="bg-card shadow-brand border border-border rounded-xl p-6 mb-8">
       <div className="flex items-center space-x-2 mb-6">
         <Icon name="Layers" size={24} className="text-primary" />
-        <h3 className="text-xl font-semibold text-black font-worksans">Technology Stack</h3>
+        <h3 className="text-xl font-semibold text-black font-worksans">Tools & Technologies</h3>
       </div>
       {/* Category Filters */}
       <div className="flex flex-wrap gap-2 mb-6 lg:justify-between">
@@ -91,7 +92,7 @@ const TechnologyShowcase = ({ technologies }) => {
       </div>
       {/* Summary Stats */}
       <div className="mt-6 pt-6 border-t border-border">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-4 text-center">
           <div>
             <div className="text-lg font-bold text-[#0077FF]">
               {technologies?.filter(t => t?.category === 'frontend')?.length}
@@ -109,6 +110,12 @@ const TechnologyShowcase = ({ technologies }) => {
               {technologies?.filter(t => t?.category === 'database')?.length}
             </div>
             <div className="text-sm text-muted-foreground">Database</div>
+          </div>
+          <div>
+            <div className="text-lg font-bold text-purple-600">
+              {technologies?.filter(t => t?.category === 'ai')?.length}
+            </div>
+            <div className="text-sm text-muted-foreground">AI</div>
           </div>
           <div>
             <div className="text-lg font-bold text-black">

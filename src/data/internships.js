@@ -1,0 +1,90 @@
+export const internships = [
+  {
+    id: 1,
+    name: 'Full Stack Developer Intern — Almosafer',
+    issuer: 'Almosafer (Seera Group)',
+    role: 'Full Stack Developer Intern',
+    description:
+      'Completed a 4-month internship at Almosafer, one of the leading travel technology companies in the Middle East (part of Seera Group). During the internship, I built three independent projects and contributed to one live production project.',
+    category: 'Internship',
+    earnedDate: '2025-02-10',
+    endDate: '2025-06-12',
+    duration: 'February 10, 2025 – June 12, 2025',
+    location: 'Dubai, UAE (On-Site)',
+    icon: 'Laptop',
+    skills: ['React', 'Material UI', 'Node.js', 'PostgreSQL', 'MongoDB', 'Tailwind CSS', 'TypeScript', 'HTML5', 'CSS3', 'Git', 'GitHub', 'Vercel', 'Docker', 'AWS', 'Jest', 'Testing', 'Webpack', 'RAG architecture', 'Vector database', 'Claude AI', 'n8n', 'Workflow automation'],
+    highlights: [
+      'Multilingual Static Website — Designed and developed a fully responsive, multilingual static website supporting Arabic and English, with RTL/LTR layout switching.',
+      'Admin Dashboard — Built a feature-rich internal admin dashboard with data tables, charts, filters, and role-based UI components using React and Material UI.',
+      'Almosafer Clone with AI Chatbot — Developed a functional clone of the Almosafer travel booking platform, integrated with an AI-powered chatbot for travel queries and booking assistance.',
+      'Athar Chatbot Project (Live Production) — Contributed to the real-time production project "Athar", an AI chatbot system. Worked on frontend integration, prompt flow, and UI components for the deployed chatbot.',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Web Development',
+    issuer: 'Developers Arena',
+    role: 'Web Development Intern',
+    description:
+      'An internship at Developers Arena focused on designing and developing responsive and user-friendly websites.',
+    category: 'Internship',
+    earnedDate: '2025-12-10',
+    duration: 'Dec 2025',
+    location: 'Remote',
+    icon: 'ClipboardList',
+    verificationUrl: 'https://drive.google.com/file/d/1DGGY3kq0zT3RaVoAHYCwQH7v7bSucp_P/view?usp=drivesdk',
+    skills: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+    highlights: [
+      'Designed and developed responsive, user-friendly websites.',
+      'Worked with the MERN stack for full-stack web development.',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Website Design and Development',
+    issuer: 'Internship Studio',
+    role: 'Web Development Intern',
+    description:
+      'An internship at Internship Studio focused on designing and developing responsive and user-friendly websites.',
+    category: 'Internship',
+    earnedDate: '2024-11-04',
+    duration: 'Nov 2024',
+    location: 'Remote',
+    icon: 'ClipboardList',
+    skills: ['HTML', 'CSS', 'React', 'Node.js', 'MongoDB'],
+    highlights: [
+      'Modern full-stack development with React and Node.js.',
+      'Built responsive and user-friendly website interfaces.',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Full Stack — Java with Angular',
+    issuer: "Zoho Tech's",
+    role: 'Full Stack Intern',
+    description:
+      'An internship at ZohoTech focused on full-stack development using Java for the backend and Angular for the frontend.',
+    category: 'Internship',
+    earnedDate: '2023-07-03',
+    duration: '40 hours',
+    location: 'Remote',
+    icon: 'Laptop',
+    skills: ['HTML', 'CSS', 'Angular', 'Java'],
+    highlights: [
+      'Full-stack development using Java backend and Angular frontend.',
+      'Foundational training in enterprise web application patterns.',
+    ],
+  },
+];
+
+export const internshipsAsCertifications = internships.map((internship) => ({
+  id: `internship-${internship.id}`,
+  name: internship.name,
+  issuer: internship.issuer,
+  description: internship.description,
+  category: internship.category,
+  earnedDate: internship.earnedDate,
+  verificationUrl: internship.verificationUrl,
+  icon: internship.icon,
+  skills: internship.skills,
+}));
