@@ -26,6 +26,15 @@ export default function Hero() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleDownloadCv = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/images/Ifthikar - Full Stack Developer Resume.pdf';
+    link.setAttribute('download', 'Ifthikar_Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
   return (
     <section id="home" className="hero-section">
       <div
@@ -102,8 +111,8 @@ export default function Hero() {
           <NeonButton variant="cyan" onClick={() => scrollTo('projects')}>
             View My Work
           </NeonButton>
-          <NeonButton variant="outline" onClick={() => scrollTo('contact')}>
-            Get in Touch
+          <NeonButton variant="purple" onClick={handleDownloadCv}>
+            Download CV
           </NeonButton>
         </div>
       </div>
