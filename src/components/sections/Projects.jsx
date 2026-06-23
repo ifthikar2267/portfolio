@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import SectionTransition from '../ui/SectionTransition';
 import NeonButton from '../ui/NeonButton';
+import Image from '../AppImage';
 import { projects } from '../../data/projects';
 
 function ProjectImageCarousel({ project }) {
@@ -20,12 +21,14 @@ function ProjectImageCarousel({ project }) {
 
   return (
     <div className="project-carousel" onClick={stop} onPointerDown={stop}>
-      <img
-        src={images[index]}
-        alt={project.imageAlt || `${project.title} screenshot ${index + 1}`}
-        className="project-carousel__img"
-        draggable={false}
-      />
+      <div className="project-carousel__frame">
+        <Image
+          src={images[index]}
+          alt={project.imageAlt || `${project.title} screenshot ${index + 1}`}
+          className="project-carousel__img"
+          draggable={false}
+        />
+      </div>
       {images.length > 1 && (
         <>
           <button
@@ -157,7 +160,7 @@ export default function Projects() {
         }
         .project-card {
           perspective: 1000px;
-          height: 420px;
+          height: 440px;
           cursor: pointer;
           -webkit-tap-highlight-color: transparent;
         }
@@ -223,16 +226,30 @@ export default function Projects() {
           position: relative;
           width: 100%;
           margin: 0;
-          flex: 1;
-          min-height: 260px;
+          flex: 1 1 auto;
+          min-height: 0;
           overflow: hidden;
           border-radius: 12px 12px 0 0;
-          background: rgba(0,0,0,0.4);
+          background: rgba(0,0,0,0.55);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .project-carousel__frame {
+          width: 100%;
+          height: 100%;
+          min-height: 220px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 8px;
         }
         .project-carousel__img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          max-height: 100%;
+          object-fit: contain;
+          object-position: center;
           display: block;
           pointer-events: none;
           user-select: none;
@@ -336,13 +353,13 @@ export default function Projects() {
         }
         @media (max-width: 1024px) {
           .projects-grid { grid-template-columns: repeat(2, 1fr); }
-          .project-card { height: 400px; }
-          .project-carousel { min-height: 240px; }
+          .project-card { height: 420px; }
+          .project-carousel__frame { min-height: 200px; }
         }
         @media (max-width: 768px) {
           .projects-grid { grid-template-columns: 1fr; }
-          .project-card { height: 380px; }
-          .project-carousel { min-height: 220px; }
+          .project-card { height: 400px; }
+          .project-carousel__frame { min-height: 190px; }
         }
         @media (max-width: 480px) {
           .project-face--back { padding: 16px; }
